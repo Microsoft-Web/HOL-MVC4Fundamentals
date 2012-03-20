@@ -2,7 +2,7 @@
 <Lab xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/ContentFramework.Core.Models">
   <Id>ASPNETMVC4Fundamentals</Id>
   <Author>
-    <Name>{replace_with_content_author}</Name>
+    <Name>.</Name>
   </Author>
   <Description>This Hands-On Lab is based on MVC (Model View Controller) Music Store, a tutorial application that introduces and explains step-by-step how to use ASP.NET MVC and Visual Studio 2011. Throughout the lab you will learn the simplicity, yet power of using these technologies together. You will start with a simple application and will build it until you have a fully functional MVC Web Application.</Description>  
   <Document ConversionType="Html">.\HOL.md</Document>
