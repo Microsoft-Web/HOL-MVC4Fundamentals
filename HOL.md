@@ -462,7 +462,7 @@ ASP.NET MasterPages are layout files that allow you to setup a template for comm
 	
 	>For more information, see this article: <http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages>.
 
-1. \_layout.cshtml contains the HTML container layout for all pages on the site.  It includes the **<html>** element for the HTML response, as well as the **<head>** and **<body>** elements. **@RenderBody()** within the HTML body identify regions that view templates will be able to fill in with dynamic content.
+1. \_layout.cshtml contains the HTML container layout for all pages on the site.  It includes the **\<html\>** element for the HTML response, as well as the **\<head\>** and **\<body\>** elements. **@RenderBody()** within the HTML body identify regions that view templates will be able to fill in with dynamic content.
 
 	````HTML(C#)
 	<!DOCTYPE html>
@@ -481,7 +481,7 @@ ASP.NET MasterPages are layout files that allow you to setup a template for comm
 	</html>
 	````
 	
-1. Add a common header with links to the Home page and Store area on all pages in the site. In order to do that, add the following code inside the **<div>** statement.
+1. Add a common header with links to the Home page and Store area on all pages in the site. In order to do that, add the following code inside the **\<div\>** statement.
 
 	````HTML(C#)
 	<!DOCTYPE html>
@@ -509,10 +509,8 @@ ASP.NET MasterPages are layout files that allow you to setup a template for comm
 	</html>
 	````
 	
-	>**Note:** Did you know? Visual Studio 11 has snippets that make it easy to add commonly used code in HTML, code files and more! Try it out by typing **<div + tab (twice)** to insert a complete **div** tag.
+	>**Note:** Did you know? Visual Studio 11 has snippets that make it easy to add commonly used code in HTML, code files and more! Try it out by typing **\<div\>** and pressing **TAB** twice to insert a complete **div** tag.
 	
-
-
 #### Task 2 - Adding CSS Stylesheet####
 
 The empty project template includes a very streamlined CSS file which just includes styles used to display validation messages. You will use additional CSS and images (potentially provided by a designer) in order to enhance the look and feel of the site.
@@ -780,7 +778,7 @@ In this task, you will update the View template created in the last task to outp
 
 	> You can just select the **NumberOfGenres** property from the Intellisense list rather than typing it in and then it will auto-complete it by pressing the **tab key**.
 
-1. Loop over the genre list in the **StoreIndexViewModel** and create an HTML **<ul>** list using a **foreach** loop. Also change the code inside **Content1** ASP.NET Content control with a simple text: **Store Genres.**
+1. Loop over the genre list in the **StoreIndexViewModel** and create an HTML **\<ul\>** list using a **foreach** loop. Also change the code inside **Content1** ASP.NET Content control with a simple text: **Store Genres.**
 
 	````HTML(C#)
 	@model MvcMusicStore.ViewModels.StoreIndexViewModel
