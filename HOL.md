@@ -120,6 +120,7 @@ This Hands-On Lab is comprised by the following exercises:
 
 1. Exercise 6: Using parameters in View
 
+1. Exercise 7: A lap around MVC4 New Template
  
 Estimated time to complete this lab: **45 minutes**.
 
@@ -439,7 +440,7 @@ So far you have been returning strings from controller actions. Although that's 
 
 In this exercise you will learn how to add a MasterPage to setup a template for common HTML content, a StyleSheet to enhance the look and feel of the site and finally a View template to enable HomeController to return HTML.
 
-#### Task 1 - Modifying the _layout.cshtml ####
+#### Task 1 - Modifying the \_layout.cshtml ####
 
 ASP.NET MasterPages are layout files that allow you to setup a template for common HTML to use across the entire website. In this task you will add a MasterPage with a common header with links to the Home page and Store area.
 
@@ -461,7 +462,7 @@ ASP.NET MasterPages are layout files that allow you to setup a template for comm
 	
 	>For more information, see this article: <http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages>.
 
-1. _layout.cshtml contains the HTML container layout for all pages on the site.  It includes the **<html>** element for the HTML response, as well as the **<head>** and **<body>** elements. **@RenderBody()** within the HTML body identify regions that view templates will be able to fill in with dynamic content.
+1. \_layout.cshtml contains the HTML container layout for all pages on the site.  It includes the **<html>** element for the HTML response, as well as the **<head>** and **<body>** elements. **@RenderBody()** within the HTML body identify regions that view templates will be able to fill in with dynamic content.
 
 	````HTML(C#)
 	<!DOCTYPE html>
@@ -479,6 +480,7 @@ ASP.NET MasterPages are layout files that allow you to setup a template for comm
 		</body>
 	</html>
 	````
+	
 1. Add a common header with links to the Home page and Store area on all pages in the site. In order to do that, add the following code inside the **<div>** statement.
 
 	````HTML(C#)
@@ -506,7 +508,9 @@ ASP.NET MasterPages are layout files that allow you to setup a template for comm
 		</body>
 	</html>
 	````
-	> **Note:** Did you know? Visual Studio 11 has snippets that make it easy to add commonly used code in HTML, code files and more! Try it out by typing **<div + tab (twice)** to insert a complete **div** tag.
+	
+	>**Note:** Did you know? Visual Studio 11 has snippets that make it easy to add commonly used code in HTML, code files and more! Try it out by typing **<div + tab (twice)** to insert a complete **div** tag.
+	
 
 
 #### Task 2 - Adding CSS Stylesheet ####
@@ -573,7 +577,7 @@ In this task, you will add a View template to generate the HTML response that wi
 
 	> This way, ASP.NET MVC avoids having to explicitly specify the name or location of a View template when using this naming convention to return a View.
 
-1. The generated View template is based on the **_layout.cshtml** template earlier defined. Update the ViewBag.Title to **Home**, and change the main content to **This is the Home Page**, as shown in the code below:
+1. The generated View template is based on the **\_layout.cshtml** template earlier defined. Update the ViewBag.Title to **Home**, and change the main content to **This is the Home Page**, as shown in the code below:
 
 	````HTML
 	@{
@@ -1212,6 +1216,108 @@ In this task, you will test that the starred genres display a star icon.
  
 	_Browsing Genres with starred elements_
 
+	
+---
+
+<a name="Exercise7" />
+### Exercise 7: A lap around MVC4 New Template ###
+
+In this exercise, you will explore the enhancements in the ASP.NET MVC4 project templates, taking a look at the most relevant features of the new template.
+
+<a name="Ex07Task1" />
+#### Task 1: Exploring the Exploring the MVC4 Internet Application Template ####
+
+1. Open **Visual Studio 11**.
+
+1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C#|Web** template on the left pane tree, and choose the **ASP**.**NET MVC 4 Web Application.** Name the project **PhotoGallery**, select a location (or leave the default) and click **OK**. 
+
+	![Creating a new MVC4 Project](images/creating-a-new-mvc4-project.png?raw=true "Creating a new MVC4 Project")
+
+	_Creating a new MVC4 Project_
+
+1. In the **New ASP.NET MVC 4 Project** dialog, select the **Internet Application** project template and click **OK**. Notice you can select either Razor or ASP.NET as the view engine.
+
+	![Creating a new MVC4 Internet Application](images/creating-a-new-mvc4-internet-application.png?raw=true "Creating a new MVC4 Internet Application")
+
+	_Creating a new MVC4 Internet Application_
+
+	>**Note**: Razor syntax has been introduced in ASP.NET MVC 3. Its goal is to minimize the number of characters and keystrokes required in a file, enabling a fast and fluid coding workflow. Razor leverages existing C#/VB (or other) language skills and delivers a template markup syntax that enables an awesome HTML construction workflow.
+
+1.	Press **F5** to run the solution and see the renewed templates. You can check out the following features:
+
+	- **Modern-style templates**
+
+		The templates have been renewed, providing more modern-looking styles.
+
+		![MVC4 restyled templates](images/mvc4-restyled-templates.png?raw=true "MVC4 restyled templates")
+
+		_MVC4 restyled templates_
+
+	- **Richer UI with JavaScript**
+
+		Another enhancement to default project templates is the use of JavaScript to provide a more interactive JavaScript. The Login and Register links used in the template exemplify how to use the jQuery UI Dialog to display a fancy login screen.
+
+		![log-in-dialog](images/log-in-dialog.png?raw=true "Log in dialog")
+
+		_Log in dialog_
+
+		
+		![Register-dialog](images/register-dialog.png?raw=true "Register dialog")
+
+		_Register dialog_
+	
+	- **Adaptive Rendering**
+		
+		Check out resizing the browser window and notice how the page layout dynamically adapts to the new window size. These templates use the adaptive rendering technique to render properly in both desktop and mobile platforms without any customization. 
+
+		![MVC 4 project template in different browser sizes](images/mvc-4-project-template-in-different-browser-s.png?raw=true "MVC 4 project template in different browser sizes")
+		
+		_MVC 4 project template in different browser sizes_
+		
+1. Close the browser to stop the debugger and return to Visual Studio.
+
+1. Now you are able to explore the solution and check out some of the new features introduced by ASP.NET MVC 4 in the project template.
+
+	![MVC4-internet-application-project-template](images/MVC4-internet-application-project-template.png?raw=true "The MVC4 Internet Application Project Template")
+
+	_The MVC4 Internet Application Project Template_	
+
+	- **HTML5 markup**
+
+		Browse template views to find out the new theme markup.
+
+		![New template, using Razor and HTML5 markup (About.cshtml)](images/new-template-using-razor-and-html5-markup-abo.png?raw=true "New template, using Razor and HTML5 markup (About.cshtml)")
+
+		_New template, using Razor and HTML5 markup (About.cshtml)_
+
+	- **JavaScript libraries included**
+
+		- **jQuery**: jQuery  simplifies HTML document traversing, event handling, animating, and Ajax interactions.
+		
+		- **jQuery UI**: This library provides abstractions for low-level interaction and animation, advanced effects and themeable widgets, built on top of the jQuery JavaScript Library.
+			
+			>**Note:** You can learn about jQuery and jQuery UI in <http://docs.jquery.com/>.
+			
+		- **KnockoutJS**: The MVC4 default template now includes **KnockoutJS**, a JavaScript MVVM framework that lets you create rich and highly responsive web applications using JavaScript and HTML. Like in MVC3, jQuery and jQuery UI libraries are also included in ASP.NET MVC 4.
+
+			>**Note:** You can get more information about KnockOutJS library in this link: <http://learn.knockoutjs.com/>.**
+		
+		- **Modernizr**: This library runs automatically, making your site compatible with older browsers when using HTML5 and CSS3 technologies.
+
+			>**Note:** You can get more information about Modernizr library in this link: <http://www.modernizr.com/>.**
+
+
+	- **ASP.NET Universal providers included in the solution**
+	
+		ASP.NET Universal Providers extend Session, Membership, Roles and Profile support to SQL Compact Edition and SQL Azure. By only configuring the right connection string, your application will be able to work with SQL Server (plus Express), SQL Server Compact or SQL Azure.
+
+		![ASP.NET Universal Providers reference is now included](images/aspnet-universal-providers-reference-is-now-i.png?raw=true "ASP.NET Universal Providers reference is now included")
+
+		_ASP.NET Universal Providers reference is now included_
+
+		>**Note:** ASP.NET Universal Providers Library is also available for MVC3 projects in the NuGet public feed. You can learn more about SQL Azure in this link: <http://msdn.microsoft.com/en-us/wazplatformtrainingcourse_sqlazure_unit>.
+
+	
 ## Summary ##
 
 By completing this Hands-On Lab you have learned the fundamentals of ASP.NET MVC:
@@ -1231,5 +1337,3 @@ By completing this Hands-On Lab you have learned the fundamentals of ASP.NET MVC
 - How to add links to pages inside the ASP.NET MVC application
 
 - How to add and use dynamic properties in a View
-
-
