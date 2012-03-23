@@ -506,7 +506,6 @@ ASP.NET MasterPages are layout files that allow you to setup a template for comm
 		</body>
 	</html>
 	````
-
 	> **Note:** Did you know? Visual Studio 11 has snippets that make it easy to add commonly used code in HTML, code files and more! Try it out by typing **<div + tab (twice)** to insert a complete **div** tag.
 
 
