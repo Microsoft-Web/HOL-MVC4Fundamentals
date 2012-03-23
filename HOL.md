@@ -91,7 +91,7 @@ Please follow these steps to downloads and install Microsoft Visual Studio 11 Ex
 
 1. The appropriate components will be downloaded and installed.
 
- 	![Web Platform Installation - Download progress](./images/Web-Platform-Installation-–-Download-progress.png?raw=true "Web Platform Installation - Download progress")
+ 	![Web Platform Installation - Download progress](./images/Web-Platform-Installation-Download-progress.png?raw=true "Web Platform Installation - Download progress")
  
 	_Web Platform Installation - Download progress_
 
