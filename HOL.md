@@ -69,40 +69,25 @@ Microsoft Web Platform Installer (WebPI) is a tool that manages the installation
 
 > **Note:** As well as the Microsoft Web Platform, WebPI can also install many of the open source applications that are available like Umbraco, Kentico, DotNetNuke and many more.  These are very useful for providing a foundation from which to customize an application to your requirements, dramatically cutting down your development time.
 
-Please follow these steps to downloads and install Microsoft Visual Studio 2011 Edition and SQL Server 2008 Express Edition:
+Please follow these steps to downloads and install Microsoft Visual Studio 11 Express Beta for Web:
 
-1. Install the Web Platform Installer 3.0. To do this, Navigate to [http://go.microsoft.com/fwlink/?LinkID=194638](http://go.microsoft.com/fwlink/?LinkID=194638) using a web browser. Click **Run** in the File Download Security Warning.
+1. Install **Visual Studio 11 Express Beta for Web**. To do this, Navigate to [http://www.microsoft.com/web/gallery/install.aspx?appid=VWD11_BETA&prerelease=true](http://www.microsoft.com/web/gallery/install.aspx?appid=VWD11_BETA&prerelease=true) using a web browser. 
 
- 	![File download pop up](./images/File-download-pop-up.png?raw=true "File download pop up")
+	![Web Platform Installer 4.0 window](./images/Microsoft-Web-Platform-Installer-4.png?raw=true "Web Platform Installer 4.0 download")
+
+	_Web Platform Installer 4.0 download_
+
+1. The Web Platform Installer launches and shows Visual Studio 11 Express Beta for Web Installation. Click on **Install**.
+
+ 	![Visual Studio 11 Express Beta for Web Installer window](./images/Microsoft-VS-11-Install.png?raw=true "Visual Studio 11 Express Beta for Web Installer window")
  
-	_File download pop up_
+	_Visual Studio 11 Express Beta for Web Installer window_
 
-1. Allow the program to make changes to your computer by clicking **Yes** in the User Account Control pop up.
+1. The **Web Platform Installer** displays the list of software to be installed. Accept by clicking **I Accept**.
 
- 
-_**Running Web Platform Installer to install Lab prerequisites**_
-
-1. The Web Platform Installer launches and shows a list of downloads. 
-
-1. Choose the **Products** category at the top side of the window, then click the **All** folder at the left, and then clik **Add** for the following items:
-
-	- **Visual Studio 2011**
-
- 	![Web Platform Installer window](./images/Web-Platform-Installer-window.png?raw=true "Web Platform Installer window")
+ 	![Web Platform Installer window](./images/Microsoft-Web-Platform-Installer-Prerequisites.png?raw=true "Web Platform Installer window")
  
 	_Web Platform Installer window_
-
-1. Click on **Install**. The **Web Platform Installer** displays the list of software to be installed. Accept by clicking **I Accept**.
-
- 	![Web Platform Installation](./images/Web-Platform-Installation.png?raw=true "Web Platform Installation")
- 
-	_Web Platform Installation_
-
-1. The SQL Server Express Edition could be configured to run with **Windows Integrated Authentication** or **Mixed Mode Authentication**. To simplify this Lab, select **Windows Integrated Authentication** and click on **Continue**. SQL Server will then use your Windows credentials to connect to the databases.
-
- 	![Web Platform Installation - SQL Server Express Authentication mode](./images/Web-Platform-Installation-–-SQL-Server-Express-Authentication-mode.png?raw=true "Web Platform Installation - SQL Server Express Authentication mode")
- 
-	_Web Platform Installation - SQL Server Express Authentication mode_
 
 1. The appropriate components will be downloaded and installed.
 
@@ -110,31 +95,13 @@ _**Running Web Platform Installer to install Lab prerequisites**_
  
 	_Web Platform Installation - Download progress_
 
-1. If your computer doesn't have the **Microsoft.NET Framework 4.0**, a pop up will ask you to restart the computer. Click **Yes**.
-
- 	![Web Platform Installation - Microsoft.NET Framework 4 installation](./images/Web-Platform-Installation-–-Microsoft.NET-Framework-4-installation.png?raw=true "Web Platform Installation - Microsoft.NET Framework 4 installation")
- 
-	_Web Platform Installation - Microsoft.NET Framework 4 installation_
-
-1. After rebooting your PC, restart the Web Platform Installer by selecting it from the **Start** menu | **All Programs** | **Microsoft** **Web Platform Installer**.
-
- 	![Starting Web Platform Installer](./images/Starting-Web-Platform-Installer.png?raw=true "Starting Web Platform Installer")
- 
-	_Starting Web Platform Installer_
-
 1. The **Web Platform Installer** will resume downloading and installing the products. When this process is finished, the Installer will show the list of all the software installed. Click **Finish**.
 
  	![Web Platform Installer](./images/Web-Platform-Installer.png?raw=true "Web Platform Installer")
  
 	_Web Platform Installer_
 
-	> **Note:** If you get an error with SQL Server Express 2008 R2 installation like the following, please dismiss it. You will be able to work-around it in **ASP.NET MVC 2.0 Models and Data Access** Hands-on lab.
-
-	> ![](./images/Note-02.png?raw=true)
-
-	> SQL Server Express 2008 R2 installation error
-
-1. Finally the Web Platform Installer shows the installed products. Click **Exit** to finish the setup process.
+1. Finally the Web Platform Installer shows the installed products. Click **Finish** to finish the setup process.
 
  
 ## Exercises ##
@@ -158,33 +125,43 @@ Estimated time to complete this lab: **45 minutes**.
 
 > **Note:** Each exercise is accompanied by an **End** folder containing the resulting solution you should obtain after completing the exercises. You can use this solution as a guide if you need additional help working through the exercises.
 
- 
-### Next Step ###
-
-#Click here to enter text.#
 ### Exercise 1: Creating MusicStore ASP.NET MVC Web Application Project ###
 
-In this exercise, you will learn how to create an ASP.NET MVC application in Visual Studio 2010 as well as its main folder organization. Additionally, you'll learn how to add a new Controller and have it display a simple string at the Application screen.
+In this exercise, you will learn how to create an ASP.NET MVC application in Visual Studio 11 Express as well as its main folder organization. Additionally, you'll learn how to add a new Controller and have it display a simple string at the Application screen.
 
 #### Task 1 - Creating the ASP.NET MVC Web Application Project ####
 
-1. In this task, you will create an empty ASP.NET MVC application project using the MVC Visual Studio template. Start Microsoft Visual Studio 2011 from **Start** | **All Programs** | **Microsoft Visual Studio 2011** | **Microsoft Visual Studio 2011**.
+1. In this task, you will create an empty ASP.NET MVC application project using the MVC Visual Studio template. Start Microsoft Visual Studio 11 from **Start** | **All Programs** | **Microsoft Visual Studio 11 Express** | **Visual Studio 11 Express Beta for Web**.
 
 1. On the **File** menu, click **New Project**.
 
-1. In the **New Project** dialog box select the **ASP.NET MVC 4 Web Application** project type, located under **Visual [C#|Basic],** **Web** template list.
+1.	Follow these steps to install the **NuGet** package dependencies.
+
+	a.	Open the **NuGet** **Package Manager Console**. To do this, select **Tools | Library Package Manager | Package Manager Console**.
+
+	b.	In the **Package Manager Console,** type **Install-Package NuGetPowerTools**.
+
+	c.	After installing the package, type **Enable-PackageRestore**.
+
+	d.	Build the solution. The **NuGet** dependencies will be downloaded and installed automatically.
+
+	>**Note:** One of the advantages of using NuGet is that you don't have to ship all the libraries in your project, reducing the project size. With NuGet Power Tools, by specifying the package versions in the Packages.config file, you will be able to download all the required libraries the first time you run the project. This is why you will have to run these steps after you open an existing solution from this lab.
+	
+	>For more information, see this article: <http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages>.
+
+1. In the **New Project** dialog box select the **ASP.NET MVC 4 Web Application** project type, located under **Visual C#,** **Web** template list.
 
 1. Change the **Name** to **MvcMusicStore**.
 
-1. Set the location of the solution inside a new **Begin** folder in this Exercise's installation folder, for example **C:\WebCampsTrainingKit\Labs\Beginner-ASP.NET-MVC-Fundamentals MVC3\Source\Ex01-CreatingMusicStoreProject\Begin**. Click **OK**.
+1. Set the location of the solution inside a new **Begin** folder in this Exercise's installation folder, for example **C:\WebCampsTrainingKit\Labs\Beginner-ASP.NET-MVC-Fundamentals MVC4\Source\Ex01-CreatingMusicStoreProject\Begin**. Click **OK**.
 
- 	![Create New Project Dialog Box - C](./images/Create-New-Project-Dialog-Box---C.png?raw=true "Create New Project Dialog Box - C")
+ 	![Create New Project Dialog Box - C](./images/Create-New-Project-Dialog-Box.png?raw=true "Create New Project Dialog Box - C")
  
-	_Create New Project Dialog Box - C#_
+	_Create New Project Dialog Box_
 
-1. In the **New ASP.NET MVC 4 Project** dialog box select the **Empty** template and make sure that the **View engine** selected is **ASPX**. Click **OK**.
+1. In the **New ASP.NET MVC 4 Project** dialog box select the **Empty** template and make sure that the **View engine** selected is **Razor**. Click **OK**.
 
- 	![New ASP.NET MVC 4 Project Dialog Box - C](./images/New-ASP.NET-MVC-3-Project-Dialog-Box---C.png?raw=true "New ASP.NET MVC 4 Project Dialog Box - C")
+ 	![New ASP.NET MVC 4 Project Dialog Box - C](./images/New-ASP.NET-MVC-3-Project-Dialog-Box.png?raw=true "New ASP.NET MVC 4 Project Dialog Box - C")
  
 	_New ASP.NET MVC 4 Project Dialog Box - C#_
 
@@ -258,14 +235,10 @@ In this task, you will try out the Application in a web browser.
  
 	_Application running in a web browser_
 
-	> **Note**: ASP.NET Development Server will run the website on a random free port number. In the figure above, the site is running at http://localhost:49161/, so it's using port 49161. Your port number may vary.
+	> **Note**: ASP.NET Development Server will run the website on a random free port number. In the figure above, the site is running at http://localhost:3013/, so it's using port 3013. Your port number may vary.
 
 1. Close the browser.
 
- 
-### Next Step ###
-
-##Click here to enter text.##
 ### Exercise 2: Creating a Controller ###
 
 In this exercise, you will learn how to create a Controller to implement simple functionality of the Music Store. That controller will define action methods to handle each specific request:
@@ -283,13 +256,29 @@ For the scope of this exercise, you will have those actions to simply return a s
 
 In this task, you will add a new Controller.
 
-1. If not already open, start Microsoft Visual Studio 2011 from **Start** | **All Programs** | **Microsoft Visual Studio 2011** | **Microsoft Visual Studio 2011**.
+1. If not already open, start Microsoft Visual Studio 11 Express Beta for Web from **Start** | **All Programs** | **Microsoft Visual Studio 11 Express** | **Visual Studio 11 Express Beta for Web**.
 
 1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to Source\Ex02-CreatingAController\Begin, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
 
+1.	Follow these steps to install the **NuGet** package dependencies.
+
+	a.	Open the **NuGet** **Package Manager Console**. To do this, select **Tools | Library Package Manager | Package Manager Console**.
+
+	b.	In the **Package Manager Console,** type **Install-Package NuGetPowerTools**.
+
+	c.	After installing the package, type **Enable-PackageRestore**.
+
+	d.	Build the solution. The **NuGet** dependencies will be downloaded and installed automatically.
+
+	>**Note:** One of the advantages of using NuGet is that you don't have to ship all the libraries in your project, reducing the project size. With NuGet Power Tools, by specifying the package versions in the Packages.config file, you will be able to download all the required libraries the first time you run the project. This is why you will have to run these steps after you open an existing solution from this lab.
+	
+	>For more information, see this article: <http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages>.
+
 1. Add the new controller. To do this, right-click the **Controllers** folder within the Solution Explorer, select **Add** and then the **Controller** command. Change the **Controller** **Name** to **StoreController**, and click **Add**.
 
- _/Add Controller Dialog_
+	![Add Controller Dialog](./images/Add-Controller-Dialog 2.png?raw=true "Add Controller Dialog")
+ 
+	_Add Controller Dialog_
  
 #### Task 2 - Modifying the StoreController's Actions ####
 
@@ -348,12 +337,6 @@ In this task, you will try out the Application in a web browser.
 
 1. Close the browser.
 
- 
-### Next Step ###
-
-#Click here to enter text.#
-
-
 ### Exercise 3: Passing parameters to a Controller ###
 
 Until now, you have been returning constant strings from the Controllers. In this exercise you will learn how to pass parameters to a Controller using the URL and querystring and then making the method actions respond with text to the browser.
@@ -362,9 +345,23 @@ Until now, you have been returning constant strings from the Controllers. In thi
 
 In this task, you will use the **querystring** to send parameters to the **Browse** action method in the **StoreController**.
 
-1. If not already open, start Microsoft Visual Studio 2011 from **Start** | **All Programs** | **Microsoft Visual Studio 2011** | **Microsoft Visual Studio 2011**.
+1. If not already open, start Microsoft Visual Studio 11 Express Beta for Web from **Start** | **All Programs** | **Microsoft Visual Studio 11 Express** | **Visual Studio 11 Express Beta for Web**.
 
 1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to Source\Ex03-PassingParametersToAController\Begin, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
+
+1.	Follow these steps to install the **NuGet** package dependencies.
+
+	a.	Open the **NuGet** **Package Manager Console**. To do this, select **Tools | Library Package Manager | Package Manager Console**.
+
+	b.	In the **Package Manager Console,** type **Install-Package NuGetPowerTools**.
+
+	c.	After installing the package, type **Enable-PackageRestore**.
+
+	d.	Build the solution. The **NuGet** dependencies will be downloaded and installed automatically.
+
+	>**Note:** One of the advantages of using NuGet is that you don't have to ship all the libraries in your project, reducing the project size. With NuGet Power Tools, by specifying the package versions in the Packages.config file, you will be able to download all the required libraries the first time you run the project. This is why you will have to run these steps after you open an existing solution from this lab.
+	
+	>For more information, see this article: <http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages>.
 
 1. Open **StoreController** class. To do this, in the **Solution Explorer**, expand the **Controllers** folder and double-click **StoreController.cs**.
 
@@ -436,87 +433,81 @@ In this task, you will try out the Application in a web browser and use the **Id
  
 	_Browsing /Store/Details/5_
 
- 
-### Next Step ###
-
-Exercise 4: Creating a View
- 
-
-
 ### Exercise 4: Creating a View ###
 
 So far you have been returning strings from controller actions. Although that's a useful way of understanding how controllers work, it's not how you'd want to build a real web application. Views are components that provide a better approach for generating HTML back to the browser with the use of template files.
 
 In this exercise you will learn how to add a MasterPage to setup a template for common HTML content, a StyleSheet to enhance the look and feel of the site and finally a View template to enable HomeController to return HTML.
 
-#### Task 1 - Adding a MasterPage ####
+#### Task 1 - Modifying the _layout.cshtml ####
 
 ASP.NET MasterPages are layout files that allow you to setup a template for common HTML to use across the entire website. In this task you will add a MasterPage with a common header with links to the Home page and Store area.
 
-1. If not already open, start Microsoft Visual Studio 2011 from **Start** | **All Programs** | **Microsoft Visual Studio 2011** | **Microsoft Visual Studio 2011**.
+1. If not already open, start Microsoft Visual Studio 11 Express Beta for Web from **Start** | **All Programs** | **Microsoft Visual Studio 11 Express** | **Visual Studio 11 Express Beta for Web**.
 
 1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to Source\Ex04-CreatingAView\Begin, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
 
-1. Add a MasterPage. Because it is a shared resource you will create it under the **/Views/Shared** folder. To do this, expand the **Views** folder and right-click the **Shared** folder. Select **Add** and then the **New Item** command.
+1.	Follow these steps to install the **NuGet** package dependencies.
 
- 	![Adding a new item](./images/Adding-a-new-item.png?raw=true "Adding a new item")
- 
-	_Adding a new item_
+	a.	Open the **NuGet** **Package Manager Console**. To do this, select **Tools | Library Package Manager | Package Manager Console**.
 
-1. In the **Add New Item** dialog box select the **MVC 4 View Master Page (ASPX)** template, located under **Visual [C#|Basic],** **Web** template list. Change the name to **Site.Master** and click **Add**.
+	b.	In the **Package Manager Console,** type **Install-Package NuGetPowerTools**.
 
- ![Add new item dialog](./images/Add-New-Item-Dialog.png?raw=true "Adding a new item dialog")
- _Add New Item Dialog - C#_
+	c.	After installing the package, type **Enable-PackageRestore**.
 
-1. Site.Master file is added. This template contains the HTML container layout for all pages on the site.  It includes the **<html>** element for the HTML response, as well as the **<head>** and **<body>** elements. **<asp:ContentPlaceholder>** tags within the HTML content identify regions that view templates will be able to fill in with dynamic content.
+	d.	Build the solution. The **NuGet** dependencies will be downloaded and installed automatically.
+
+	>**Note:** One of the advantages of using NuGet is that you don't have to ship all the libraries in your project, reducing the project size. With NuGet Power Tools, by specifying the package versions in the Packages.config file, you will be able to download all the required libraries the first time you run the project. This is why you will have to run these steps after you open an existing solution from this lab.
+	
+	>For more information, see this article: <http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages>.
+
+1. _layout.cshtml contains the HTML container layout for all pages on the site.  It includes the **<html>** element for the HTML response, as well as the **<head>** and **<body>** elements. **@RenderBody()** within the HTML body identify regions that view templates will be able to fill in with dynamic content.
 
 	````HTML(C#)
-	<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
-	
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-	
-	<html xmlns="http://www.w3.org/1999/xhtml" >
-	<head runat="server">
-	    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
-	</head>
-	<body>
-	    <div>
-	        <asp:ContentPlaceHolder ID="MainContent" runat="server">
-	    
-	        </asp:ContentPlaceHolder>
-	    </div>
-	</body>
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width" />
+			<title>@ViewBag.Title</title>
+			<link href="@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/Content/css")" rel="stylesheet" type="text/css" />
+			<link href="@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/Content/themes/base/css")" rel="stylesheet" type="text/css" />
+			<script src="@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/Scripts/js")"></script>
+		</head>
+		<body>
+			@RenderBody()
+		</body>
 	</html>
 	````
 1. Add a common header with links to the Home page and Store area on all pages in the site. In order to do that, add the following code inside the **<div>** statement.
 
 	````HTML(C#)
-	<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
-	
-	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-	
-	<html xmlns="http://www.w3.org/1999/xhtml" >
-	<head runat="server">
-	    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
-	</head>
-	<body>
-	    <div>
-	        <div id="header">
-	            <h1>ASP.NET MVC MUSIC STORE</h1>
-	            <ul id="navlist">
-	                <li class="first"><a href="/" id="current">Home</a></li>
-	                <li><a href="/Store/">Store</a></li>
-	            </ul>
-	        </div>
-	        <asp:ContentPlaceHolder ID="MainContent" runat="server">
-	    
-	        </asp:ContentPlaceHolder>
-	    </div>
-	</body>
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8" />
+			<meta name="viewport" content="width=device-width" />
+			<title>@ViewBag.Title</title>
+			<link href="@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/Content/css")" rel="stylesheet" type="text/css" />
+			<link href="@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/Content/themes/base/css")" rel="stylesheet" type="text/css" />
+			<script src="@System.Web.Optimization.BundleTable.Bundles.ResolveBundleUrl("~/Scripts/js")"></script>
+		</head>
+		<body>
+			<div id="header">
+				<h1>
+					ASP.NET MVC MUSIC STORE</h1>
+				<ul id="navlist">
+					<li class="first"><a href="/" id="current">Home</a></li>
+					<li><a href="/Store/">Store</a></li>
+				</ul>
+			</div>
+
+			@RenderBody()
+		</body>
 	</html>
 	````
 
-> **Note:** Did you know? Visual Studio 2010 has snippets that make it easy to add commonly used code in HTML, code files and more! Try it out by typing **<div + tab (twice)** to insert a complete **div** tag.
+> **Note:** Did you know? Visual Studio 11 has snippets that make it easy to add commonly used code in HTML, code files and more! Try it out by typing **<div + tab (twice)** to insert a complete **div** tag.
 
 #### Task 2 - Adding CSS Stylesheet ####
 
@@ -535,15 +526,6 @@ In this task, you will add a CSS stylesheet to **Site.Master** to define the sty
 1. ![Warning Dialog](./images/Warning-Dialog.png?raw=true "Warning Dialog")
 
 	_Warning Dialog_
-
-1. Add a **<link>** element into the **<head>** tag of **Site.Master** file, with a reference to the css file you just added:
-
-	````HTML
-	<head runat="server">
-	    <link href="/Content/Site.css" rel="Stylesheet" type="text/css" />
-	    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
-	</head>
-	````
 
  
 #### Task 3 - Adding a View Template ####
@@ -569,7 +551,7 @@ In this task, you will add a View template to generate the HTML response that wi
 
 1. Now, you need to add an appropriate View template. To do this, **right-click** inside the **Index** action method and select **Add View**. This will bring up the Add View dialog.
 
- 	![Adding a View from within the Index method - C](./images/Adding-a-View-from-within-the-Index-method-–-C.png?raw=true "Adding a View from within the Index method - C")
+ 	![Adding a View from within the Index method - C](./images/Adding-a-View-from-within-the-Index-method.png?raw=true "Adding a View from within the Index method - C")
  
 	_Adding a View from within the Index method - C#_
 
@@ -579,41 +561,30 @@ In this task, you will add a View template to generate the HTML response that wi
  
 	_Add View Dialog_
 
-1. Visual Studio generates an **Index.aspx** view template inside the Views\Home folder and then opens it.
+1. Visual Studio generates an **Index.cshtml** view template inside the Views\Home folder and then opens it.
 
- 	![Add View Dialog](./images/Add-View-Dialog.png?raw=true "Add View Dialog")
+ 	![Add View Dialog](./images/Add-View-Dialog-solution.png?raw=true "Add View Dialog")
  
 	_Add View Dialog_
 
-	> **Note:** name and location of the **Index.aspx** file is relevant and follows the default ASP.NET MVC naming conventions.
+	> **Note:** name and location of the **Index.cshtml** file is relevant and follows the default ASP.NET MVC naming conventions.
 
 	> The folder (\Views\**Home**) matches the controller name (**Home**Controller). The View template name (**Index**), matches the controller action method which will be displaying the View.
 
 	> This way, ASP.NET MVC avoids having to explicitly specify the name or location of a View template when using this naming convention to return a View.
 
-1. The generated View template is based on the **Site.master** template earlier defined, and contains two **<asp:content>** sections that enables you to override to fill with the page content. Update the Title to **Home**, and change the main content to **This is the Home Page**, as shown in the code below:
+1. The generated View template is based on the **_layout.cshtml** template earlier defined. Update the ViewBag.Title to **Home**, and change the main content to **This is the Home Page**, as shown in the code below:
 
 	````HTML
-	<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	    Home
-	</asp:Content>
-	<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+	@{
+		ViewBag.Title = "Home";
+	}
 
-	    <h2>This is the Home Page</h2>
-	
-	</asp:Content>
+	<h2>This is the Home Page</h2>
 	````
 
 1. Select **MvcMusicStore** project in the Solution Explorer and Press **F5** to run the Application.
 
- 	![MvcMusicStore Project selected in the Solution Explorer](./images/MvcMusicStore-Project-selected-in-the-Solution-Explorer.png?raw=true "MvcMusicStore Project selected in the Solution Explorer")
- 
-	_MvcMusicStore Project selected in the Solution Explorer_
-
- 
-### Next Step ###
-
-Click here to enter text.
 **Exercise 4: Verification**
 In order to verify that you have correctly performed all the steps in the previous exercise, proceed as follows:
 
@@ -625,15 +596,9 @@ In order to verify that you have correctly performed all the steps in the previo
 
 	1. The Home Page is using the **MasterPage** template, and so the welcome message is contained within the standard site HTML layout.
 
- 		![Home Index View using the MasterPage and style defined](./images/Home-Index-View-using-the-MasterPage-and-style-defined.png?raw=true "Home Index View using the MasterPage and style defined")
+ 		![Home Index View using the LayoutPage and style defined](./images/Home-Index-View-using-the-layoutPage-and-style-defined.png?raw=true "Home Index View using the layoutPage and style defined")
  
-		_Home Index View using the MasterPage and style defined_
-
- 
-### Next Step ###
-
-Click here to enter text.
-
+		_Home Index View using the LayoutPage and style defined_
 
 ### Exercise 5: Creating a View Model ###
 
@@ -645,9 +610,23 @@ In this exercise, you will learn how to create a ViewModel class and add the nee
 
 In this task, you will create a ViewModel class that will implement the Store genre listing scenario.
 
-1. If not already open, start Microsoft Visual Studio 2011 from **Start** | **All Programs** | **Microsoft Visual Studio 2011** | **Microsoft Visual Studio 2011**.
+1. If not already open, start Microsoft Visual Studio 11 Express Beta for Web from **Start** | **All Programs** | **Microsoft Visual Studio 11 Express** | **Visual Studio 11 Express Beta for Web**.
 
 1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to Source\Ex05-CreatingAViewModel\Begin, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
+
+1.	Follow these steps to install the **NuGet** package dependencies.
+
+	a.	Open the **NuGet** **Package Manager Console**. To do this, select **Tools | Library Package Manager | Package Manager Console**.
+
+	b.	In the **Package Manager Console,** type **Install-Package NuGetPowerTools**.
+
+	c.	After installing the package, type **Enable-PackageRestore**.
+
+	d.	Build the solution. The **NuGet** dependencies will be downloaded and installed automatically.
+
+	>**Note:** One of the advantages of using NuGet is that you don't have to ship all the libraries in your project, reducing the project size. With NuGet Power Tools, by specifying the package versions in the Packages.config file, you will be able to download all the required libraries the first time you run the project. This is why you will have to run these steps after you open an existing solution from this lab.
+	
+	>For more information, see this article: <http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages>.
 
 1. Create a **ViewModels** folder to hold the ViewModel. To do this, right-click the top-level **MvcMusicStore** project, select **Add** and then **New Folder**.
 
@@ -669,7 +648,7 @@ In this task, you will create a ViewModel class that will implement the Store ge
 
 1. Name the class **StoreIndexViewModel** and click **Add**.
 
- 	![Creating StoreIndexViewModel class - C](./images/Creating-StoreIndexViewModel-class-–-C.png?raw=true "Creating StoreIndexViewModel class - C")
+ 	![Creating StoreIndexViewModel class - C](./images/Creating-StoreIndexViewModel-class.png?raw=true "Creating StoreIndexViewModel class - C")
  
 	_Creating StoreIndexViewModel class - C#_
 
@@ -707,7 +686,7 @@ In this task, you will update the **StoreController** to use the **StoreIndexVie
 
 1. In order to use the **StoreIndexViewModel** class from the **StoreController**, add the following namespace to the top of the **StoreController** code:
 
-	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex5 StoreIndexViewModel using ViewModels - CSharp)
+	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex5 StoreIndexViewModel using ViewModels)
 
 	````C#
 	using MvcMusicStore.ViewModels;
@@ -721,7 +700,7 @@ In this task, you will update the **StoreController** to use the **StoreIndexVie
 
 1. Replace the **Index** method with the following code:
 
-	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex5 StoreController Index method - CSharp)
+	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex5 StoreController Index method)
 
 	````C#
 	public ActionResult Index()
@@ -754,44 +733,42 @@ In this task, you will create a View template that will use a StoreIndexViewMode
 
 1. Create a new View template. To do that, right-click inside the **Index** method and select **Add View.**
 
- 	![Adding a View - C](./images/Adding-a-View-–-C.png?raw=true "Adding a View - C")
+ 	![Adding a View - C](./images/Adding-a-View.png?raw=true "Adding a View - C")
  
 	_Adding a View - C#_
 
-1. Because the **Add View Dialog** was invoked from the **StoreController**, it will add the View template by default in a \Views\Store\Index.aspx file.  The view will be based on the Site.Master MasterPage template. Check the **Create a strongly-typed-view** checkbox and then select the **StoreIndexViewModel** as the **Model class**. Also, make sure that the View engine selected is **ASPX (C#)**. Click **Add**.
+1. Because the **Add View Dialog** was invoked from the **StoreController**, it will add the View template by default in a \Views\Store\Index.aspx file.  The view will be based on the Site.Master MasterPage template. Check the **Create a strongly-typed-view** checkbox and then select the **StoreIndexViewModel** as the **Model class**. Also, make sure that the View engine selected is **Razor**. Click **Add**.
 
- 	![Add View Dialog - C](./images/Add-View-Dialog-–-C.png?raw=true "Add View Dialog - C")
+ 	![Add View Dialog - C](./images/Add-View-Dialog-2.png?raw=true "Add View Dialog - C")
  
 	_Add View Dialog - C#_
 
-	The \Views\Store\Index.aspx View template file is created and opened. Based on the information provided to the **Add View** dialog in the last step, the View template will expect a **StoreIndexViewModel** instance as the data to use to generate an HTML response. You will notice that by seeing that the template inherits a **ViewPage<MusicStore.ViewModels.StoreIndexViewModel>** in C# and a **ViewPage(Of MusicStore. StoreIndexViewModel)** in Visual Basic.
+	The \Views\Store\Index.aspx View template file is created and opened. Based on the information provided to the **Add View** dialog in the last step, the View template will expect a **StoreIndexViewModel** instance as the data to use to generate an HTML response. You will notice that by seeing that the template inherits a **ViewPage<MusicStore.ViewModels.StoreIndexViewModel>** in C#.
 
  
 #### Task 5 - Updating the View Template ####
 
 In this task, you will update the View template created in the last task to output the number of genres and their names within the page.
 
-> **Note:** You will use <%: %> syntax (often referred to as "code nuggets") to execute code within the View template. There are two main ways you will see this used:
+> **Note:** You will use @ syntax (often referred to as "code nuggets") to execute code within the View template.
 
-> 1. Code enclosed within <% %> will be executed
-
-> 2. Code enclosed within <%: %> will be executed, and the result will be output to the page
-
-1. In the Index.aspx file, replace the code inside the **Content2** ASP.NET Content control with the following:
+1. In the Index.cshtml file, replace the code inside the **Content2** ASP.NET Content control with the following:
 
 	````HTML
-	<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-	
-	    <h3> Browse Genres</h3>
-	
-	    <p> Select from <%: Model.NumberOfGenres %> genres</p>
-	
-	</asp:Content>
+	@model MvcMusicStore.ViewModels.StoreIndexViewModel
+
+	@{
+		ViewBag.Title = "Browse Genres";
+	}
+
+	<h2>Browse Genres</h2>
+
+	<p> Select from @Model.NumberOfGenres genres</p>
 	````
 
 	> **Note:** As soon as you finish typing the period after the word **Model**, Visual Studio's Intellisense feature supplies you with a list of possible properties and methods to choose from.
 
-	> ![](./images/Note-03.png?raw=true)
+	> ![](./images/Intelisense.png?raw=true)
 
 	> _Getting Model properties and methods with Visual Studio's IntelliSense_
 
@@ -802,27 +779,23 @@ In this task, you will update the View template created in the last task to outp
 1. Loop over the genre list in the **StoreIndexViewModel** and create an HTML **<ul>** list using a **foreach** loop. Also change the code inside **Content1** ASP.NET Content control with a simple text: **Store Genres.**
 
 	````HTML(C#)
-	<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<MvcMusicStore.ViewModels.StoreIndexViewModel>" %>
-	
-	<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	    Store Genres
-	</asp:Content>
-	
-	<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-	
-	    <h3>Browse Genres</h3>
-	
-	    <p>Select from <%: Model.NumberOfGenres %> genres</p>
-	
-	    <ul>
-	        <% foreach (string genreName in Model.Genres) { %>
-	           <li>
-	            <%: genreName %>
-	           </li>
-	        <% } %>
-	    </ul>
-	
-	</asp:Content>
+	@model MvcMusicStore.ViewModels.StoreIndexViewModel
+
+	@{
+		ViewBag.Title = "Index";
+	}
+
+	<h2>Browse Genres</h2>
+
+	<p> Select from @Model.NumberOfGenres genres</p>
+
+	<ul>
+		@foreach (string genreName in Model.Genres) {
+			<li>
+				@genreName
+			</li>
+			}
+	</ul>
 	````
 
 1. Press **F5** to run the Application and browse **/Store**. You will see the list of genres passed in the **StoreIndexViewModel** object from the **StoreController** to the View template.
@@ -833,10 +806,6 @@ In this task, you will update the View template created in the last task to outp
 
 1. Close the browser.
 
- 
-### Next Step ###
-
-Click here to enter text.
 ### Exercise 6: Using Parameters in View ###
 
 In Exercise 3 you learned how to pass parameters to the Controller. In this exercise, you will learn how to use those parameters in the View template. For that purpose, you will be introduced first to Model classes that will help you to manage your data and domain logic. Additionally, you will learn how to create links to pages inside the ASP.NET MVC application without worrying of things like URL paths encoding.
@@ -845,19 +814,33 @@ In Exercise 3 you learned how to pass parameters to the Controller. In this exer
 
 Unlike ViewModels, which are created just to pass information from the Controller to the View, Model classes are built to contain and manage data and domain logic. In this task you will add two model classes to represent these concepts: **Genre** and **Album**. In the next Hands-on Lab, these classes will be hooked to a database, mapping each one of them to a table.
 
-1. If not already open, start Microsoft Visual Studio 2011 from **Start | All Programs | Microsoft Visual Studio 2011 | Microsoft Visual Studio 2011**.
+1. If not already open, start Microsoft Visual Studio 11 Express Beta for Web from **Start** | **All Programs** | **Microsoft Visual Studio 11 Express** | **Visual Studio 11 Express Beta for Web**.
 
 1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to Source\Ex06-UsingParametersInView\Begin, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
 
+1.	Follow these steps to install the **NuGet** package dependencies.
+
+	a.	Open the **NuGet** **Package Manager Console**. To do this, select **Tools | Library Package Manager | Package Manager Console**.
+
+	b.	In the **Package Manager Console,** type **Install-Package NuGetPowerTools**.
+
+	c.	After installing the package, type **Enable-PackageRestore**.
+
+	d.	Build the solution. The **NuGet** dependencies will be downloaded and installed automatically.
+
+	>**Note:** One of the advantages of using NuGet is that you don't have to ship all the libraries in your project, reducing the project size. With NuGet Power Tools, by specifying the package versions in the Packages.config file, you will be able to download all the required libraries the first time you run the project. This is why you will have to run these steps after you open an existing solution from this lab.
+	
+	>For more information, see this article: <http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages>.
+
 1. Add a **Genre** Model class. To do this, right-click the **Models** folder in the **Solution Explorer**, select **Add** and then the **Class** option. Name the file **Genre.cs** and click **Add**.
 
- 	![Add Genre Model Class - C](./images/Add-Genre-Model-Class-–-C.png?raw=true "Add Genre Model Class - C")
+ 	![Add Genre Model Class - C](./images/Add-Genre-Model-Class.png?raw=true "Add Genre Model Class - C")
  
 	_Add Genre Model Class - C#_
 
 1. Add a **Name** property to the Genre class. To do this, add the following code:
 
-	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 Genre - CSharp)
+	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 Genre)
 
 	````C#
 	using System;
@@ -878,7 +861,7 @@ Unlike ViewModels, which are created just to pass information from the Controlle
 
 1. Add two properties to the Album class**: Genre** and **Title**. To do this, add the following code:
 
-	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 Album - CSharp)
+	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 Album)
 
 	````C#
 	using System;
@@ -902,13 +885,9 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 
 1. Add a **StoreBrowseViewModel** class. To do this, right-click the **ViewModels** folder in the **Solution Explorer**, choose **Add** and then **Class**. Name the file **StoreBrowseViewModel.cs**.
 
- 	![Adding StoreBrowseViewModel Class - C](./images/Adding-StoreBrowseViewModel-Class-–-C.png?raw=true "Adding StoreBrowseViewModel Class - C")
- 
-	_Adding StoreBrowseViewModel Class - C#_
+1. Add a reference to the Models in **StoreBrowseViewModel** class. To do this, add the following using namespace:
 
-1. If you are using C#, add a reference to the Models in **StoreBrowseViewModel** class. To do this, add the following using namespace:
-
-	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 UsingModel - CSharp)
+	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 UsingModel)
 
 	````C#
 	using System;
@@ -927,7 +906,7 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 
 1. Add two properties to **StoreBrowseViewModel** class:  **Genre** and **Albums.** To do this, add the following code:
 
-	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 ModelProperties - CSharp)
+	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 ModelProperties)
 
 	````C#
 	using System;
@@ -956,9 +935,10 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 #### Task 3 - Using the New ViewModel in the StoreController ####
 
  In this task, you will modify the**StoreController**'s **Browse** and **Details** action methods to use the new **StoreBrowseViewModel**.
-1. If you are using C#, add a reference to the Models folder in **StoreController** class. To do this, expand the **Controllers** folder in the **Solution Explorer** and open the **StoreController** class. Then add the following code:
 
-	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 UsingModelInController - CSharp)
+1. Add a reference to the Models folder in **StoreController** class. To do this, expand the **Controllers** folder in the **Solution Explorer** and open the **StoreController** class. Then add the following code:
+
+	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 UsingModelInController)
 
 	````C#
 	using System;
@@ -973,7 +953,7 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 
 1. Replace the **Browse** action method to use the **StoreViewBrowseController** class**.** You will create a Genre and two new Albums objects with dummy data (in the next Hands-on Lab you will consume real data from a database). To do this, replace the **Browse** method with the following code:
 
-	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 BrowseMethod - CSharp)
+	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 BrowseMethod)
 
 	````C#
 	//
@@ -1004,7 +984,7 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 
 1. Replace the **Details** action method to use the **StoreViewBrowseController** class**.** You will create a new **Album** object to be returned to the **View**. To do this, replace the **Details** method with the following code:
 
-	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 DetailsMethod - CSharp)
+	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 DetailsMethod)
 
 	````C#
 	//
@@ -1024,44 +1004,35 @@ In this task, you will add a **Browse** View to show the Albums found for a spec
 
 1. Before creating the new View template, you should build the project so that the **Add View Dialog** knows about the **ViewModel** class to use. Build the project by selecting the **Debug** menu item and then **Build MvcMusicStore**.
 
- 	![Building the project in Visual Web Developer 2010](./images/Building-the-project-in-Visual-Web-Developer-2010.png?raw=true "Building the project in Visual Web Developer 2010")
+ 	![Building the project in Visual Studio 2010](./images/Building-the-project-in-Visual-Studio-11.png?raw=true "Building the project in Visual Studio 2010")
  
-	_Building the project in Visual Web Developer 2010_
-
- 	![Building the project in Visual Studio 2010](./images/Building-the-project-in-Visual-Studio-2010.png?raw=true "Building the project in Visual Studio 2010")
- 
-	_Building the project in Visual Studio 2010_
+	_Building the project in Visual Studio 11_
 
 1. Add a **Browse** View. To do this, right-click in the **Browse** action method of the **StoreController** and click **Add View**.
 
 1. In the **Add View** dialog box, verify that the View Name is **Browse**. Check the **Create a strongly-typed view** checkbox and select **StoreBrowseViewModel** from the**Model class** dropdown. Leave the other fields with their default value. Then click **Add**.
 
- 	![Adding a Browse View - C](./images/Adding-a-Browse-View-–-C.png?raw=true "Adding a Browse View - C")
+ 	![Adding a Browse View](./images/Adding-a-Browse-View.png?raw=true "Adding a Browse View - C")
  
-	_Adding a Browse View - C#_
+	_Adding a Browse View_
 
-1. Modify the **Browse.aspx** to display the Genre's information, accessing the **StoreBrowseViewModel** object that is passed to the view template. To do this, replace the **Title Content** and the **Main Content** with the following content:
+1. Modify the **Browse.cshtml** to display the Genre's information, accessing the **StoreBrowseViewModel** object that is passed to the view template. To do this, replace the **Title Content** and the **Main Content** with the following content:
 
 	````HTML(C#)
-	<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<MvcMusicStore.ViewModels.StoreBrowseViewModel>" %>
-	
-	<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	    Browse Albums
-	</asp:Content>
-	
-	<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-	
-	    <h2>Browsing Genre: <%: Model.Genre.Name %></h2>
-	
-	    <ul>
-	
-	    <% foreach (var album in Model.Albums)
-	       { %>
-	       <li><%: album.Title %></li>
-	    <% } %>
-	    </ul>
-	
-	</asp:Content>
+	@model MvcMusicStore.ViewModels.StoreBrowseViewModel
+
+	@{
+		ViewBag.Title = "Browse Albums";
+	}
+
+	<h2>Browsing Genre: @Model.Genre.Name</h2>
+
+	<ul>
+		@foreach (var album in Model.Albums)
+		{
+			<li>@album.Title</li>
+		}
+	</ul>
 	````
  
 #### Task 5 - Running the Application ####
@@ -1085,24 +1056,19 @@ In this task, you will implement the **Store/Details** view to display informati
 
 1. In the **Add View** dialog view, verify that the **View Name** is **Details**. Check the **Create a strongly-typed view** checkbox and select **Album** from the**Model class** drop-down. Leave the other fields with their default value. Then click **Add**. This will create and open a **\Views\Store\Details.aspx** file.
 
- 	![Adding a Details View - C](./images/Adding-a-Details-View-–-C.png?raw=true "Adding a Details View - C")
+ 	![Adding a Details View](./images/Adding-a-Details-View.png?raw=true "Adding a Details View")
  
-	_Adding a Details View - C#_
-
-1. Modify the **Details.aspx** file to display the Album's information, accessing the **Album** object that is passed to the view template.  To do this, replace the **Main Content** with the following content:
+	_Adding a Details View
+1. Modify the **Details.cshtml** file to display the Album's information, accessing the **Album** object that is passed to the view template.  To do this, replace the content with the following content:
 
 	````HTML(C#)
-	<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<MvcMusicStore.Models.Album>" %>
-	
-	<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	    Details
-	</asp:Content>
-	
-	<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-	
-	    <h2>Album: <%: Model.Title %></h2>
-	
-	</asp:Content>
+	@model MvcMusicStore.Models.Album
+
+	@{
+		ViewBag.Title = "Details";
+	}
+
+	<h2>Album: @Model.Title</h2>
 	````
  
 #### Task 7 - Running the Application ####
@@ -1122,44 +1088,41 @@ In this task, you will test that the **Details** View retrieves Album's informat
 
 In this task, you will add a link in the Store View to have a link in every Genre name to the appropriate **/Store/Browse** URL. This way, when you click on a Genre, for instance **Disco**, it will navigate to **/Store/Browse?genre=Disco** URL.
 
-Close the browser if needed, to return to the Visual Studio window. Update the **Index** page to add a link to the **Browse** page. To do this, in the **Solution Explorer** expand the **Views** folder, then the **Store** folder and double-click the **Index.aspx** page. Add a link to the Browse view indicating the genre selected. To do this, replace the following  code in the **Index.aspx**:	````HTML(C#)
-	<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<MvcMusicStore.ViewModels.StoreIndexViewModel>" %>
-	
-	<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	    Browse Genres
-	</asp:Content>
-	
-	<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-	
-	    <h2>Browse Genres</h2>
-	    
-	    <p>Select from **<%: Model.NumberOfGenres** %></p>
-	
-	    <ul>
-	        <% foreach (string genreName in Model.Genres)
-	           { %>
-	           <li>
-	           <%: Html.ActionLink(genreName, "Browse", new { genre = genreName }, null) %>
-	           </li>
-	        <% } %>
-	    </ul>
-	
-	</asp:Content>
+1. Close the browser if needed, to return to the Visual Studio window. Update the **Index** page to add a link to the **Browse** page. To do this, in the **Solution Explorer** expand the **Views** folder, then the **Store** folder and double-click the **Index.cshtml** page. Add a link to the Browse view indicating the genre selected. To do this, replace the following  code in the **Index.cshtml**:	
+
+	````HTML(C#)
+	@model MvcMusicStore.ViewModels.StoreIndexViewModel
+
+	@{
+		ViewBag.Title = "Browse Genres";
+	}
+
+	<h2>Browse Genres</h2>
+
+	<p> Select from @Model.NumberOfGenres genres</p>
+
+	<ul>
+		@foreach (string genreName in Model.Genres) {
+			<li>
+				@Html.ActionLink(genreName, "Browse", new { genre = genreName }, null)
+			</li>
+			}
+	</ul>
 	````
 
 	> **Note**: another approach would be linking directly to the page, with a code like the following:
 
-	> <a href="/Store/Browse?genre=<%: genreName %>"><%: genreName %></a>
+	>	&lt;a href="/Store/Browse?genre=<%: genreName %>"><%: genreName %></a&gt;
 
 	> Although this approach works, it depends on a hardcoded string. If you later rename the Controller, you will have to change this instruction manually. A better alternative is to use an **HTML Helper** method. ASP.NET MVC includes an HTML Helper method which is available for such tasks. The **Html.ActionLink()** helper method makes it easy to build HTML **<a>** links, making sure URL paths are properly URL encoded.
 
 	> Htlm.ActionLink has several overloads. In this exercise you will use one that takes three parameters:
 
-	> 1. Link text, which will display the Genre name
+	>	1. Link text, which will display the Genre name
 
-	> 2. Controller action name (**Browse**)
+	>	2. Controller action name (**Browse**)
 
-	> 3. Route parameter values, specifying both the name (**Genre**) and the value (**Genre name**)
+	>	3. Route parameter values, specifying both the name (**Genre**) and the value (**Genre name**)
 
  
 #### Task 9 - Running the Application ####
@@ -1170,7 +1133,9 @@ In this task, you will test that each Genre is displayed with a link to the appr
 
 1. The project starts in the Home page. Change the URL to **/Store** to verify that each Genre links to the appropriate **/Store/Browse** URL.
 
- _/Browsing Genres with links to Browse page_
+	![Browsing Genres with links to Browse page](./images/Browsing-genres-with-links-to-Browse-page.png?raw=true "Browsing Genres with links to Browse page")
+
+	_Browsing Genres with links to Browse page_
  
 #### Task 10 - Using Dynamic ViewModel Collection to Pass Values ####
 
@@ -1199,23 +1164,8 @@ You will now use ViewBag dynamic collection to pass from the controller to the v
 	}
 	````
 
-	````VisualBasic
-	Public Function Index() As ActionResult
-	    'Create list of genres
-	        Dim genres = New List(Of String) From {"Rock", "Jazz", "Country", "Pop", "Disco"}
-	
-	    'Create your view model
-	    Dim viewModel = New StoreIndexViewModel With
-	                    {.NumberOfGenres = genres.Count, 
-	                     .Genres = genres}
-	
-	    ViewBag.Starred = New List(Of String) From {"Rock", "Jazz"}
-	
-	    Return View(viewModel) 
-	End Function
-	````
+	**Note:** You could also use the syntax **ViewBag["Starred"]** to access the properties. 
 
- **Note:** You could also use the syntax **ViewBag["Starred"]** to access the properties. 
 1. The star icon **"starred.png"** is included in the **Source\Assets\Images** folder of this lab. In order to add them to the application, drag their content from a **Windows Explorer** window into the **Solution Explorer** in Visual Web Developer Express, as shown below:
 
  	![Adding star image to the solution](./images/Adding-star-image-to-the-solution.png?raw=true "Adding star image to the solution")
@@ -1225,34 +1175,29 @@ You will now use ViewBag dynamic collection to pass from the controller to the v
 1. Open the view **Store/Index.aspx** and modify the content. You will read the "starred" property in the **ViewBag** collection, and ask if the current genre name is in the list. In that case you will show a star icon right to the genre link.
 
 	````HTML(C#)
-	<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<MvcMusicStore.ViewModels.StoreIndexViewModel>" %>
-	
-	<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	    Browse Genres
-	</asp:Content>
-	
-	<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-	
-	    <h2>Browse Genres</h2>
-	    
-	    <p>Select from <%: Model.NumberOfGenres %></p>
-	
-	    <ul>
-	        <% foreach (string genreName in Model.Genres)
-	           { %>
-	           <li>
-	           <%: Html.ActionLink(genreName, "Browse", new { genre = genreName }, null) %> 
-	           
-	           <% if (ViewBag.Starred.Contains(genreName))  {  %>
-	                <img src="../../Content/Images/starred.png" alt="Starred element" />
-	           <% } %>
-	           </li>
-	        <% } %>
-	    </ul>
-	    <br/>
-	    <h5> <img src="../../Content/Images/starred.png" alt="Starred element" /> Starred genres 20% Off! </h5>
-	
-	</asp:Content>
+	?@model MvcMusicStore.ViewModels.StoreIndexViewModel
+
+	@{
+		ViewBag.Title = "Browse Genres";
+	}
+
+	<h2>Browse Genres</h2>
+
+	<p> Select from @Model.NumberOfGenres genres</p>
+
+	<ul>
+		@foreach (string genreName in Model.Genres) {
+			<li>
+				@Html.ActionLink(genreName, "Browse", new { genre = genreName }, null)
+
+				@if (ViewBag.Starred.Contains(genreName)) { 
+					<img src="../../Content/Images/starred.png" alt="Starred element" />
+				}
+			</li>
+			}
+	</ul>
+	<br />
+	<h5><img src="../../Content/Images/starred.png" alt="Starred element" />Starred genres 20% Off!</h5>
 	````
  
 #### Task 11 - Running the Application ####
@@ -1267,10 +1212,6 @@ In this task, you will test that the starred genres display a star icon.
  
 	_Browsing Genres with starred elements_
 
- 
-### Next Step ###
-
-Click here to enter text.
 ## Summary ##
 
 By completing this Hands-On Lab you have learned the fundamentals of ASP.NET MVC:
