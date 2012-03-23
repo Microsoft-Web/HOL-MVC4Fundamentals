@@ -130,7 +130,7 @@ Estimated time to complete this lab: **45 minutes**.
 
 In this exercise, you will learn how to create an ASP.NET MVC application in Visual Studio 11 Express as well as its main folder organization. Additionally, you'll learn how to add a new Controller and have it display a simple string at the Application screen.
 
-#### Task 1 - Creating the ASP.NET MVC Web Application Project ####
+#### Task 1 - Creating the ASP.NET MVC Web Application Project####
 
 1. In this task, you will create an empty ASP.NET MVC application project using the MVC Visual Studio template. Start Microsoft Visual Studio 11 from **Start** | **All Programs** | **Microsoft Visual Studio 11 Express** | **Visual Studio 11 Express Beta for Web**.
 
@@ -166,7 +166,7 @@ In this exercise, you will learn how to create an ASP.NET MVC application in Vis
  
 	_New ASP.NET MVC 4 Project Dialog Box - C#_
 
-#### Task 2 - Exploring the Solution Structure ####
+#### Task 2 - Exploring the Solution Structure####
 
 The ASP.NET MVC framework includes a Visual Studio project template that helps you create Web applications that are structured to support the MVC pattern. This template creates a new MVC Web application that is configured to have the required folders, item templates, and configuration-file entries.
 
@@ -195,7 +195,7 @@ In this task, you will examine the solution structure to understand the involved
 		> **Note:** In addition to the folders listed previously, an MVC Web application uses the **Global.asax** file to set global URL routing defaults, and it uses the **Web.config** file to configure the application.
 
  
-#### Task 3 - Adding a HomeController ####
+#### Task 3 - Adding a HomeController####
 
 In ASP.NET applications that do not use the MVC framework, user interaction is organized around pages, and around raising and handling events from those pages. In contrast, user interaction with ASP.NET MVC applications is organized around controllers and their action methods.
 
@@ -226,7 +226,7 @@ In this task, you will add a Controller class that will handle URLs to the Home 
 	}
 	````
 
-#### Task 4 - Running the Application ####
+#### Task 4 - Running the Application####
 
 In this task, you will try out the Application in a web browser.
 
@@ -253,7 +253,7 @@ In this exercise, you will learn how to create a Controller to implement simple 
 For the scope of this exercise, you will have those actions to simply return a string by now.
 
  
-#### Task 1 - Adding a New StoreController Class ####
+#### Task 1 - Adding a New StoreController Class####
 
 In this task, you will add a new Controller.
 
@@ -281,7 +281,7 @@ In this task, you will add a new Controller.
  
 	_Add Controller Dialog_
  
-#### Task 2 - Modifying the StoreController's Actions ####
+#### Task 2 - Modifying the StoreController's Actions####
 
 In this task, you will modify Controller methods that are called **actions**. These actions are responsible for responding to URL requests and determine the content that should be sent back to the browser or user that invoked the URL.
 
@@ -318,7 +318,7 @@ In this task, you will modify Controller methods that are called **actions**. Th
 	}
 	````
 
-#### Task 3 - Running the Application ####
+#### Task 3 - Running the Application####
 
 In this task, you will try out the Application in a web browser.
 
@@ -342,7 +342,7 @@ In this task, you will try out the Application in a web browser.
 
 Until now, you have been returning constant strings from the Controllers. In this exercise you will learn how to pass parameters to a Controller using the URL and querystring and then making the method actions respond with text to the browser.
 
-#### Task 1 - Adding Genre Parameter to StoreController ####
+#### Task 1 - Adding Genre Parameter to StoreController####
 
 In this task, you will use the **querystring** to send parameters to the **Browse** action method in the **StoreController**.
 
@@ -387,7 +387,7 @@ In this task, you will use the **querystring** to send parameters to the **Brows
 	> For further explanation, please visit [this msdn article](http://msdn.microsoft.com/en-us/library/a2a4yykt(v=VS.80).aspx).
 
  
-#### Task 2 - Running the Application ####
+#### Task 2 - Running the Application####
 
 In this task, you will try out the Application in a web browser and use the **genre** parameter.
 
@@ -402,7 +402,7 @@ In this task, you will try out the Application in a web browser and use the **ge
 1. Close the browser.
 
  
-#### Task 3 - Adding an Id Parameter Embedded in the URL ####
+#### Task 3 - Adding an Id Parameter Embedded in the URL####
 
 In this task, you will use the **URL** to pass an **Id** parameter to the **Details** action method of the **StoreController**. ASP.NET MVC's default routing convention is to treat the segment of a URL after the action method name as a parameter named **Id**.  If your action method has a parameter named Id then ASP.NET MVC will automatically pass the URL segment to you as a parameter. In the URL **Store/Detail/5**, **Id** will be interpreted as **5**.
 
@@ -422,7 +422,7 @@ In this task, you will use the **URL** to pass an **Id** parameter to the **Deta
 	}
 	````
  
-#### Task 4 - Running the Application ####
+#### Task 4 - Running the Application####
 
 In this task, you will try out the Application in a web browser and use the **Id** parameter.
 
@@ -440,7 +440,7 @@ So far you have been returning strings from controller actions. Although that's 
 
 In this exercise you will learn how to add a MasterPage to setup a template for common HTML content, a StyleSheet to enhance the look and feel of the site and finally a View template to enable HomeController to return HTML.
 
-#### Task 1 - Modifying the \_layout.cshtml ####
+#### Task 1 - Modifying the \_layout.cshtml####
 
 ASP.NET MasterPages are layout files that allow you to setup a template for common HTML to use across the entire website. In this task you will add a MasterPage with a common header with links to the Home page and Store area.
 
@@ -513,7 +513,7 @@ ASP.NET MasterPages are layout files that allow you to setup a template for comm
 	
 
 
-#### Task 2 - Adding CSS Stylesheet ####
+#### Task 2 - Adding CSS Stylesheet####
 
 The empty project template includes a very streamlined CSS file which just includes styles used to display validation messages. You will use additional CSS and images (potentially provided by a designer) in order to enhance the look and feel of the site.
 
@@ -532,7 +532,7 @@ In this task, you will add a CSS stylesheet to **Site.Master** to define the sty
 	_Warning Dialog_
 
  
-#### Task 3 - Adding a View Template ####
+#### Task 3 - Adding a View Template####
 
 In this task, you will add a View template to generate the HTML response that will use the Master Page and CSS added in this exercise.
 
@@ -610,7 +610,7 @@ So far you made your Views display hardcoded HTML, but in order to create dynami
 
 In this exercise, you will learn how to create a ViewModel class and add the needed properties: in this case the number of genres in the store and a list of those genres. Also, you will update the StoreController to use the created ViewModel and finally you will create a new View template that will display the mentioned properties in the page.
 
-#### Task 1 - Creating a ViewModel Class ####
+#### Task 1 - Creating a ViewModel Class####
 
 In this task, you will create a ViewModel class that will implement the Store genre listing scenario.
 
@@ -656,7 +656,7 @@ In this task, you will create a ViewModel class that will implement the Store ge
  
 	_Creating StoreIndexViewModel class - C#_
 
-#### Task 2 - Adding Properties to the ViewModel class ####
+#### Task 2 - Adding Properties to the ViewModel class####
 
 There are two pieces of information to be passed from the StoreController to the View template in order to generate the HTML response wanted: the number of genres in the store and a list of those genres.
 
@@ -676,7 +676,7 @@ In this task, you will add those 2 properties to the **StoreIndexViewModel** cla
 	> **Note**: The **{ get; set; }** notation makes use of C#'s auto-implemented properties feature. It provides the benefits of a property without requiring us to declare a backing field.
 
  
-#### Task 3 - Updating StoreController to use the StoreIndexViewModel ####
+#### Task 3 - Updating StoreController to use the StoreIndexViewModel####
 
 The **StoreIndexViewModel** class encapsulates the information needed to pass from **StoreController**'s **Index** method to a View template in order to generate a response.
 
@@ -725,7 +725,7 @@ In this task, you will update the **StoreController** to use the **StoreIndexVie
 	> **Note:** If you're unfamiliar with C#, you may assume that using **var** means that the **viewModel** variable is late-bound. That's not correct - the C# compiler is using type-inference based on what you assign to the variable to determine that **viewModel** is of type **StoreIndexViewModel**. Also, by compiling the local **viewModel** variable as a **StoreIndexViewModel** type you get compile-time checking and Visual Studio code-editor support.
 
  
-#### Task 4 - Creating a View Template that Uses StoreIndexViewModel ####
+#### Task 4 - Creating a View Template that Uses StoreIndexViewModel####
 
 In this task, you will create a View template that will use a StoreIndexViewModel object passed from the Controller to display a list of genres.
 
@@ -750,7 +750,7 @@ In this task, you will create a View template that will use a StoreIndexViewMode
 	The \Views\Store\Index.aspx View template file is created and opened. Based on the information provided to the **Add View** dialog in the last step, the View template will expect a **StoreIndexViewModel** instance as the data to use to generate an HTML response. You will notice that by seeing that the template inherits a **ViewPage<MusicStore.ViewModels.StoreIndexViewModel>** in C#.
 
  
-#### Task 5 - Updating the View Template ####
+#### Task 5 - Updating the View Template####
 
 In this task, you will update the View template created in the last task to output the number of genres and their names within the page.
 
@@ -814,7 +814,7 @@ In this task, you will update the View template created in the last task to outp
 
 In Exercise 3 you learned how to pass parameters to the Controller. In this exercise, you will learn how to use those parameters in the View template. For that purpose, you will be introduced first to Model classes that will help you to manage your data and domain logic. Additionally, you will learn how to create links to pages inside the ASP.NET MVC application without worrying of things like URL paths encoding.
 
-#### Task 1 - Adding Model Classes ####
+#### Task 1 - Adding Model Classes####
 
 Unlike ViewModels, which are created just to pass information from the Controller to the View, Model classes are built to contain and manage data and domain logic. In this task you will add two model classes to represent these concepts: **Genre** and **Album**. In the next Hands-on Lab, these classes will be hooked to a database, mapping each one of them to a table.
 
@@ -883,7 +883,7 @@ Unlike ViewModels, which are created just to pass information from the Controlle
 	}
 	````
  
-#### Task 2 - Adding a StoreBrowseViewModel ####
+#### Task 2 - Adding a StoreBrowseViewModel####
 
 A **StoreBrowseViewModel** will be used in this task to show the Albums that match a selected Genre.  In this task, you will create this class and then add two properties to handle the **Genre** and its **Album**'s List.
 
@@ -936,7 +936,7 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 	> **List<T>** is the generic equivalent of the **ArrayList** type and is available in the **System.Collections.Generic** namespace**.** One of the benefits of using **generics** is that since the type is specified, you do not need to take care of type checking operations such as casting the elements into **Album** as you would do with an **ArrayList**.
 
  
-#### Task 3 - Using the New ViewModel in the StoreController ####
+#### Task 3 - Using the New ViewModel in the StoreController####
 
  In this task, you will modify the**StoreController**'s **Browse** and **Details** action methods to use the new **StoreBrowseViewModel**.
 
@@ -1002,7 +1002,7 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 	}
 	````
 
-#### Task 4 - Adding a Browse View Template ####
+#### Task 4 - Adding a Browse View Template####
 
 In this task, you will add a **Browse** View to show the Albums found for a specific Genre.
 
@@ -1039,7 +1039,7 @@ In this task, you will add a **Browse** View to show the Albums found for a spec
 	</ul>
 	````
  
-#### Task 5 - Running the Application ####
+#### Task 5 - Running the Application####
 
 In this task, you will test that the **Browse** method retrieves Albums from the **Browse** method action.
 
@@ -1052,7 +1052,7 @@ In this task, you will test that the **Browse** method retrieves Albums from the
 	_Browsing Store Disco Albums_
 
  
-#### Task 6 - Displaying information About a Specific Album ####
+#### Task 6 - Displaying information About a Specific Album####
 
 In this task, you will implement the **Store/Details** view to display information about a specific album. In this Hands-on Lab, everything you will display about the album is already contained in the View template. So, instead of creating a **StoreDetailsViewModel** class you will use the current **StoreBrowseViewModel** template passing the Album to it.
 
@@ -1075,7 +1075,7 @@ In this task, you will implement the **Store/Details** view to display informati
 	<h2>Album: @Model.Title</h2>
 	````
  
-#### Task 7 - Running the Application ####
+#### Task 7 - Running the Application####
 
 In this task, you will test that the **Details** View retrieves Album's information from the **Details action** method.
 
@@ -1088,7 +1088,7 @@ In this task, you will test that the **Details** View retrieves Album's informat
 	_Browsing Album's Detail_
 
  
-#### Task 8 - Adding Links Between Pages ####
+#### Task 8 - Adding Links Between Pages####
 
 In this task, you will add a link in the Store View to have a link in every Genre name to the appropriate **/Store/Browse** URL. This way, when you click on a Genre, for instance **Disco**, it will navigate to **/Store/Browse?genre=Disco** URL.
 
@@ -1129,7 +1129,7 @@ In this task, you will add a link in the Store View to have a link in every Genr
 	>	3. Route parameter values, specifying both the name (**Genre**) and the value (**Genre name**)
 
  
-#### Task 9 - Running the Application ####
+#### Task 9 - Running the Application####
 
 In this task, you will test that each Genre is displayed with a link to the appropriate **/Store/Browse** URL.
 
@@ -1141,7 +1141,7 @@ In this task, you will test that each Genre is displayed with a link to the appr
 
 	_Browsing Genres with links to Browse page_
  
-#### Task 10 - Using Dynamic ViewModel Collection to Pass Values ####
+#### Task 10 - Using Dynamic ViewModel Collection to Pass Values####
 
 In this task, you will learn a simple and powerfull method to pass values between the Controller and the View without making any changes in the Model. MVC 4 provides the collection "ViewModel" than can be assigned to any dynamic value and accessed inside controllers and views as well.
 
@@ -1204,7 +1204,7 @@ You will now use ViewBag dynamic collection to pass from the controller to the v
 	<h5><img src="../../Content/Images/starred.png" alt="Starred element" />Starred genres 20% Off!</h5>
 	````
  
-#### Task 11 - Running the Application ####
+#### Task 11 - Running the Application####
 
 In this task, you will test that the starred genres display a star icon.
 
@@ -1225,7 +1225,7 @@ In this task, you will test that the starred genres display a star icon.
 In this exercise, you will explore the enhancements in the ASP.NET MVC4 project templates, taking a look at the most relevant features of the new template.
 
 <a name="Ex07Task1" />
-#### Task 1: Exploring the Exploring the MVC4 Internet Application Template ####
+#### Task 1: Exploring the Exploring the MVC4 Internet Application Template####
 
 1. Open **Visual Studio 11**.
 
