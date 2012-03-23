@@ -276,7 +276,7 @@ In this task, you will add a new Controller.
 
 1. Add the new controller. To do this, right-click the **Controllers** folder within the Solution Explorer, select **Add** and then the **Controller** command. Change the **Controller** **Name** to **StoreController**, and click **Add**.
 
-	![Add Controller Dialog](./images/Add-Controller-Dialog-2.png?raw=true "Add Controller Dialog")
+	![Add Controller Dialog](./images/Add-controller-dialog-2.png?raw=true "Add Controller Dialog")
  
 	_Add Controller Dialog_
  
