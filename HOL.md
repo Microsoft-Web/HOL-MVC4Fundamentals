@@ -6,7 +6,7 @@
 <a name="Overview" />
 ## Overview ##
 
-This Hands-On Lab is based on MVC (Model View Controller) Music Store, a tutorial application that introduces and explains step-by-step how to use ASP.NET MVC and Visual Studio 2011. Throughout the lab you will learn the simplicity, yet power of using these technologies together. You will start with a simple application and will build it until you have a fully functional MVC Web Application.
+This Hands-On Lab is based on MVC (Model View Controller) Music Store, a tutorial application that introduces and explains step-by-step how to use ASP.NET MVC and Visual Studio. Throughout the lab you will learn the simplicity, yet power of using these technologies together. You will start with a simple application and will build it until you have a fully functional MVC Web Application.
 
 This Lab will work with ASP.NET MVC 4.
 
@@ -33,9 +33,9 @@ Music Store application will be built using **Model View Controller (MVC)**, an 
 - **Controllers:** Controllers are the components that handle user interaction, manipulate the model, and ultimately select a view to render the UI. In an MVC application, the view only displays information; the controller handles and responds to user input and interaction.
 
  
-The MVC pattern helps you to create applications that separate the different aspects of the application (input logic, business logic, and UI logic), while providing a loose coupling between these elements. This separation helps you manage complexity when you build an application, because it enables you to focus on one aspect of the implementation at a time. In addition to managing complexity, the MVC pattern makes it easier to test applications than it is to test a traditional ASP.NET Web application, encouraging the use of test-driven development (TDD) for creating an applications.
+The MVC pattern helps you to create applications that separate the different aspects of the application (input logic, business logic, and UI logic), while providing a loose coupling between these elements. This separation helps you manage complexity when you build an application, because it enables you to focus on one aspect of the implementation at a time. In addition to managing complexity, the MVC pattern makes it easier to test applications than it is to test a traditional ASP.NET Web application, encouraging the use of test-driven development (TDD) for creating applications.
 
-Then, the **ASP.NET MVC** framework provides an alternative to the ASP.NET Web Forms pattern for creating MVC-based Web applications. The **ASP.NET MVC** framework is a lightweight, highly testable presentation framework that (as with Web-forms-based applications) is integrated with existing ASP.NET features, such as master pages and membership-based authentication so you get all the power of the core .NET framework.  This is useful if you are already familiar with ASP.NET Web Forms because all of the libraries that you already use are available to you in ASP.NET MVC as well.
+Then, the **ASP.NET MVC** framework provides an alternative to the ASP.NET Web Forms pattern for creating MVC-based Web applications. The **ASP.NET MVC** framework is a lightweight, highly testable presentation framework that (as with Web-forms-based applications) is integrated with existing ASP.NET features, such as master pages and membership-based authentication so you get all the power of the core .NET framework.  This is useful if you are already familiar with ASP.NET Web Forms because all the libraries that you already use are available in ASP.NET MVC as well.
 
 In addition, the loose coupling between the three main components of an MVC application also promotes parallel development. For instance, one developer can work on the view, a second developer can work on the controller logic, and a third developer can focus on the business logic in the model.
 
@@ -66,18 +66,20 @@ You must have the following items to complete this lab:
 ### Setup ###
 
 _**Installing Code Snippets**_
+
 For convenience, much of the code you will be managing along this lab is available as Visual Studio code snippets. To install the code snippets run **.\Source\Assets\CodeSnippets.vsi** file.
 
 _**Installing Web Platform Installer**_
+
 This section assumes that you don't have some or all the system requirements installed. In case you do, you can simply skip this section.
 
 Microsoft Web Platform Installer (WebPI) is a tool that manages the installation of the prerequisites for this Lab.
 
 > **Note:** As well as the Microsoft Web Platform, WebPI can also install many of the open source applications that are available like Umbraco, Kentico, DotNetNuke and many more.  These are very useful for providing a foundation from which to customize an application to your requirements, dramatically cutting down your development time.
 
-Please follow these steps to downloads and install Microsoft Visual Studio 11 Express Beta for Web:
+Please follow these steps to download and install Microsoft Visual Studio 11 Express Beta for Web:
 
-1. Install **Visual Studio 11 Express Beta for Web**. To do this, Navigate to [http://www.microsoft.com/web/gallery/install.aspx?appid=VWD11_BETA&prerelease=true](http://www.microsoft.com/web/gallery/install.aspx?appid=VWD11_BETA&prerelease=true) using a web browser. 
+1. Install **Visual Studio 11 Express Beta for Web**. To do this, navigate to [http://www.microsoft.com/web/gallery/install.aspx?appid=VWD11_BETA&prerelease=true](http://www.microsoft.com/web/gallery/install.aspx?appid=VWD11_BETA&prerelease=true) using a web browser. 
 
 	![Web Platform Installer 4.0 window](./images/Microsoft-Web-Platform-Installer-4.png?raw=true "Web Platform Installer 4.0 download")
 
@@ -106,8 +108,6 @@ Please follow these steps to downloads and install Microsoft Visual Studio 11 Ex
  	![Web Platform Installer](./images/Web-Platform-Installer.png?raw=true "Web Platform Installer")
  
 	_Web Platform Installer_
-
-1. Finally the Web Platform Installer shows the installed products. Click **Finish** to finish the setup process.
 
 ---
 <a name="Exercises" />
@@ -144,20 +144,6 @@ In this exercise, you will learn how to create an ASP.NET MVC application in Vis
 1. In this task, you will create an empty ASP.NET MVC application project using the MVC Visual Studio template. Start Microsoft Visual Studio 11 from **Start** | **All Programs** | **Microsoft Visual Studio 11 Express** | **Visual Studio 11 Express Beta for Web**.
 
 1. On the **File** menu, click **New Project**.
-
-1.	Follow these steps to install the **NuGet** package dependencies.
-
-	a.	Open the **NuGet** **Package Manager Console**. To do this, select **Tools | Library Package Manager | Package Manager Console**.
-
-	b.	In the **Package Manager Console,** type **Install-Package NuGetPowerTools**.
-
-	c.	After installing the package, type **Enable-PackageRestore**.
-
-	d.	Build the solution. The **NuGet** dependencies will be downloaded and installed automatically.
-
-	>**Note:** One of the advantages of using NuGet is that you don't have to ship all the libraries in your project, reducing the project size. With NuGet Power Tools, by specifying the package versions in the Packages.config file, you will be able to download all the required libraries the first time you run the project. This is why you will have to run these steps after you open an existing solution from this lab.
-	
-	>For more information, see this article: <http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages>.
 
 1. In the **New Project** dialog box select the **ASP.NET MVC 4 Web Application** project type, located under **Visual C#,** **Web** template list.
 
@@ -200,7 +186,7 @@ In this task, you will examine the solution structure to understand the involved
 
 	1. **Views**. This folder is the recommended location for views, the components responsible for displaying the application's user interface. Views use .aspx, .ascx, .cshtml and .master files, in addition to any other files that are related to rendering views. Views folder contains a folder for each controller; the folder is named with the controller-name prefix. For example, if you have a controller named **HomeController**, the Views folder will contain a folder named Home. By default, when the ASP.NET MVC framework loads a view, it looks for an .aspx file with the requested view name in the Views\controllerName folder (**Views\[ControllerName]\[Action].aspx**) or (**Views\[ControllerName]\[Action].cshtml**) for Razor Views. 
 
-	1. **Views\Shared.** By default, there is also a folder named Shared in the Views folder, which does not correspond to any controller. The Shared folder is used for views that are shared across multiple controllers. For example, you can put the Web application's master page in the Shared folder.
+	1. **Views\Shared.** By default, there is also a folder named Shared in the Views folder, which does not correspond to any controller. The Shared folder is used for views that are shared across multiple controllers. For example, you can put the Web application's layout master page in the Shared folder.
 
 		> **Note:** In addition to the folders listed previously, an MVC Web application uses the **Global.asax** file to set global URL routing defaults, and it uses the **Web.config** file to configure the application.
 
@@ -460,12 +446,12 @@ In this task, you will try out the Application in a web browser and use the **Id
 
 So far you have been returning strings from controller actions. Although that's a useful way of understanding how controllers work, it's not how you'd want to build a real web application. Views are components that provide a better approach for generating HTML back to the browser with the use of template files.
 
-In this exercise you will learn how to add a MasterPage to setup a template for common HTML content, a StyleSheet to enhance the look and feel of the site and finally a View template to enable HomeController to return HTML.
+In this exercise you will learn how to add a layout master page to setup a template for common HTML content, a StyleSheet to enhance the look and feel of the site and finally a View template to enable HomeController to return HTML.
 
 <a name="Ex4Task1" />
-#### Task 1 - Modifying the \_layout.cshtml####
+#### Task 1 - Modifying the file _layout.cshtml####
 
-ASP.NET MasterPages are layout files that allow you to setup a template for common HTML to use across the entire website. In this task you will add a MasterPage with a common header with links to the Home page and Store area.
+The file ~/Views/Shared/_layout.cshtml allows you to setup a template for common HTML to use across the entire website. In this task you will add a layout master page with a common header with links to the Home page and Store area.
 
 1. If not already open, start Microsoft Visual Studio 11 Express Beta for Web from **Start** | **All Programs** | **Microsoft Visual Studio 11 Express** | **Visual Studio 11 Express Beta for Web**.
 
@@ -557,9 +543,9 @@ In this task, you will add a CSS stylesheet to **Site.Master** to define the sty
 <a name="Ex4Task3" />
 #### Task 3 - Adding a View Template####
 
-In this task, you will add a View template to generate the HTML response that will use the Master Page and CSS added in this exercise.
+In this task, you will add a View template to generate the HTML response that will use the layout master page and CSS added in this exercise.
 
-1. To use a View template when browsing the site's home page, first you need to indicate that instead of returning a string, the **HomeController Index** method should return a **View**. Open **HomeController** class and change its**Index** method to return an **ActionResult,** and have it return **View()**.
+1. To use a View template when browsing the site's home page, first you need to indicate that instead of returning a string, the **HomeController Index** method should return a **View**. Open **HomeController** class and change its **Index** method to return an **ActionResult,** and have it return **View()**.
 
 	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex4 HomeController Index - CSharp)
 
@@ -815,7 +801,7 @@ In this task, you will update the View template created in the last task to outp
 	@model MvcMusicStore.ViewModels.StoreIndexViewModel
 
 	@{
-		ViewBag.Title = "Index";
+		ViewBag.Title = "Browse Genres";
 	}
 
 	<h2>Browse Genres</h2>
@@ -867,7 +853,11 @@ Unlike ViewModels, which are created just to pass information from the Controlle
 	
 	>For more information, see this article: <http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages>.
 
-1. Add a **Genre** Model class. To do this, right-click the **Models** folder in the **Solution Explorer**, select **Add** and then the **Class** option. Name the file **Genre.cs** and click **Add**.
+1. Add a **Genre** Model class. To do this, right-click the **Models** folder in the **Solution Explorer**, select **Add** and then the **New Item** option. Under **Code** choose the **Class** item and name the file **Genre.cs**, then click **Add**.
+
+	![Adding a class](./images/Adding-a-class.png?raw=true "Adding a class")
+
+	_Adding a new item_
 
  	![Add Genre Model Class - C](./images/Add-Genre-Model-Class.png?raw=true "Add Genre Model Class - C")
  
@@ -1042,13 +1032,13 @@ In this task, you will add a **Browse** View to show the Albums found for a spec
 
 1. Before creating the new View template, you should build the project so that the **Add View Dialog** knows about the **ViewModel** class to use. Build the project by selecting the **Debug** menu item and then **Build MvcMusicStore**.
 
- 	![Building the project in Visual Studio 2010](./images/Building-the-project-in-Visual-Studio-11.png?raw=true "Building the project in Visual Studio 2010")
+ 	![Building the project in Visual Studio 11](./images/Building-the-project-in-Visual-Studio-11.png?raw=true "Building the project in Visual Studio 11")
  
 	_Building the project in Visual Studio 11_
 
 1. Add a **Browse** View. To do this, right-click in the **Browse** action method of the **StoreController** and click **Add View**.
 
-1. In the **Add View** dialog box, verify that the View Name is **Browse**. Check the **Create a strongly-typed view** checkbox and select **StoreBrowseViewModel** from the**Model class** dropdown. Leave the other fields with their default value. Then click **Add**.
+1. In the **Add View** dialog box, verify that the View Name is **Browse**. Check the **Create a strongly-typed view** checkbox and select **StoreBrowseViewModel** from the **Model class** dropdown. Leave the other fields with their default value. Then click **Add**.
 
  	![Adding a Browse View](./images/Adding-a-Browse-View.png?raw=true "Adding a Browse View - C")
  
@@ -1094,7 +1084,7 @@ In this task, you will implement the **Store/Details** view to display informati
 
 1. Close the browser if needed, to return to the Visual Studio window. Add a new **Details** view for the **StoreController**'s**Details** action method. To do this, right-click the **Details** method in the **StoreController** class and click **Add View**.
 
-1. In the **Add View** dialog view, verify that the **View Name** is **Details**. Check the **Create a strongly-typed view** checkbox and select **Album** from the**Model class** drop-down. Leave the other fields with their default value. Then click **Add**. This will create and open a **\Views\Store\Details.aspx** file.
+1. In the **Add View** dialog view, verify that the **View Name** is **Details**. Check the **Create a strongly-typed view** checkbox and select **Album** from the **Model class** drop-down. Leave the other fields with their default value. Then click **Add**. This will create and open a **\Views\Store\Details.aspx** file.
 
  	![Adding a Details View](./images/Adding-a-Details-View.png?raw=true "Adding a Details View")
  
@@ -1208,7 +1198,7 @@ You will now use ViewBag dynamic collection to pass from the controller to the v
 	}
 	````
 
-	**Note:** You could also use the syntax **ViewBag["Starred"]** to access the properties. 
+	> **Note:** You could also use the syntax **ViewBag["Starred"]** to access the properties. 
 
 1. The star icon **"starred.png"** is included in the **Source\Assets\Images** folder of this lab. In order to add them to the application, drag their content from a **Windows Explorer** window into the **Solution Explorer** in Visual Web Developer Express, as shown below:
 
@@ -1369,7 +1359,7 @@ By completing this Hands-On Lab you have learned the fundamentals of ASP.NET MVC
 
 - How to add and configure Controllers to handle parameters passed through the URL and querystring
 
-- How to add a MasterPage to setup a template for common HTML content, a StyleSheet to enhance the look and feel and a View template to display HTML content
+- How to add a layout master page to setup a template for common HTML content, a StyleSheet to enhance the look and feel and a View template to display HTML content
 
 - How to use the ViewModel pattern for passing properties to the View template for them to display dynamic information
 
