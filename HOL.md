@@ -151,15 +151,15 @@ In this exercise, you will learn how to create an ASP.NET MVC application in Vis
 
 1. Set the location of the solution inside a new **Begin** folder in this Exercise's installation folder, for example **C:\WebCampsTrainingKit\Labs\Beginner-ASP.NET-MVC-Fundamentals MVC4\Source\Ex01-CreatingMusicStoreProject\Begin**. Click **OK**.
 
- 	![Create New Project Dialog Box - C](./images/Create-New-Project-Dialog-Box.png?raw=true "Create New Project Dialog Box - C")
+ 	![Create New Project Dialog Box](./images/Create-New-Project-Dialog-Box.png?raw=true "Create New Project Dialog Box")
  
 	_Create New Project Dialog Box_
 
 1. In the **New ASP.NET MVC 4 Project** dialog box select the **Empty** template and make sure that the **View engine** selected is **Razor**. Click **OK**.
 
- 	![New ASP.NET MVC 4 Project Dialog Box - C](./images/New-ASP.NET-MVC-3-Project-Dialog-Box.png?raw=true "New ASP.NET MVC 4 Project Dialog Box - C")
+ 	![New ASP.NET MVC 4 Project Dialog Box](./images/New-ASP.NET-MVC-3-Project-Dialog-Box.png?raw=true "New ASP.NET MVC 4 Project Dialog Box")
  
-	_New ASP.NET MVC 4 Project Dialog Box - C#_
+	_New ASP.NET MVC 4 Project Dialog Box_
 
 <a name="Ex1Task2" />
 #### Task 2 - Exploring the Solution Structure####
@@ -214,8 +214,8 @@ In this task, you will add a Controller class that will handle URLs to the Home 
 
 1. The file **HomeController.cs** is created in the **Controllers** folder. In order to have the **HomeController** return a string on its Index action, replace the **Index** method with the following code:
 
-	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex1 HomeController Index - CSharp)
-
+	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex1 HomeController Index)
+	<!-- mark:1-5 -->
 	````C#
 	public string Index()
 	{
@@ -228,13 +228,13 @@ In this task, you will add a Controller class that will handle URLs to the Home 
 
 In this task, you will try out the Application in a web browser.
 
-1. Press **F5** to run the Application. The project gets compiled and the ASP.NET Web Server that is built-into Visual Web Developer starts. Visual Web Developer will automatically open a web browser pointing to the web-server URL. This will allow you to try out the web application.
+1. Press **F5** to run the Application. The project gets compiled and the local IIS Web Server starts. The local IIS Web Server will automatically open a web browser pointing to the web-server URL. This will allow you to try out the web application.
 
  	![Application running in a web browser](./images/Application-running-in-a-web-browser.png?raw=true "Application running in a web browser")
  
 	_Application running in a web browser_
 
-	> **Note**: ASP.NET Development Server will run the website on a random free port number. In the figure above, the site is running at http://localhost:3013/, so it's using port 3013. Your port number may vary.
+	> **Note**: The local IIS Web Server will run the website on a random free port number. In the figure above, the site is running at http://localhost:3013/, so it's using port 3013. Your port number may vary.
 
 1. Close the browser.
 
@@ -288,8 +288,8 @@ In this task, you will modify Controller methods that are called **actions**. Th
 
 1. The **StoreController** class already has an **Index** method. You will use it later in this Lab to implement the page that lists all genres of the music store. For now, just replace the **Index** method with the following code that returns a string "Hello from Store.Index()":
 
-	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex2 StoreController Index - CSharp)
-
+	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex2 StoreController Index)
+	<!-- mark:1-5 -->
 	````C#
 	public string Index()
 	{
@@ -299,8 +299,8 @@ In this task, you will modify Controller methods that are called **actions**. Th
 
 1. Add the **Browse** and **Details** methods. To do this, add the following code to the **StoreController**:
 
-	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex2 StoreController BrowseAndDetails - CSharp)
-
+	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex2 StoreController BrowseAndDetails)
+	<!-- mark:1-15 -->
 	````C#
 	//
 	// GET: /Store/Browse
@@ -372,8 +372,8 @@ In this task, you will use the **querystring** to send parameters to the **Brows
 
 1. Change the **Browse** method, adding a string parameter to request for a specific genre. ASP.NET MVC will automatically pass any querystring or form post parameters named **genre** to this action method when invoked. To do this, replace the **Browse** method with the following code:
 
-	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex3 StoreController BrowseMethod - CSharp)
-
+	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex3 StoreController BrowseMethod)
+	<!-- mark:1-10 -->
 	````C#
 	//
 	// GET: /Store/Browse?genre=Disco
@@ -414,8 +414,8 @@ In this task, you will use the **URL** to pass an **Id** parameter to the **Deta
 
 1. Change the **Details** method of the **StoreController**, adding an **int** parameter called **id**. To do this, replace the **Details** method with the following code:
 
-	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex3 StoreController DetailsMethod - CSharp)
-
+	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex3 StoreController DetailsMethod)
+	<!-- mark:1-9 -->
 	````C#
 	//
 	// GET: /Store/Details/5
@@ -471,7 +471,7 @@ The file ~/Views/Shared/_layout.cshtml allows you to setup a template for common
 	
 	>For more information, see this article: <http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages>.
 
-1. \_layout.cshtml contains the HTML container layout for all pages on the site.  It includes the **\<html\>** element for the HTML response, as well as the **\<head\>** and **\<body\>** elements. **@RenderBody()** within the HTML body identify regions that view templates will be able to fill in with dynamic content.
+1. The file _layout.cshtml contains the HTML container layout for all pages on the site.  It includes the **\<html\>** element for the HTML response, as well as the **\<head\>** and **\<body\>** elements. **@RenderBody()** within the HTML body identify regions that view templates will be able to fill in with dynamic content.
 
 	````HTML(C#)
 	<!DOCTYPE html>
@@ -491,7 +491,7 @@ The file ~/Views/Shared/_layout.cshtml allows you to setup a template for common
 	````
 	
 1. Add a common header with links to the Home page and Store area on all pages in the site. In order to do that, add the following code inside the **\<div\>** statement.
-
+	<!-- mark:12-19 -->
 	````HTML(C#)
 	<!DOCTYPE html>
 	<html>
@@ -523,9 +523,9 @@ The file ~/Views/Shared/_layout.cshtml allows you to setup a template for common
 <a name="Ex4Task2" />
 #### Task 2 - Adding CSS Stylesheet####
 
-The empty project template includes a very streamlined CSS file which just includes styles used to display validation messages. You will use additional CSS and images (potentially provided by a designer) in order to enhance the look and feel of the site.
+The empty project template includes a very streamlined CSS file which just includes styles used to display basic forms and validation messages. You will use additional CSS and images (potentially provided by a designer) in order to enhance the look and feel of the site.
 
-In this task, you will add a CSS stylesheet to **Site.Master** to define the styles of the site.
+In this task, you will add a CSS stylesheet to define the styles of the site.
 
 1. The CSS file and images are included in the Source\Assets\Content of this Lab. In order to add them to the application, drag their content from a **Windows Explorer** window into the **Solution Explorer** in Visual Web Developer Express, as shown below:
 
@@ -547,8 +547,7 @@ In this task, you will add a View template to generate the HTML response that wi
 
 1. To use a View template when browsing the site's home page, first you need to indicate that instead of returning a string, the **HomeController Index** method should return a **View**. Open **HomeController** class and change its **Index** method to return an **ActionResult,** and have it return **View()**.
 
-	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex4 HomeController Index - CSharp)
-
+	<!-- (Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex4 HomeController Index - CSharp);mark:3-10 -->
 	````C#
 	public class HomeController : Controller
 	{
@@ -564,11 +563,11 @@ In this task, you will add a View template to generate the HTML response that wi
 
 1. Now, you need to add an appropriate View template. To do this, **right-click** inside the **Index** action method and select **Add View**. This will bring up the Add View dialog.
 
- 	![Adding a View from within the Index method - C](./images/Adding-a-View-from-within-the-Index-method.png?raw=true "Adding a View from within the Index method - C")
+ 	![Adding a View from within the Index method](./images/Adding-a-View-from-within-the-Index-method.png?raw=true "Adding a View from within the Index method")
  
-	_Adding a View from within the Index method - C#_
+	_Adding a View from within the Index method_
 
-1. The **Add View** Dialog appears. It allows generating View template files. By default this dialog pre-populates the name of the View template so that it matches the action method that will use it.  Because you used the **Add View** context menu within the **Index** action method of the HomeController, the **Add View** dialog has **Index** as the default view name.  Because there is a **Site.Master** MasterPage template within the project, the dialog also pre-fills that name as the master page template the View should be based on. Click **Add**.
+1. The **Add View** Dialog appears. It allows generating View template files. By default this dialog pre-populates the name of the View template so that it matches the action method that will use it.  Because you used the **Add View** context menu within the **Index** action method of the HomeController, the **Add View** dialog has **Index** as the default view name. Click **Add**.
 
  	![Add View Dialog](./images/Add-View-Dialog.png?raw=true "Add View Dialog")
  
@@ -582,12 +581,12 @@ In this task, you will add a View template to generate the HTML response that wi
 
 	> **Note:** name and location of the **Index.cshtml** file is relevant and follows the default ASP.NET MVC naming conventions.
 
-	> The folder (\Views\**Home**) matches the controller name (**Home**Controller). The View template name (**Index**), matches the controller action method which will be displaying the View.
+	> The folder \\Views\\**Home** matches the controller name (**Home**Controller). The View template name (**Index**), matches the controller action method which will be displaying the View.
 
 	> This way, ASP.NET MVC avoids having to explicitly specify the name or location of a View template when using this naming convention to return a View.
 
 1. The generated View template is based on the **\_layout.cshtml** template earlier defined. Update the ViewBag.Title to **Home**, and change the main content to **This is the Home Page**, as shown in the code below:
-
+	<!-- mark:1-5 -->
 	````HTML
 	@{
 		ViewBag.Title = "Home";
@@ -599,19 +598,20 @@ In this task, you will add a View template to generate the HTML response that wi
 1. Select **MvcMusicStore** project in the Solution Explorer and Press **F5** to run the Application.
 
 **Exercise 4: Verification**
+
 In order to verify that you have correctly performed all the steps in the previous exercise, proceed as follows:
 
-1. With the application open in a browser, you should note that:
+With the application open in a browser, you should note that:
 
-	1. The HomeController's Index action method found and displayed the **\Views\Home\Index.aspx** View template, even though the code called **return View()**, because the View template followed the standard naming convention.
+1. The HomeController's Index action method found and displayed the **\Views\Home\Index.cshtml** View template, even though the code called **return View()**, because the View template followed the standard naming convention.
 
-	1. The Home Page displays the welcome message defined within the **\Views\Home\Index.aspx** view template.
+1. The Home Page displays the welcome message defined within the **\Views\Home\Index.cshtml** view template.
 
-	1. The Home Page is using the **MasterPage** template, and so the welcome message is contained within the standard site HTML layout.
+1. The Home Page is using the **_layout.cshtml** template, and so the welcome message is contained within the standard site HTML layout.
 
- 		![Home Index View using the LayoutPage and style defined](./images/Home-Index-View-using-the-layoutPage-and-style-defined.png?raw=true "Home Index View using the layoutPage and style defined")
- 
-		_Home Index View using the LayoutPage and style defined_
+	![Home Index View using the LayoutPage and style defined](./images/Home-Index-View-using-the-layoutPage-and-style-defined.png?raw=true "Home Index View using the layoutPage and style defined")
+
+	_Home Index View using the LayoutPage and style defined_
 
 <a name="Exercise5" />
 ### Exercise 5: Creating a View Model ###
@@ -655,17 +655,15 @@ In this task, you will create a ViewModel class that will implement the Store ge
  
 	_ViewModels folder in Solution Explorer_
 
-1. Create a **ViewModel** class. To do this, right-click on the **ViewModels** folder recently created, select **Add** and then **Class**.
+1. Create a **ViewModel** class. To do this, right-click on the **ViewModels** folder recently created, select **Add** and then **New Item**. Under **Code** choose the **Class** item and name the file **StoreIndexViewModel.cs**, then click **Add**.
 
  	![Adding a new Class](./images/Adding-a-new-Class.png?raw=true "Adding a new Class")
  
 	_Adding a new Class_
 
-1. Name the class **StoreIndexViewModel** and click **Add**.
-
- 	![Creating StoreIndexViewModel class - C](./images/Creating-StoreIndexViewModel-class.png?raw=true "Creating StoreIndexViewModel class - C")
+ 	![Creating StoreIndexViewModel class](./images/Creating-StoreIndexViewModel-class.png?raw=true "Creating StoreIndexViewModel class")
  
-	_Creating StoreIndexViewModel class - C#_
+	_Creating StoreIndexViewModel class_
 
 <a name="Ex5Task2" />
 #### Task 2 - Adding Properties to the ViewModel class####
@@ -676,8 +674,8 @@ In this task, you will add those 2 properties to the **StoreIndexViewModel** cla
 
 1. Add **NumberOfGenres** and **Genres** properties to the **StoreIndexViewModel** class. To do this, add the following 2 lines to the class definition:
 
-	(Code Snippet - ASP.NET MVC 4.0  Fundamentals - Ex5 StoreIndexViewModel properties - CSharp)
-
+	(Code Snippet - ASP.NET MVC 4.0  Fundamentals - Ex5 StoreIndexViewModel properties)
+	<!-- mark:3-5 -->
 	````C#
 	public class StoreIndexViewModel
 	{
@@ -704,7 +702,7 @@ In this task, you will update the **StoreController** to use the **StoreIndexVie
 1. In order to use the **StoreIndexViewModel** class from the **StoreController**, add the following namespace to the top of the **StoreController** code:
 
 	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex5 StoreIndexViewModel using ViewModels)
-
+	<!-- mark:1-2 -->
 	````C#
 	using MvcMusicStore.ViewModels;
 	````
@@ -718,7 +716,7 @@ In this task, you will update the **StoreController** to use the **StoreIndexVie
 1. Replace the **Index** method with the following code:
 
 	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex5 StoreController Index method)
-
+	<!-- mark:1-13 -->
 	````C#
 	public ActionResult Index()
 	{
@@ -751,17 +749,17 @@ In this task, you will create a View template that will use a StoreIndexViewMode
 
 1. Create a new View template. To do that, right-click inside the **Index** method and select **Add View.**
 
- 	![Adding a View - C](./images/Adding-a-View.png?raw=true "Adding a View - C")
+ 	![Adding a View](./images/Adding-a-View.png?raw=true "Adding a View")
  
-	_Adding a View - C#_
+	_Adding a View_
 
-1. Because the **Add View Dialog** was invoked from the **StoreController**, it will add the View template by default in a \Views\Store\Index.aspx file.  The view will be based on the Site.Master MasterPage template. Check the **Create a strongly-typed-view** checkbox and then select the **StoreIndexViewModel** as the **Model class**. Also, make sure that the View engine selected is **Razor**. Click **Add**.
+1. Because the **Add View Dialog** was invoked from the **StoreController**, it will add the View template by default in a \Views\Store\Index.cshtml file. Check the **Create a strongly-typed-view** checkbox and then select the **StoreIndexViewModel** as the **Model class**. Also, make sure that the View engine selected is **Razor**. Click **Add**.
 
- 	![Add View Dialog - C](./images/Add-View-Dialog-2.png?raw=true "Add View Dialog - C")
+ 	![Add View Dialog](./images/Add-View-Dialog-2.png?raw=true "Add View Dialog")
  
-	_Add View Dialog - C#_
+	_Add View Dialog_
 
-	The \Views\Store\Index.aspx View template file is created and opened. Based on the information provided to the **Add View** dialog in the last step, the View template will expect a **StoreIndexViewModel** instance as the data to use to generate an HTML response. You will notice that by seeing that the template inherits a **ViewPage<MusicStore.ViewModels.StoreIndexViewModel>** in C#.
+	The \Views\Store\Index.cshtml View template file is created and opened. Based on the information provided to the **Add View** dialog in the last step, the View template will expect a **StoreIndexViewModel** instance as the data to use to generate an HTML response. You will notice that by seeing that the template inherits a **ViewPage<MusicStore.ViewModels.StoreIndexViewModel>** in C#.
 
  
 <a name="Ex5Task5" />
@@ -771,8 +769,8 @@ In this task, you will update the View template created in the last task to outp
 
 > **Note:** You will use @ syntax (often referred to as "code nuggets") to execute code within the View template.
 
-1. In the Index.cshtml file, replace the code inside the **Content2** ASP.NET Content control with the following:
-
+1. In the Index.cshtml file, replace the code inside with the following:
+	<!-- mark:1-9 -->
 	````HTML
 	@model MvcMusicStore.ViewModels.StoreIndexViewModel
 
@@ -795,8 +793,8 @@ In this task, you will update the View template created in the last task to outp
 
 	> You can just select the **NumberOfGenres** property from the Intellisense list rather than typing it in and then it will auto-complete it by pressing the **tab key**.
 
-1. Loop over the genre list in the **StoreIndexViewModel** and create an HTML **\<ul\>** list using a **foreach** loop. Also change the code inside **Content1** ASP.NET Content control with a simple text: **Store Genres.**
-
+1. Loop over the genre list in the **StoreIndexViewModel** and create an HTML **\<ul\>** list using a **foreach** loop. Also change the title to **Browse Genres.**
+	<!-- mark:1-17 -->
 	````HTML(C#)
 	@model MvcMusicStore.ViewModels.StoreIndexViewModel
 
@@ -859,14 +857,14 @@ Unlike ViewModels, which are created just to pass information from the Controlle
 
 	_Adding a new item_
 
- 	![Add Genre Model Class - C](./images/Add-Genre-Model-Class.png?raw=true "Add Genre Model Class - C")
+ 	![Add Genre Model Class](./images/Add-Genre-Model-Class.png?raw=true "Add Genre Model Class")
  
-	_Add Genre Model Class - C#_
+	_Add Genre Model Class_
 
 1. Add a **Name** property to the Genre class. To do this, add the following code:
 
 	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 Genre)
-
+	<!-- mark:10-11 -->
 	````C#
 	using System;
 	using System.Collections.Generic;
@@ -882,12 +880,12 @@ Unlike ViewModels, which are created just to pass information from the Controlle
 	}
 	````
 
-1. Following the same procedure as before, add an **Album** class. To do this, right-click the **Models** folder in the **Solution Explorer**, select **Add** and then the **Class** option. Name the file **Album.cs** and click **Add**.
+1. Following the same procedure as before, add an **Album** class. To do this, right-click the **Models** folder in the **Solution Explorer**, select **Add** and then the **New Item** option. Under **Code** choose the **Class** item and name the file **Album.cs**, then click **Add**.
 
 1. Add two properties to the Album class**: Genre** and **Title**. To do this, add the following code:
 
 	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 Album)
-
+	<!-- mark:10-12 -->
 	````C#
 	using System;
 	using System.Collections.Generic;
@@ -909,12 +907,12 @@ Unlike ViewModels, which are created just to pass information from the Controlle
 
 A **StoreBrowseViewModel** will be used in this task to show the Albums that match a selected Genre.  In this task, you will create this class and then add two properties to handle the **Genre** and its **Album**'s List.
 
-1. Add a **StoreBrowseViewModel** class. To do this, right-click the **ViewModels** folder in the **Solution Explorer**, choose **Add** and then **Class**. Name the file **StoreBrowseViewModel.cs**.
+1. Add a **StoreBrowseViewModel** class. To do this, right-click the **ViewModels** folder in the **Solution Explorer**, select **Add** and then the **New Item** option. Under **Code** choose the **Class** item and name the file **StoreBrowseViewModel.cs**, then click **Add**.
 
 1. Add a reference to the Models in **StoreBrowseViewModel** class. To do this, add the following using namespace:
 
 	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 UsingModel)
-
+	<!-- mark:5-6 -->
 	````C#
 	using System;
 	using System.Collections.Generic;
@@ -933,7 +931,7 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 1. Add two properties to **StoreBrowseViewModel** class:  **Genre** and **Albums.** To do this, add the following code:
 
 	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 ModelProperties)
-
+	<!-- mark:11-13 -->
 	````C#
 	using System;
 	using System.Collections.Generic;
@@ -951,7 +949,7 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 	}
 	````
 
-	> **Note:** What is**List<Album>** ?: This definition is using the **List<T>** type, where **T** constrains the type to which elements of this **List** belong to, in this case **Album** (or any of its descendants).
+	> **Note:** What is **List\<Album\>** ?: This definition is using the **List<T>** type, where **T** constrains the type to which elements of this **List** belong to, in this case **Album** (or any of its descendants).
 
 	> This ability to design classes and methods that defer the specification of one or more types until the class or method is declared and instantiated by client code is a feature of the C# language called **Generics**.
 
@@ -961,12 +959,12 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 <a name="Ex6Task3" />
 #### Task 3 - Using the New ViewModel in the StoreController####
 
- In this task, you will modify the**StoreController**'s **Browse** and **Details** action methods to use the new **StoreBrowseViewModel**.
+ In this task, you will modify the **StoreController**'s **Browse** and **Details** action methods to use the new **StoreBrowseViewModel**.
 
 1. Add a reference to the Models folder in **StoreController** class. To do this, expand the **Controllers** folder in the **Solution Explorer** and open the **StoreController** class. Then add the following code:
 
 	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 UsingModelInController)
-
+	<!-- mark:7-9 -->
 	````C#
 	using System;
 	using System.Collections.Generic;
@@ -981,7 +979,7 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 1. Replace the **Browse** action method to use the **StoreViewBrowseController** class**.** You will create a Genre and two new Albums objects with dummy data (in the next Hands-on Lab you will consume real data from a database). To do this, replace the **Browse** method with the following code:
 
 	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 BrowseMethod)
-
+	<!-- mark:1-24 -->
 	````C#
 	//
 	// GET: /Store/Browse?genre=Disco
@@ -1012,7 +1010,7 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 1. Replace the **Details** action method to use the **StoreViewBrowseController** class**.** You will create a new **Album** object to be returned to the **View**. To do this, replace the **Details** method with the following code:
 
 	(Code Snippet - ASP.NET MVC 4.0 Fundamentals - Ex6 DetailsMethod)
-
+	<!-- mark:1-10 -->
 	````C#
 	//
 	// GET: /Store/Details/5
@@ -1044,8 +1042,8 @@ In this task, you will add a **Browse** View to show the Albums found for a spec
  
 	_Adding a Browse View_
 
-1. Modify the **Browse.cshtml** to display the Genre's information, accessing the **StoreBrowseViewModel** object that is passed to the view template. To do this, replace the **Title Content** and the **Main Content** with the following content:
-
+1. Modify the **Browse.cshtml** to display the Genre's information, accessing the **StoreBrowseViewModel** object that is passed to the view template. To do this, replace the content with the following:
+	<!-- mark:1-14 -->
 	````HTML(C#)
 	@model MvcMusicStore.ViewModels.StoreBrowseViewModel
 
@@ -1082,15 +1080,16 @@ In this task, you will test that the **Browse** method retrieves Albums from the
 
 In this task, you will implement the **Store/Details** view to display information about a specific album. In this Hands-on Lab, everything you will display about the album is already contained in the View template. So, instead of creating a **StoreDetailsViewModel** class you will use the current **StoreBrowseViewModel** template passing the Album to it.
 
-1. Close the browser if needed, to return to the Visual Studio window. Add a new **Details** view for the **StoreController**'s**Details** action method. To do this, right-click the **Details** method in the **StoreController** class and click **Add View**.
+1. Close the browser if needed, to return to the Visual Studio window. Add a new **Details** view for the **StoreController**'s **Details** action method. To do this, right-click the **Details** method in the **StoreController** class and click **Add View**.
 
-1. In the **Add View** dialog view, verify that the **View Name** is **Details**. Check the **Create a strongly-typed view** checkbox and select **Album** from the **Model class** drop-down. Leave the other fields with their default value. Then click **Add**. This will create and open a **\Views\Store\Details.aspx** file.
+1. In the **Add View** dialog view, verify that the **View Name** is **Details**. Check the **Create a strongly-typed view** checkbox and select **Album** from the **Model class** drop-down. Leave the other fields with their default value. Then click **Add**. This will create and open a **\Views\Store\Details.cshtml** file.
 
  	![Adding a Details View](./images/Adding-a-Details-View.png?raw=true "Adding a Details View")
  
-	_Adding a Details View
-1. Modify the **Details.cshtml** file to display the Album's information, accessing the **Album** object that is passed to the view template.  To do this, replace the content with the following content:
+	_Adding a Details View_
 
+1. Modify the **Details.cshtml** file to display the Album's information, accessing the **Album** object that is passed to the view template.  To do this, replace the content with the following:
+	<!-- mark:1-8 -->
 	````HTML(C#)
 	@model MvcMusicStore.Models.Album
 
@@ -1121,7 +1120,7 @@ In this task, you will test that the **Details** View retrieves Album's informat
 In this task, you will add a link in the Store View to have a link in every Genre name to the appropriate **/Store/Browse** URL. This way, when you click on a Genre, for instance **Disco**, it will navigate to **/Store/Browse?genre=Disco** URL.
 
 1. Close the browser if needed, to return to the Visual Studio window. Update the **Index** page to add a link to the **Browse** page. To do this, in the **Solution Explorer** expand the **Views** folder, then the **Store** folder and double-click the **Index.cshtml** page. Add a link to the Browse view indicating the genre selected. To do this, replace the following  code in the **Index.cshtml**:	
-
+	<!-- mark:1-17 -->
 	````HTML(C#)
 	@model MvcMusicStore.ViewModels.StoreIndexViewModel
 
@@ -1178,7 +1177,7 @@ In this task, you will learn a simple and powerfull method to pass values betwee
 You will now use ViewBag dynamic collection to pass from the controller to the view a list of "**Starred genres**". The Store Index view will access to **ViewModel** and display the information.
 
 1. Close the browser if needed, to return to the Visual Studio window. Open **StoreController.cs** and modify **Index** method to create a list of starred genres into ViewModel collection :
-
+	<!-- mark:13-14 -->
 	````C#
 	public ActionResult Index()
 	{
@@ -1206,10 +1205,10 @@ You will now use ViewBag dynamic collection to pass from the controller to the v
  
 	_Adding star image to the solution_
 
-1. Open the view **Store/Index.aspx** and modify the content. You will read the "starred" property in the **ViewBag** collection, and ask if the current genre name is in the list. In that case you will show a star icon right to the genre link.
-
+1. Open the view **Store/Index.cshtml** and modify the content. You will read the "starred" property in the **ViewBag** collection, and ask if the current genre name is in the list. In that case you will show a star icon right to the genre link.
+	<!-- mark:16-18,22-24 -->
 	````HTML(C#)
-	?@model MvcMusicStore.ViewModels.StoreIndexViewModel
+	@model MvcMusicStore.ViewModels.StoreIndexViewModel
 
 	@{
 		ViewBag.Title = "Browse Genres";
@@ -1249,16 +1248,16 @@ In this task, you will test that the starred genres display a star icon.
 
 	
 <a name="Exercise7" />
-### Exercise 7: A lap around MVC4 New Template ###
+### Exercise 7: A lap around MVC4 new template ###
 
 In this exercise, you will explore the enhancements in the ASP.NET MVC4 project templates, taking a look at the most relevant features of the new template.
 
 <a name="Ex07Task1" />
-#### Task 1: Exploring the Exploring the MVC4 Internet Application Template####
+#### Task 1: Exploring the MVC4 Internet Application Template####
 
-1. Open **Visual Studio 11**.
+1. If not already open, start Microsoft Visual Studio 11 Express Beta for Web from **Start** | **All Programs** | **Microsoft Visual Studio 11 Express** | **Visual Studio 11 Express Beta for Web**.
 
-1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C#|Web** template on the left pane tree, and choose the **ASP**.**NET MVC 4 Web Application.** Name the project **PhotoGallery**, select a location (or leave the default) and click **OK**. 
+1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C#|Web** template on the left pane tree, and choose the **ASP**.**NET MVC 4 Web Application.** Name the project **MusicStore**, select a location (or leave the default) and click **OK**. 
 
 	![Creating a new MVC4 Project](images/creating-a-new-mvc4-project.png?raw=true "Creating a new MVC4 Project")
 
@@ -1368,3 +1367,5 @@ By completing this Hands-On Lab you have learned the fundamentals of ASP.NET MVC
 - How to add links to pages inside the ASP.NET MVC application
 
 - How to add and use dynamic properties in a View
+
+- The enhancements in the ASP.NET MVC4 project templates
