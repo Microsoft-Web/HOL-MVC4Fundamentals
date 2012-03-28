@@ -527,7 +527,7 @@ The empty project template includes a very streamlined CSS file which just inclu
 
 In this task, you will add a CSS stylesheet to define the styles of the site.
 
-1. The CSS file and images are included in the Source\Assets\Content of this Lab. In order to add them to the application, drag their content from a **Windows Explorer** window into the **Solution Explorer** in Visual Web Developer Express, as shown below:
+1. The CSS file and images are included in the **Source\Assets\Content** folder of this Lab. In order to add them to the application, drag their content from a **Windows Explorer** window into the **Solution Explorer** in Visual Web Developer Express, as shown below:
 
  	![Dragging style contents](./images/Dragging-style-contents.png?raw=true "Dragging style contents")
  
@@ -585,7 +585,7 @@ In this task, you will add a View template to generate the HTML response that wi
 
 	> This way, ASP.NET MVC avoids having to explicitly specify the name or location of a View template when using this naming convention to return a View.
 
-1. The generated View template is based on the **\_layout.cshtml** template earlier defined. Update the ViewBag.Title to **Home**, and change the main content to **This is the Home Page**, as shown in the code below:
+1. The generated View template is based on the **\_layout.cshtml** template earlier defined. Update the ViewBag.Title property to **Home**, and change the main content to **This is the Home Page**, as shown in the code below:
 	<!-- mark:1-5 -->
 	````HTML
 	@{
