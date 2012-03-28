@@ -535,7 +535,7 @@ In this task, you will add a CSS stylesheet to define the styles of the site.
 
 1. A warning dialog will appear, asking for confirmation to replace Site.css file. Click **Yes**.
 
-1. ![Warning Dialog](./images/Warning-Dialog.png?raw=true "Warning Dialog")
+	![Warning Dialog](./images/Warning-Dialog.png?raw=true "Warning Dialog")
 
 	_Warning Dialog_
 
@@ -567,7 +567,7 @@ In this task, you will add a View template to generate the HTML response that wi
  
 	_Adding a View from within the Index method_
 
-1. The **Add View** Dialog appears. It allows generating View template files. By default this dialog pre-populates the name of the View template so that it matches the action method that will use it.  Because you used the **Add View** context menu within the **Index** action method of the HomeController, the **Add View** dialog has **Index** as the default view name. Click **Add**.
+1. The **Add View** Dialog appears. It allows generating View template files. By default this dialog pre-populates the name of the View template so that it matches the action method that will use it.  Because you used the **Add View** context menu within the **Index** action method of the HomeController, the **Add View** dialog has Index as the default view name. Click **Add**.
 
  	![Add View Dialog](./images/Add-View-Dialog.png?raw=true "Add View Dialog")
  
@@ -601,7 +601,7 @@ In this task, you will add a View template to generate the HTML response that wi
 
 In order to verify that you have correctly performed all the steps in the previous exercise, proceed as follows:
 
-With the application open in a browser, you should note that:
+With the application opened in a browser, you should note that:
 
 1. The HomeController's Index action method found and displayed the **\Views\Home\Index.cshtml** View template, even though the code called **return View()**, because the View template followed the standard naming convention.
 
@@ -609,9 +609,9 @@ With the application open in a browser, you should note that:
 
 1. The Home Page is using the **_layout.cshtml** template, and so the welcome message is contained within the standard site HTML layout.
 
-	![Home Index View using the LayoutPage and style defined](./images/Home-Index-View-using-the-layoutPage-and-style-defined.png?raw=true "Home Index View using the layoutPage and style defined")
+	![Home Index View using the defined LayoutPage and style](./images/Home-Index-View-using-the-layoutPage-and-style-defined.png?raw=true "Home Index View using the defined LayoutPage and style")
 
-	_Home Index View using the LayoutPage and style defined_
+	_Home Index View using the defined LayoutPage and style_
 
 <a name="Exercise5" />
 ### Exercise 5: Creating a View Model ###
