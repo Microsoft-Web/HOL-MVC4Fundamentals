@@ -618,7 +618,7 @@ With the application opened in a browser, you should note that:
 
 So far you made your Views display hardcoded HTML, but in order to create dynamic web applications, the View template should receive information from the Controller. One common technique to be used for that purpose is the **ViewModel** pattern, which allows a Controller to package up all the information needed to generate the appropriate HTML response.
 
-In this exercise, you will learn how to create a ViewModel class and add the needed properties: in this case the number of genres in the store and a list of those genres. Also, you will update the StoreController to use the created ViewModel and finally you will create a new View template that will display the mentioned properties in the page.
+In this exercise, you will learn how to create a ViewModel class and add the needed properties: in this case, the number of genres in the store and a list of those genres. Also, you will update the StoreController to use the created ViewModel and finally you will create a new View template that will display the mentioned properties in the page.
 
 <a name="Ex5Task1" />
 #### Task 1 - Creating a ViewModel Class####
@@ -655,7 +655,7 @@ In this task, you will create a ViewModel class that will implement the Store ge
  
 	_ViewModels folder in Solution Explorer_
 
-1. Create a **ViewModel** class. To do this, right-click on the **ViewModels** folder recently created, select **Add** and then **New Item**. Under **Code** choose the **Class** item and name the file **StoreIndexViewModel.cs**, then click **Add**.
+1. Create a **ViewModel** class. To do this, right-click on the **ViewModels** folder recently created, select **Add** and then **New Item**. Under **Code**, choose the **Class** item and name the file **StoreIndexViewModel.cs**, then click **Add**.
 
  	![Adding a new Class](./images/Adding-a-new-Class.png?raw=true "Adding a new Class")
  
@@ -668,7 +668,7 @@ In this task, you will create a ViewModel class that will implement the Store ge
 <a name="Ex5Task2" />
 #### Task 2 - Adding Properties to the ViewModel class####
 
-There are two pieces of information to be passed from the StoreController to the View template in order to generate the HTML response wanted: the number of genres in the store and a list of those genres.
+There are two pieces of information to be passed from the StoreController to the View template in order to generate the expected HTML response: the number of genres in the store and a list of those genres.
 
 In this task, you will add those 2 properties to the **StoreIndexViewModel** class: **NumberOfGenres** (an integer) and **Genres** (a list of strings).
 
@@ -753,7 +753,7 @@ In this task, you will create a View template that will use a StoreIndexViewMode
  
 	_Adding a View_
 
-1. Because the **Add View Dialog** was invoked from the **StoreController**, it will add the View template by default in a \Views\Store\Index.cshtml file. Check the **Create a strongly-typed-view** checkbox and then select the **StoreIndexViewModel** as the **Model class**. Also, make sure that the View engine selected is **Razor**. Click **Add**.
+1. Because the **Add View Dialog** was invoked from the **StoreController**, it will add the View template by default in a \Views\Store\Index.cshtml file. Check the **Create a strongly-typed-view** checkbox and then select **StoreIndexViewModel** as the **Model class**. Also, make sure that the View engine selected is **Razor**. Click **Add**.
 
  	![Add View Dialog](./images/Add-View-Dialog-2.png?raw=true "Add View Dialog")
  
@@ -789,11 +789,11 @@ In this task, you will update the View template created in the last task to outp
 
 	> _Getting Model properties and methods with Visual Studio's IntelliSense_
 
-	> The **Model** property references the **StoreIndexViewModel** object that the Controller passed to the View template.  This means that you can access all of the data passed the Controller to the View template via the **Model** property, and format it into an appropriate HTML response within the View template.
+	> The **Model** property references the **StoreIndexViewModel** object that the Controller passed to the View template.  This means that you can access all of the data passed from the Controller to the View template via the **Model** property, and format it into an appropriate HTML response within the View template.
 
 	> You can just select the **NumberOfGenres** property from the Intellisense list rather than typing it in and then it will auto-complete it by pressing the **tab key**.
 
-1. Loop over the genre list in the **StoreIndexViewModel** and create an HTML **\<ul\>** list using a **foreach** loop. Also change the title to **Browse Genres.**
+1. Loop over the genre list in **StoreIndexViewModel** and create an HTML **\<ul\>** list using a **foreach** loop. Also change the title to **Browse Genres.**
 	<!-- mark:1-17 -->
 	````HTML(C#)
 	@model MvcMusicStore.ViewModels.StoreIndexViewModel
@@ -851,7 +851,7 @@ Unlike ViewModels, which are created just to pass information from the Controlle
 	
 	>For more information, see this article: <http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages>.
 
-1. Add a **Genre** Model class. To do this, right-click the **Models** folder in the **Solution Explorer**, select **Add** and then the **New Item** option. Under **Code** choose the **Class** item and name the file **Genre.cs**, then click **Add**.
+1. Add a **Genre** Model class. To do this, right-click the **Models** folder in the **Solution Explorer**, select **Add** and then the **New Item** option. Under **Code**, choose the **Class** item and name the file **Genre.cs**, then click **Add**.
 
 	![Adding a class](./images/Adding-a-class.png?raw=true "Adding a class")
 
@@ -880,7 +880,7 @@ Unlike ViewModels, which are created just to pass information from the Controlle
 	}
 	````
 
-1. Following the same procedure as before, add an **Album** class. To do this, right-click the **Models** folder in the **Solution Explorer**, select **Add** and then the **New Item** option. Under **Code** choose the **Class** item and name the file **Album.cs**, then click **Add**.
+1. Following the same procedure as before, add an **Album** class. To do this, right-click the **Models** folder in the **Solution Explorer**, select **Add** and then the **New Item** option. Under **Code**, choose the **Class** item and name the file **Album.cs**, then click **Add**.
 
 1. Add two properties to the Album class**: Genre** and **Title**. To do this, add the following code:
 
@@ -907,7 +907,7 @@ Unlike ViewModels, which are created just to pass information from the Controlle
 
 A **StoreBrowseViewModel** will be used in this task to show the Albums that match a selected Genre.  In this task, you will create this class and then add two properties to handle the **Genre** and its **Album**'s List.
 
-1. Add a **StoreBrowseViewModel** class. To do this, right-click the **ViewModels** folder in the **Solution Explorer**, select **Add** and then the **New Item** option. Under **Code** choose the **Class** item and name the file **StoreBrowseViewModel.cs**, then click **Add**.
+1. Add a **StoreBrowseViewModel** class. To do this, right-click the **ViewModels** folder in the **Solution Explorer**, select **Add** and then the **New Item** option. Under **Code**, choose the **Class** item and name the file **StoreBrowseViewModel.cs**, then click **Add**.
 
 1. Add a reference to the Models in **StoreBrowseViewModel** class. To do this, add the following using namespace:
 
@@ -1078,7 +1078,7 @@ In this task, you will test that the **Browse** method retrieves Albums from the
 <a name="Ex6Task6" />
 #### Task 6 - Displaying information About a Specific Album####
 
-In this task, you will implement the **Store/Details** view to display information about a specific album. In this Hands-on Lab, everything you will display about the album is already contained in the View template. So, instead of creating a **StoreDetailsViewModel** class you will use the current **StoreBrowseViewModel** template passing the Album to it.
+In this task, you will implement the **Store/Details** view to display information about a specific album. In this Hands-on Lab, everything you will display about the album is already contained in the **View** template. So, instead of creating a **StoreDetailsViewModel** class you will use the current **StoreBrowseViewModel** template passing the Album to it.
 
 1. Close the browser if needed, to return to the Visual Studio window. Add a new **Details** view for the **StoreController**'s **Details** action method. To do this, right-click the **Details** method in the **StoreController** class and click **Add View**.
 
@@ -1172,9 +1172,9 @@ In this task, you will test that each Genre is displayed with a link to the appr
 <a name="Ex6Task10" />
 #### Task 10 - Using Dynamic ViewModel Collection to Pass Values####
 
-In this task, you will learn a simple and powerfull method to pass values between the Controller and the View without making any changes in the Model. MVC 4 provides the collection "ViewModel" than can be assigned to any dynamic value and accessed inside controllers and views as well.
+In this task, you will learn a simple and powerful method to pass values between the Controller and the View without making any changes in the Model. MVC 4 provides the collection "ViewModel" than can be assigned to any dynamic value and accessed inside controllers and views as well.
 
-You will now use ViewBag dynamic collection to pass from the controller to the view a list of "**Starred genres**". The Store Index view will access to **ViewModel** and display the information.
+You will now use ViewBag dynamic collection to pass a list of "**Starred genres**" from the controller to the view. The Store Index view will access to **ViewModel** and display the information.
 
 1. Close the browser if needed, to return to the Visual Studio window. Open **StoreController.cs** and modify **Index** method to create a list of starred genres into ViewModel collection :
 	<!-- mark:13-14 -->
