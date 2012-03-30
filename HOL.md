@@ -1283,8 +1283,13 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 
 	- **Richer UI with JavaScript**
 
-		Another enhancement to default project templates is the use of JavaScript to provide a more interactive JavaScript. The Login and Register links used in the template exemplify how to use the jQuery UI Dialog to display a fancy login screen.
+		Another enhancement to default project templates is the use of JavaScript to provide a more interactive JavaScript. The Login and Register links used in the template exemplify how to use the jQuery UI Dialog to display a fancy login screen. Click the **Log in** link located on the upper-right corner of the home page. Then, click the register link located next to the login link.
 
+		![Log in and Register links](images/login-and-register-links.png?raw=true "Log in and Register links")
+		
+		_Log in and Register links_
+		
+			
 		![log-in-dialog](images/log-in-dialog.png?raw=true "Log in dialog")
 
 		_Log in dialog_
