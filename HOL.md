@@ -55,12 +55,14 @@ In this Hands-On Lab, you will learn how to:
 - Use View Model pattern to pass information from controller actions to the view templates
 
  
+<a name="SystemRequirements" />
 ### System Requirements ###
 
 You must have the following items to complete this lab:
 
 - Visual Studio 11 Express Beta for Web
 
+	>**Note:** You can install **Visual Studio 11 Express Beta for Web**. To do this, navigate to [http://www.microsoft.com/web/gallery/install.aspx?appid=VWD11_BETA&prerelease=true](http://www.microsoft.com/web/gallery/install.aspx?appid=VWD11_BETA&prerelease=true) using a web browser. 
  
 <a name="Setup" />
 ### Setup ###
