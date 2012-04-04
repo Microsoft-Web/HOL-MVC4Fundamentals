@@ -8,15 +8,15 @@
 
 This Hands-On Lab is based on MVC (Model View Controller) Music Store, a tutorial application that introduces and explains step-by-step how to use ASP.NET MVC and Visual Studio. Throughout the lab you will learn the simplicity, yet power of using these technologies together. You will start with a simple application and will build it until you have a fully functional MVC Web Application.
 
-This Lab will work with ASP.NET MVC 4.
+This Lab works with ASP.NET MVC 4.
 
-If you wish to explore the ASP.NET MVC 3 version of the tutorial application, you will find it in [http://mvcmusicstore.codeplex.com/](http://mvcmusicstore.codeplex.com/).
+If you wish to explore the ASP.NET MVC 3 version of the tutorial application, you can find it in [http://mvcmusicstore.codeplex.com/](http://mvcmusicstore.codeplex.com/).
 
-> **Note:** This Hands-On Lab assumes that the developer has basic experience with Web Development and technologies such as HTML and JavaScript.
+> **Note:** This Hands-On Lab assumes that the developer has experience in Web development technologies, such as HTML and JavaScript.
 
 ### The Music Store application ###
 
-The Music Store web application to be built throughout this Lab comprises three main parts: shopping, checkout, and administration. Visitors will be able to browse albums by genre, add albums to their cart, review their selection and finally proceed to checkout to login and complete the order. Additionally, store administrators will be able to manage the store's available albums as well as their main properties.
+The Music Store web application that will be built throughout this Lab comprises three main parts: shopping, checkout, and administration. Visitors will be able to browse albums by genre, add albums to their cart, review their selection and finally proceed to checkout to login and complete the order. Additionally, store administrators will be able to manage the available albums. as well as their main properties.
 
  ![Music Store screens](./images/Music-Store-screens.png?raw=true "Music Store screens")
  
@@ -33,9 +33,9 @@ Music Store application will be built using **Model View Controller (MVC)**, an 
 - **Controllers:** Controllers are the components that handle user interaction, manipulate the model, and ultimately select a view to render the UI. In an MVC application, the view only displays information; the controller handles and responds to user input and interaction.
 
  
-The MVC pattern helps you to create applications that separate the different aspects of the application (input logic, business logic, and UI logic), while providing a loose coupling between these elements. This separation helps you manage complexity when you build an application, because it enables you to focus on one aspect of the implementation at a time. In addition to managing complexity, the MVC pattern makes it easier to test applications than it is to test a traditional ASP.NET Web application, encouraging the use of test-driven development (TDD) for creating applications.
+The MVC pattern helps you to create applications that separate the different aspects of the application (input logic, business logic, and UI logic), while providing a loose coupling between these elements. This separation helps you manage complexity when you build an application, as it allows you to focus on one aspect of the implementation at a time. In addition, the MVC pattern makes it easy to test applications, also encouraging the use of test-driven development (TDD) for creating applications.
 
-Then, the **ASP.NET MVC** framework provides an alternative to the ASP.NET Web Forms pattern for creating MVC-based Web applications. The **ASP.NET MVC** framework is a lightweight, highly testable presentation framework that (as with Web-forms-based applications) is integrated with existing ASP.NET features, such as master pages and membership-based authentication so you get all the power of the core .NET framework.  This is useful if you are already familiar with ASP.NET Web Forms because all the libraries that you already use are available in ASP.NET MVC as well.
+The **ASP.NET MVC** framework provides an alternative to the ASP.NET Web Forms pattern for creating MVC-based Web applications. The **ASP.NET MVC** framework is a lightweight, highly testable presentation framework that (as with Web-forms-based applications) is integrated with existing ASP.NET features, such as master pages and membership-based authentication so you get all the power of the core .NET framework.  This is useful if you are already familiar with ASP.NET Web Forms because all the libraries that you already use are available in ASP.NET MVC as well.
 
 In addition, the loose coupling between the three main components of an MVC application also promotes parallel development. For instance, one developer can work on the view, a second developer can work on the controller logic, and a third developer can focus on the business logic in the model.
 
@@ -137,7 +137,7 @@ Estimated time to complete this lab: **45 minutes**.
 <a name="Exercise1" />
 ### Exercise 1: Creating MusicStore ASP.NET MVC Web Application Project ###
 
-In this exercise, you will learn how to create an ASP.NET MVC application in Visual Studio 11 Express as well as its main folder organization. Additionally, you'll learn how to add a new Controller and have it display a simple string at the Application screen.
+In this exercise, you will learn how to create an ASP.NET MVC application in Visual Studio 11 Express as well as its main folder organization. Additionally, you will learn how to add a new Controller and have it display a simple string at the Application screen.
 
 <a name="Ex1Task1" />
 #### Task 1 - Creating the ASP.NET MVC Web Application Project####
@@ -165,9 +165,9 @@ In this exercise, you will learn how to create an ASP.NET MVC application in Vis
 <a name="Ex1Task2" />
 #### Task 2 - Exploring the Solution Structure####
 
-The ASP.NET MVC framework includes a Visual Studio project template that helps you create Web applications that are structured to support the MVC pattern. This template creates a new MVC Web application that is configured to have the required folders, item templates, and configuration-file entries.
+The ASP.NET MVC framework includes a Visual Studio project template that helps you create Web applications supporting the MVC pattern. This template creates a new MVC Web application with the required folders, item templates, and configuration-file entries.
 
-In this task, you will examine the solution structure to understand the involved elements and its relationships. The following folders are included even in an Empty ASP.NET MVC application because the ASP.NET MVC framework by default uses a "convention over configuration" approach and makes some default assumptions based on folder naming conventions.
+In this task, you will examine the solution structure to understand the elements that are involved and their relationships. The following folders are included in all the ASP.NET MVC application because the ASP.NET MVC framework by default uses a "convention over configuration" approach, and makes some default assumptions based on folder naming conventions.
 
 1. Once the project is created, review the folder structure that has been created in the Solution Explorer on the right side:
 
@@ -230,7 +230,7 @@ In this task, you will add a Controller class that will handle URLs to the Home 
 
 In this task, you will try out the Application in a web browser.
 
-1. Press **F5** to run the Application. The project gets compiled and the local IIS Web Server starts. The local IIS Web Server will automatically open a web browser pointing to the web-server URL. This will allow you to try out the web application.
+1. Press **F5** to run the Application. The project is compiled and the local IIS Web Server starts. The local IIS Web Server will automatically open a web browser pointing to the URL of the Web server.
 
  	![Application running in a web browser](./images/Application-running-in-a-web-browser.png?raw=true "Application running in a web browser")
  
@@ -243,7 +243,7 @@ In this task, you will try out the Application in a web browser.
 <a name="Exercise2" />
 ### Exercise 2: Creating a Controller ###
 
-In this exercise, you will learn how to create a Controller to implement simple functionality of the Music Store. That controller will define action methods to handle each specific request:
+In this exercise, you will learn how to create a Controller to implement simple functionality of the Music Store. That controller will define action methods to handle each of the following specific requests:
 
 - A listing page of the music genres in the Music Store
 
@@ -286,7 +286,7 @@ In this task, you will add a new Controller.
 <a name="Ex2Task2" />
 #### Task 2 - Modifying the StoreController's Actions####
 
-In this task, you will modify Controller methods that are called **actions**. These actions are responsible for responding to URL requests and determine the content that should be sent back to the browser or user that invoked the URL.
+In this task, you will modify the Controller methods that are called **actions**. Actions are responsible for handling URL requests and determining the content that should be sent back to the browser or user that invoked the URL.
 
 1. The **StoreController** class already has an **Index** method. You will use it later in this Lab to implement the page that lists all genres of the music store. For now, just replace the **Index** method with the following code that returns a string "Hello from Store.Index()":
 
@@ -347,7 +347,7 @@ In this task, you will try out the Application in a web browser.
 <a name="Exercise3" />
 ### Exercise 3: Passing parameters to a Controller ###
 
-Until now, you have been returning constant strings from the Controllers. In this exercise you will learn how to pass parameters to a Controller using the URL and querystring and then making the method actions respond with text to the browser.
+Until now, you have been returning constant strings from the Controllers. In this exercise you will learn how to pass parameters to a Controller using the URL and querystring, and then making the method actions respond with text to the browser.
 
 <a name="Ex3Task1" />
 #### Task 1 - Adding Genre Parameter to StoreController####
@@ -415,7 +415,7 @@ In this task, you will try out the Application in a web browser and use the **ge
 <a name="Ex3Task3" />
 #### Task 3 - Adding an Id Parameter Embedded in the URL####
 
-In this task, you will use the **URL** to pass an **Id** parameter to the **Details** action method of the **StoreController**. ASP.NET MVC's default routing convention is to treat the segment of a URL after the action method name as a parameter named **Id**.  If your action method has a parameter named Id then ASP.NET MVC will automatically pass the URL segment to you as a parameter. In the URL **Store/Details/5**, **Id** will be interpreted as **5**.
+In this task, you will use the **URL** to pass an **Id** parameter to the **Details** action method of the **StoreController**. ASP.NET MVC's default routing convention is to treat the segment of a URL after the action method name as a parameter named **Id**.  If your action method has parameter named Id, then ASP.NET MVC will automatically pass the URL segment to you as a parameter. In the URL **Store/Details/5**, **Id** will be interpreted as **5**.
 
 1. Change the **Details** method of the **StoreController**, adding an **int** parameter called **id**. To do this, replace the **Details** method with the following code:
 
@@ -450,7 +450,7 @@ In this task, you will try out the Application in a web browser and use the **Id
 <a name="Exercise4" />
 ### Exercise 4: Creating a View ###
 
-So far you have been returning strings from controller actions. Although that's a useful way of understanding how controllers work, it's not how you'd want to build a real web application. Views are components that provide a better approach for generating HTML back to the browser with the use of template files.
+So far you have been returning strings from controller actions. Although that is a useful way of understanding how controllers work, it is not how you real Web applications are built. Views are components that provide a better approach for generating HTML back to the browser with the use of template files.
 
 In this exercise you will learn how to add a layout master page to setup a template for common HTML content, a StyleSheet to enhance the look and feel of the site and finally a View template to enable HomeController to return HTML.
 
@@ -551,7 +551,7 @@ In this task, you will add a CSS stylesheet to define the styles of the site.
 
 In this task, you will add a View template to generate the HTML response that will use the layout master page and CSS added in this exercise.
 
-1. To use a View template when browsing the site's home page, first you need to indicate that instead of returning a string, the **HomeController Index** method should return a **View**. Open **HomeController** class and change its **Index** method to return an **ActionResult,** and have it return **View()**.
+1. To use a View template when browsing the site's home page, you will first need to indicate that instead of returning a string, the **HomeController Index** method should return a **View**. Open **HomeController** class and change its **Index** method to return an **ActionResult,** and have it return **View()**.
 
 	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex4 HomeController Index_)
 	
@@ -575,7 +575,7 @@ In this task, you will add a View template to generate the HTML response that wi
  
 	_Adding a View from within the Index method_
 
-1. The **Add View** Dialog appears. It allows generating View template files. By default this dialog pre-populates the name of the View template so that it matches the action method that will use it.  Because you used the **Add View** context menu within the **Index** action method of the HomeController, the **Add View** dialog has Index as the default view name. Click **Add**.
+1. The **Add View** Dialog will appear to generate a View template file. By default, this dialog pre-populates the name of the View template so that it matches the action method that will use it.  Because you used the **Add View** context menu within the **Index** action method of the HomeController, the **Add View** dialog has Index as the default view name. Click **Add**.
 
  	![Add View Dialog](./images/Add-View-Dialog.png?raw=true "Add View Dialog")
  
@@ -624,9 +624,9 @@ With the application opened in a browser, you should note that:
 <a name="Exercise5" />
 ### Exercise 5: Creating a View Model ###
 
-So far you made your Views display hardcoded HTML, but in order to create dynamic web applications, the View template should receive information from the Controller. One common technique to be used for that purpose is the **ViewModel** pattern, which allows a Controller to package up all the information needed to generate the appropriate HTML response.
+So far, you made your Views display hardcoded HTML, but, in order to create dynamic web applications, the View template should receive information from the Controller. One common technique to be used for that purpose is the **ViewModel** pattern, which allows a Controller to package up all the information needed to generate the appropriate HTML response.
 
-In this exercise, you will learn how to create a ViewModel class and add the needed properties: in this case, the number of genres in the store and a list of those genres. Also, you will update the StoreController to use the created ViewModel and finally you will create a new View template that will display the mentioned properties in the page.
+In this exercise, you will learn how to create a ViewModel class and add the required properties:  the number of genres in the store and a list of those genres. You will also update the StoreController to use the created ViewModel, and finally, you will create a new View template that will display the mentioned properties in the page.
 
 <a name="Ex5Task1" />
 #### Task 1 - Creating a ViewModel Class####
@@ -676,7 +676,7 @@ In this task, you will create a ViewModel class that will implement the Store ge
 <a name="Ex5Task2" />
 #### Task 2 - Adding Properties to the ViewModel class####
 
-There are two pieces of information to be passed from the StoreController to the View template in order to generate the expected HTML response: the number of genres in the store and a list of those genres.
+There are two parameters to be passed from the StoreController to the View template in order to generate the expected HTML response: the number of genres in the store and a list of those genres.
 
 In this task, you will add those 2 properties to the **StoreIndexViewModel** class: **NumberOfGenres** (an integer) and **Genres** (a list of strings).
 
@@ -776,7 +776,7 @@ In this task, you will create a View template that will use a StoreIndexViewMode
 <a name="Ex5Task5" />
 #### Task 5 - Updating the View Template####
 
-In this task, you will update the View template created in the last task to output the number of genres and their names within the page.
+In this task, you will update the View template created in the last task to retrieve the number of genres and their names within the page.
 
 > **Note:** You will use @ syntax (often referred to as "code nuggets") to execute code within the View template.
 
@@ -794,7 +794,7 @@ In this task, you will update the View template created in the last task to outp
 	<p> Select from @Model.NumberOfGenres genres</p>
 	````
 
-	> **Note:** As soon as you finish typing the period after the word **Model**, Visual Studio's Intellisense feature supplies you with a list of possible properties and methods to choose from.
+	> **Note:** As soon as you finish typing the period after the word **Model**, Visual Studio's Intellisense will show a list of possible properties and methods to choose from.
 
 	> ![](./images/Intelisense.png?raw=true)
 
@@ -842,7 +842,7 @@ In Exercise 3 you learned how to pass parameters to the Controller. In this exer
 <a name="Ex6Task1" />
 #### Task 1 - Adding Model Classes####
 
-Unlike ViewModels, which are created just to pass information from the Controller to the View, Model classes are built to contain and manage data and domain logic. In this task you will add two model classes to represent these concepts: **Genre** and **Album**. In the next Hands-on Lab, these classes will be hooked to a database, mapping each one of them to a table.
+Unlike ViewModels, which are created just to pass information from the Controller to the View, Model classes are built to contain and manage data and domain logic. In this task you will add two model classes to represent these concepts: **Genre** and **Album**.
 
 1. If not already open, start Microsoft Visual Studio 11 Express Beta for Web from **Start** | **All Programs** | **Microsoft Visual Studio 11 Express** | **Visual Studio 11 Express Beta for Web**.
 
@@ -1096,7 +1096,7 @@ In this task, you will test that the **Browse** method retrieves Albums from the
 <a name="Ex6Task6" />
 #### Task 6 - Displaying information About a Specific Album####
 
-In this task, you will implement the **Store/Details** view to display information about a specific album. In this Hands-on Lab, everything you will display about the album is already contained in the **View** template. So, instead of creating a **StoreDetailsViewModel** class you will use the current **StoreBrowseViewModel** template passing the Album to it.
+In this task, you will implement the **Store/Details** view to display information about a specific album. In this Hands-on Lab, everything you will display about the album is already contained in the **View** template. So, instead of creating a **StoreDetailsViewModel** class, you will use the current **StoreBrowseViewModel** template passing the Album to it.
 
 1. Close the browser if needed, to return to the Visual Studio window. Add a new **Details** view for the **StoreController**'s **Details** action method. To do this, right-click the **Details** method in the **StoreController** class and click **Add View**.
 
@@ -1192,9 +1192,9 @@ In this task, you will test that each Genre is displayed with a link to the appr
 <a name="Ex6Task10" />
 #### Task 10 - Using Dynamic ViewModel Collection to Pass Values####
 
-In this task, you will learn a simple and powerful method to pass values between the Controller and the View without making any changes in the Model. MVC 4 provides the collection "ViewModel" than can be assigned to any dynamic value and accessed inside controllers and views as well.
+In this task, you will learn a simple and powerful method to pass values between the Controller and the View without making any changes in the Model. MVC 4 provides the collection "ViewModel", which can be assigned to any dynamic value and accessed inside controllers and views as well.
 
-You will now use ViewBag dynamic collection to pass a list of "**Starred genres**" from the controller to the view. The Store Index view will access to **ViewModel** and display the information.
+You will now use the ViewBag dynamic collection to pass a list of "**Starred genres**" from the controller to the view. The Store Index view will access to **ViewModel** and display the information.
 
 1. Close the browser if needed, to return to the Visual Studio window. Open **StoreController.cs** and modify **Index** method to create a list of starred genres into ViewModel collection :
 	<!-- mark:13-14 -->
@@ -1304,7 +1304,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 
 	1. **Richer UI with JavaScript**
 
-		Another enhancement to default project templates is the use of JavaScript to provide a more interactive JavaScript. The Login and Register links used in the template exemplify how to use the jQuery UI Dialog to display a fancy login screen. Click the **Log in** link located on the upper-right corner of the home page. Then, click the register link located next to the login link.
+		Another enhancement to default project templates is the use of JavaScript to provide an enhanced interaction. The Login and Register links used in the template exemplify how to use the jQuery UI Dialog to display a fancy login screen. Click the **Log in** link located on the upper-right corner of the home page. Then, click the register link located next to the login link.
 
 		![Log in and Register links](images/login-and-register-links.png?raw=true "Log in and Register links")
 		
@@ -1386,7 +1386,7 @@ By completing this Hands-On Lab you have learned the fundamentals of ASP.NET MVC
 
 - How to add a layout master page to setup a template for common HTML content, a StyleSheet to enhance the look and feel and a View template to display HTML content
 
-- How to use the ViewModel pattern for passing properties to the View template for them to display dynamic information
+- How to use the ViewModel pattern for passing properties to the View template to display dynamic information
 
 - How to use parameters passed to Controllers in the View template
 
