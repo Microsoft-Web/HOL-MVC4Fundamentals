@@ -1346,17 +1346,17 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 
 	1. **JavaScript libraries included**
 
-		* **jQuery**: jQuery  simplifies HTML document traversing, event handling, animating, and Ajax interactions.
+		1. **jQuery**: jQuery  simplifies HTML document traversing, event handling, animating, and Ajax interactions.
 		
-		* **jQuery UI**: This library provides abstractions for low-level interaction and animation, advanced effects and themeable widgets, built on top of the jQuery JavaScript Library.
+		1. **jQuery UI**: This library provides abstractions for low-level interaction and animation, advanced effects and themeable widgets, built on top of the jQuery JavaScript Library.
 			
 			>**Note:** You can learn about jQuery and jQuery UI in <http://docs.jquery.com/>.
 			
-		* **KnockoutJS**: The MVC4 default template now includes **KnockoutJS**, a JavaScript MVVM framework that lets you create rich and highly responsive web applications using JavaScript and HTML. Like in MVC3, jQuery and jQuery UI libraries are also included in ASP.NET MVC 4.
+		1. **KnockoutJS**: The MVC4 default template now includes **KnockoutJS**, a JavaScript MVVM framework that lets you create rich and highly responsive web applications using JavaScript and HTML. Like in MVC3, jQuery and jQuery UI libraries are also included in ASP.NET MVC 4.
 
 			>**Note:** You can get more information about KnockOutJS library in this link: <http://learn.knockoutjs.com/>.
 		
-		* **Modernizr**: This library runs automatically, making your site compatible with older browsers when using HTML5 and CSS3 technologies.
+		1. **Modernizr**: This library runs automatically, making your site compatible with older browsers when using HTML5 and CSS3 technologies.
 
 			>**Note:** You can get more information about Modernizr library in this link: <http://www.modernizr.com/>.
 
