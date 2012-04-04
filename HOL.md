@@ -62,8 +62,6 @@ You must have the following items to complete this lab:
 
 - Visual Studio 11 Express Beta for Web
 
-	>**Note:** You can install **Visual Studio 11 Express Beta for Web**. To do this, navigate to [http://www.microsoft.com/web/gallery/install.aspx?appid=VWD11_BETA&prerelease=true](http://www.microsoft.com/web/gallery/install.aspx?appid=VWD11_BETA&prerelease=true) using a web browser. 
- 
 <a name="Setup" />
 ### Setup ###
 
