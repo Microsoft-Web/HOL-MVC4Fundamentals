@@ -1294,7 +1294,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 
 1.	Press **F5** to run the solution and see the renewed templates. You can check out the following features:
 
-	- **Modern-style templates**
+	* **Modern-style templates**
 
 		The templates have been renewed, providing more modern-looking styles.
 
@@ -1302,7 +1302,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 
 		_MVC4 restyled templates_
 
-	- **Richer UI with JavaScript**
+	* **Richer UI with JavaScript**
 
 		Another enhancement to default project templates is the use of JavaScript to provide a more interactive JavaScript. The Login and Register links used in the template exemplify how to use the jQuery UI Dialog to display a fancy login screen. Click the **Log in** link located on the upper-right corner of the home page. Then, click the register link located next to the login link.
 
@@ -1320,7 +1320,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 
 		_Register dialog_
 	
-	- **Adaptive Rendering**
+	* **Adaptive Rendering**
 		
 		Check out resizing the browser window and notice how the page layout dynamically adapts to the new window size. These templates use the adaptive rendering technique to render properly in both desktop and mobile platforms without any customization. 
 
@@ -1336,7 +1336,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 
 	_The MVC4 Internet Application Project Template_	
 
-	- **HTML5 markup**
+	* **HTML5 markup**
 
 		Browse template views to find out the new theme markup.
 
@@ -1344,24 +1344,24 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 
 		_New template, using Razor and HTML5 markup (About.cshtml)_
 
-	- **JavaScript libraries included**
+	* **JavaScript libraries included**
 
-		- **jQuery**: jQuery  simplifies HTML document traversing, event handling, animating, and Ajax interactions.
+		* **jQuery**: jQuery  simplifies HTML document traversing, event handling, animating, and Ajax interactions.
 		
-		- **jQuery UI**: This library provides abstractions for low-level interaction and animation, advanced effects and themeable widgets, built on top of the jQuery JavaScript Library.
+		* **jQuery UI**: This library provides abstractions for low-level interaction and animation, advanced effects and themeable widgets, built on top of the jQuery JavaScript Library.
 			
 			>**Note:** You can learn about jQuery and jQuery UI in <http://docs.jquery.com/>.
 			
-		- **KnockoutJS**: The MVC4 default template now includes **KnockoutJS**, a JavaScript MVVM framework that lets you create rich and highly responsive web applications using JavaScript and HTML. Like in MVC3, jQuery and jQuery UI libraries are also included in ASP.NET MVC 4.
+		* **KnockoutJS**: The MVC4 default template now includes **KnockoutJS**, a JavaScript MVVM framework that lets you create rich and highly responsive web applications using JavaScript and HTML. Like in MVC3, jQuery and jQuery UI libraries are also included in ASP.NET MVC 4.
 
 			>**Note:** You can get more information about KnockOutJS library in this link: <http://learn.knockoutjs.com/>.
 		
-		- **Modernizr**: This library runs automatically, making your site compatible with older browsers when using HTML5 and CSS3 technologies.
+		* **Modernizr**: This library runs automatically, making your site compatible with older browsers when using HTML5 and CSS3 technologies.
 
 			>**Note:** You can get more information about Modernizr library in this link: <http://www.modernizr.com/>.
 
 
-	- **ASP.NET Universal providers included in the solution**
+	* **ASP.NET Universal providers included in the solution**
 	
 		ASP.NET Universal Providers extend Session, Membership, Roles and Profile support to SQL Compact Edition and SQL Azure. By only configuring the right connection string, your application will be able to work with SQL Server (plus Express), SQL Server Compact or SQL Azure.
 
