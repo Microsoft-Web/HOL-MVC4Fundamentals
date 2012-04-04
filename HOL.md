@@ -6,7 +6,7 @@
 <a name="Overview" />
 ## Overview ##
 
-This Hands-On Lab is based on MVC (Model View Controller) Music Store, a tutorial application that introduces and explains step-by-step how to use ASP.NET MVC and Visual Studio 11. Throughout the lab you will learn the simplicity, yet power of using these technologies together. You will start with a simple application and will build it until you have a fully functional MVC Web Application.
+This Hands-On Lab is based on MVC (Model View Controller) Music Store, a tutorial application that introduces and explains step-by-step how to use ASP.NET MVC and Visual Studio. Throughout the lab you will learn the simplicity, yet power of using these technologies together. You will start with a simple application and will build it until you have a fully functional MVC Web Application.
 
 This Lab will work with ASP.NET MVC 4.
 
@@ -54,6 +54,7 @@ In this Hands-On Lab, you will learn how to:
 
 - Use View Model pattern to pass information from controller actions to the view templates
 
+- Explore the MVC 4 new template for internet applications
  
 <a name="SystemRequirements" />
 ### System Requirements ###
@@ -176,7 +177,7 @@ In this task, you will examine the solution structure to understand the involved
 
 	1. **Content**. This folder is the recommended location to add content files such as cascading style sheet files, images, and so on. In general, the Content folder is used for static files.
 
-	1. **Controllers.** This folder will contain the controller classes. In an MVC based application, controllers are responsible for handling end user interaction, manipulating the model, and ultimately choosing a view to render to display UI.
+	1. **Controllers.** This folder will contain the controller classes. In an MVC based application, controllers are responsible for handling end user interaction, manipulating the model, and ultimately choosing a view to render the UI.
 
 		> **Note:** The MVC framework requires the names of all controllers to end with "Controller"-for example, HomeController, LoginController, or ProductController.
 
@@ -214,7 +215,8 @@ In this task, you will add a Controller class that will handle URLs to the Home 
 
 1. The file **HomeController.cs** is created in the **Controllers** folder. In order to have the **HomeController** return a string on its Index action, replace the **Index** method with the following code:
 
-	(Code Snippet - ASP.NET MVC 4 Fundamentals - Ex1 HomeController Index)
+	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex1 HomeController Index_)
+
 	<!-- mark:1-5 -->
 	````C#
 	public string Index()
@@ -288,7 +290,8 @@ In this task, you will modify Controller methods that are called **actions**. Th
 
 1. The **StoreController** class already has an **Index** method. You will use it later in this Lab to implement the page that lists all genres of the music store. For now, just replace the **Index** method with the following code that returns a string "Hello from Store.Index()":
 
-	(Code Snippet - ASP.NET MVC 4 Fundamentals - Ex2 StoreController Index)
+	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex2 StoreController Index_)
+
 	<!-- mark:1-5 -->
 	````C#
 	public string Index()
@@ -299,7 +302,8 @@ In this task, you will modify Controller methods that are called **actions**. Th
 
 1. Add the **Browse** and **Details** methods. To do this, add the following code to the **StoreController**:
 
-	(Code Snippet - ASP.NET MVC 4 Fundamentals - Ex2 StoreController BrowseAndDetails)
+	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex2 StoreController BrowseAndDetails_)
+
 	<!-- mark:1-15 -->
 	````C#
 	//
@@ -372,7 +376,8 @@ In this task, you will use the **querystring** to send parameters to the **Brows
 
 1. Change the **Browse** method, adding a string parameter to request for a specific genre. ASP.NET MVC will automatically pass any querystring or form post parameters named **genre** to this action method when invoked. To do this, replace the **Browse** method with the following code:
 
-	(Code Snippet - ASP.NET MVC 4 Fundamentals - Ex3 StoreController BrowseMethod)
+	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex3 StoreController BrowseMethod_)
+
 	<!-- mark:1-10 -->
 	````C#
 	//
@@ -410,11 +415,12 @@ In this task, you will try out the Application in a web browser and use the **ge
 <a name="Ex3Task3" />
 #### Task 3 - Adding an Id Parameter Embedded in the URL####
 
-In this task, you will use the **URL** to pass an **Id** parameter to the **Details** action method of the **StoreController**. ASP.NET MVC's default routing convention is to treat the segment of a URL after the action method name as a parameter named **Id**.  If your action method has a parameter named Id then ASP.NET MVC will automatically pass the URL segment to you as a parameter. In the URL **Store/Detail/5**, **Id** will be interpreted as **5**.
+In this task, you will use the **URL** to pass an **Id** parameter to the **Details** action method of the **StoreController**. ASP.NET MVC's default routing convention is to treat the segment of a URL after the action method name as a parameter named **Id**.  If your action method has a parameter named Id then ASP.NET MVC will automatically pass the URL segment to you as a parameter. In the URL **Store/Details/5**, **Id** will be interpreted as **5**.
 
 1. Change the **Details** method of the **StoreController**, adding an **int** parameter called **id**. To do this, replace the **Details** method with the following code:
 
-	(Code Snippet - ASP.NET MVC 4 Fundamentals - Ex3 StoreController DetailsMethod)
+	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex3 StoreController DetailsMethod_)
+
 	<!-- mark:1-9 -->
 	````C#
 	//
@@ -547,7 +553,7 @@ In this task, you will add a View template to generate the HTML response that wi
 
 1. To use a View template when browsing the site's home page, first you need to indicate that instead of returning a string, the **HomeController Index** method should return a **View**. Open **HomeController** class and change its **Index** method to return an **ActionResult,** and have it return **View()**.
 
-	(Code Snippet - ASP.NET MVC 4 Fundamentals - Ex4 HomeController Index - CSharp)
+	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex4 HomeController Index_)
 	
 	<!-- mark:3-10 -->
 	````C#
@@ -676,7 +682,8 @@ In this task, you will add those 2 properties to the **StoreIndexViewModel** cla
 
 1. Add **NumberOfGenres** and **Genres** properties to the **StoreIndexViewModel** class. To do this, add the following 2 lines to the class definition:
 
-	(Code Snippet - ASP.NET MVC 4 Fundamentals - Ex5 StoreIndexViewModel properties)
+	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex5 StoreIndexViewModel properties_)
+
 	<!-- mark:3-5 -->
 	````C#
 	public class StoreIndexViewModel
@@ -703,7 +710,8 @@ In this task, you will update the **StoreController** to use the **StoreIndexVie
 
 1. In order to use the **StoreIndexViewModel** class from the **StoreController**, add the following namespace to the top of the **StoreController** code:
 
-	(Code Snippet - ASP.NET MVC 4 Fundamentals - Ex5 StoreIndexViewModel using ViewModels)
+	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex5 StoreIndexViewModel using ViewModels_)
+
 	<!-- mark:1-2 -->
 	````C#
 	using MvcMusicStore.ViewModels;
@@ -717,7 +725,8 @@ In this task, you will update the **StoreController** to use the **StoreIndexVie
 
 1. Replace the **Index** method with the following code:
 
-	(Code Snippet - ASP.NET MVC 4 Fundamentals - Ex5 StoreController Index method)
+	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex5 StoreController Index method_)
+
 	<!-- mark:1-13 -->
 	````C#
 	public ActionResult Index()
@@ -865,7 +874,8 @@ Unlike ViewModels, which are created just to pass information from the Controlle
 
 1. Add a **Name** property to the Genre class. To do this, add the following code:
 
-	(Code Snippet - ASP.NET MVC 4 Fundamentals - Ex6 Genre)
+	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex6 Genre_)
+
 	<!-- mark:10-11 -->
 	````C#
 	using System;
@@ -886,7 +896,8 @@ Unlike ViewModels, which are created just to pass information from the Controlle
 
 1. Add two properties to the Album class**: Genre** and **Title**. To do this, add the following code:
 
-	(Code Snippet - ASP.NET MVC 4 Fundamentals - Ex6 Album)
+	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex6 Album_)
+
 	<!-- mark:10-12 -->
 	````C#
 	using System;
@@ -913,7 +924,8 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 
 1. Add a reference to the Models in **StoreBrowseViewModel** class. To do this, add the following using namespace:
 
-	(Code Snippet - ASP.NET MVC 4 Fundamentals - Ex6 UsingModel)
+	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex6 UsingModel_)
+
 	<!-- mark:5-6 -->
 	````C#
 	using System;
@@ -932,7 +944,8 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 
 1. Add two properties to **StoreBrowseViewModel** class:  **Genre** and **Albums.** To do this, add the following code:
 
-	(Code Snippet - ASP.NET MVC 4 Fundamentals - Ex6 ModelProperties)
+	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex6 ModelProperties_)
+
 	<!-- mark:11-13 -->
 	````C#
 	using System;
@@ -965,7 +978,8 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 
 1. Add a reference to the Models folder in **StoreController** class. To do this, expand the **Controllers** folder in the **Solution Explorer** and open the **StoreController** class. Then add the following code:
 
-	(Code Snippet - ASP.NET MVC 4 Fundamentals - Ex6 UsingModelInController)
+	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex6 UsingModelInController_)
+
 	<!-- mark:7-9 -->
 	````C#
 	using System;
@@ -980,7 +994,8 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 
 1. Replace the **Browse** action method to use the **StoreViewBrowseController** class**.** You will create a Genre and two new Albums objects with dummy data (in the next Hands-on Lab you will consume real data from a database). To do this, replace the **Browse** method with the following code:
 
-	(Code Snippet - ASP.NET MVC 4 Fundamentals - Ex6 BrowseMethod)
+	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex6 BrowseMethod_)
+
 	<!-- mark:1-24 -->
 	````C#
 	//
@@ -1011,7 +1026,8 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 
 1. Replace the **Details** action method to use the **StoreViewBrowseController** class**.** You will create a new **Album** object to be returned to the **View**. To do this, replace the **Details** method with the following code:
 
-	(Code Snippet - ASP.NET MVC 4 Fundamentals - Ex6 DetailsMethod)
+	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex6 DetailsMethod_)
+
 	<!-- mark:1-10 -->
 	````C#
 	//
@@ -1040,7 +1056,7 @@ In this task, you will add a **Browse** View to show the Albums found for a spec
 
 1. In the **Add View** dialog box, verify that the View Name is **Browse**. Check the **Create a strongly-typed view** checkbox and select **StoreBrowseViewModel** from the **Model class** dropdown. Leave the other fields with their default value. Then click **Add**.
 
- 	![Adding a Browse View](./images/Adding-a-Browse-View.png?raw=true "Adding a Browse View - C")
+ 	![Adding a Browse View](./images/Adding-a-Browse-View.png?raw=true "Adding a Browse View")
  
 	_Adding a Browse View_
 
@@ -1147,7 +1163,7 @@ In this task, you will add a link in the Store View to have a link in every Genr
 
 	> **Note**: another approach would be linking directly to the page, with a code like the following:
 
-	>	&lt;a href="/Store/Browse?genre=<%: genreName %>"><%: genreName %></a&gt;
+	> &lt;a href="/Store/Browse?genre=@genreName">@genreName</a&gt;
 
 	> Although this approach works, it depends on a hardcoded string. If you later rename the Controller, you will have to change this instruction manually. A better alternative is to use an **HTML Helper** method. ASP.NET MVC includes an HTML Helper method which is available for such tasks. The **Html.ActionLink()** helper method makes it easy to build HTML **<a>** links, making sure URL paths are properly URL encoded.
 
@@ -1257,7 +1273,7 @@ In this task, you will test that the starred genres display a star icon.
 
 In this exercise, you will explore the enhancements in the ASP.NET MVC4 project templates, taking a look at the most relevant features of the new template.
 
-<a name="Ex07Task1" />
+<a name="Ex7Task1" />
 #### Task 1: Exploring the MVC4 Internet Application Template####
 
 1. If not already open, start Microsoft Visual Studio 11 Express Beta for Web from **Start** | **All Programs** | **Microsoft Visual Studio 11 Express** | **Visual Studio 11 Express Beta for Web**.
@@ -1338,11 +1354,11 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 			
 		- **KnockoutJS**: The MVC4 default template now includes **KnockoutJS**, a JavaScript MVVM framework that lets you create rich and highly responsive web applications using JavaScript and HTML. Like in MVC3, jQuery and jQuery UI libraries are also included in ASP.NET MVC 4.
 
-			>**Note:** You can get more information about KnockOutJS library in this link: <http://learn.knockoutjs.com/>.**
+			>**Note:** You can get more information about KnockOutJS library in this link: <http://learn.knockoutjs.com/>.
 		
 		- **Modernizr**: This library runs automatically, making your site compatible with older browsers when using HTML5 and CSS3 technologies.
 
-			>**Note:** You can get more information about Modernizr library in this link: <http://www.modernizr.com/>.**
+			>**Note:** You can get more information about Modernizr library in this link: <http://www.modernizr.com/>.
 
 
 	- **ASP.NET Universal providers included in the solution**
