@@ -1294,7 +1294,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 
 1.	Press **F5** to run the solution and see the renewed templates. You can check out the following features:
 
-	* **Modern-style templates**
+	1. **Modern-style templates**
 
 		The templates have been renewed, providing more modern-looking styles.
 
@@ -1302,7 +1302,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 
 		_MVC4 restyled templates_
 
-	* **Richer UI with JavaScript**
+	1. **Richer UI with JavaScript**
 
 		Another enhancement to default project templates is the use of JavaScript to provide a more interactive JavaScript. The Login and Register links used in the template exemplify how to use the jQuery UI Dialog to display a fancy login screen. Click the **Log in** link located on the upper-right corner of the home page. Then, click the register link located next to the login link.
 
@@ -1320,7 +1320,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 
 		_Register dialog_
 	
-	* **Adaptive Rendering**
+	1. **Adaptive Rendering**
 		
 		Check out resizing the browser window and notice how the page layout dynamically adapts to the new window size. These templates use the adaptive rendering technique to render properly in both desktop and mobile platforms without any customization. 
 
@@ -1336,7 +1336,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 
 	_The MVC4 Internet Application Project Template_	
 
-	* **HTML5 markup**
+	1. **HTML5 markup**
 
 		Browse template views to find out the new theme markup.
 
@@ -1344,7 +1344,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 
 		_New template, using Razor and HTML5 markup (About.cshtml)_
 
-	* **JavaScript libraries included**
+	1. **JavaScript libraries included**
 
 		* **jQuery**: jQuery  simplifies HTML document traversing, event handling, animating, and Ajax interactions.
 		
@@ -1361,7 +1361,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 			>**Note:** You can get more information about Modernizr library in this link: <http://www.modernizr.com/>.
 
 
-	* **ASP.NET Universal providers included in the solution**
+	1. **ASP.NET Universal providers included in the solution**
 	
 		ASP.NET Universal Providers extend Session, Membership, Roles and Profile support to SQL Compact Edition and SQL Azure. By only configuring the right connection string, your application will be able to work with SQL Server (plus Express), SQL Server Compact or SQL Azure.
 
