@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
 using MvcMusicStore.ViewModels;
 
 namespace MvcMusicStore.Controllers
@@ -16,7 +15,8 @@ namespace MvcMusicStore.Controllers
             var genres = new List<string> { "Rock", "Jazz", "Country", "Pop", "Disco" };
 
             // Create our view model
-            var viewModel = new StoreIndexViewModel { 
+            var viewModel = new StoreIndexViewModel
+            {
                 NumberOfGenres = genres.Count(),
                 Genres = genres
             };

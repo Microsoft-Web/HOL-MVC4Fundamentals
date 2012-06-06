@@ -13,9 +13,10 @@
         <li>
             @Html.ActionLink(genreName, "Browse", new { genre = genreName }, null)
 
-            @if (ViewBag.Starred.Contains(genreName)) { 
+             @if (ViewBag.Starred.Contains(genreName)) { 
                 <img src="../../Content/Images/starred.png" alt="Starred element" />
             }
+
         </li>
         }
 </ul>

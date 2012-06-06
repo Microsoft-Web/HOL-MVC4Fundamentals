@@ -61,7 +61,7 @@ In this Hands-On Lab, you will learn how to:
 
 You must have the following items to complete this lab:
 
-- Visual Studio 11 Express Beta for Web
+- Visual Studio 2012
 
 <a name="Setup" />
 ### Setup ###
@@ -70,47 +70,7 @@ _**Installing Code Snippets**_
 
 For convenience, much of the code you will be managing along this lab is available as Visual Studio code snippets. To install the code snippets run **.\Source\Assets\CodeSnippets.vsi** file.
 
-_**Installing Web Platform Installer**_
 
-This section assumes that you don't have some or all the system requirements installed. In case you do, you can simply skip this section.
-
-Microsoft Web Platform Installer (WebPI) is a tool that manages the installation of the prerequisites for this Lab.
-
-> **Note:** As well as the Microsoft Web Platform, WebPI can also install many of the open source applications that are available like Umbraco, Kentico, DotNetNuke and many more.  These are very useful for providing a foundation from which to customize an application to your requirements, dramatically cutting down your development time.
-
-Please follow these steps to download and install Microsoft Visual Studio 11 Express Beta for Web:
-
-1. Install **Visual Studio 11 Express Beta for Web**. To do this, navigate to [http://www.microsoft.com/web/gallery/install.aspx?appid=VWD11_BETA&prerelease=true](http://www.microsoft.com/web/gallery/install.aspx?appid=VWD11_BETA&prerelease=true) using a web browser. 
-
-	![Web Platform Installer 4.0 window](./images/Microsoft-Web-Platform-Installer-4.png?raw=true "Web Platform Installer 4.0 download")
-
-	_Web Platform Installer 4.0 download_
-
-1. The Web Platform Installer launches and shows Visual Studio 11 Express Beta for Web Installation. Click on **Install**.
-
- 	![Visual Studio 11 Express Beta for Web Installer window](./images/Microsoft-VS-11-Install.png?raw=true "Visual Studio 11 Express Beta for Web Installer window")
- 
-	_Visual Studio 11 Express Beta for Web Installer window_
-
-1. The **Web Platform Installer** displays the list of software to be installed. Accept by clicking **I Accept**.
-
- 	![Web Platform Installer window](./images/Microsoft-Web-Platform-Installer-Prerequisites.png?raw=true "Web Platform Installer window")
- 
-	_Web Platform Installer window_
-
-1. The appropriate components will be downloaded and installed.
-
- 	![Web Platform Installation - Download progress](./images/Web-Platform-Installation-Download-progress.png?raw=true "Web Platform Installation - Download progress")
- 
-	_Web Platform Installation - Download progress_
-
-1. The **Web Platform Installer** will resume downloading and installing the products. When this process is finished, the Installer will show the list of all the software installed. Click **Finish**.
-
- 	![Web Platform Installer](./images/Web-Platform-Installer.png?raw=true "Web Platform Installer")
- 
-	_Web Platform Installer_
-
----
 <a name="Exercises" />
 ## Exercises ##
 
@@ -137,12 +97,12 @@ Estimated time to complete this lab: **45 minutes**.
 <a name="Exercise1" />
 ### Exercise 1: Creating MusicStore ASP.NET MVC Web Application Project ###
 
-In this exercise, you will learn how to create an ASP.NET MVC application in Visual Studio 11 Express as well as its main folder organization. Additionally, you will learn how to add a new Controller and have it display a simple string at the Application screen.
+In this exercise, you will learn how to create an ASP.NET MVC application in Visual Studio 2012 Express as well as its main folder organization. Additionally, you will learn how to add a new Controller and have it display a simple string at the Application screen.
 
 <a name="Ex1Task1" />
 #### Task 1 - Creating the ASP.NET MVC Web Application Project####
 
-1. In this task, you will create an empty ASP.NET MVC application project using the MVC Visual Studio template. Start Microsoft Visual Studio 11 from **Start** | **All Programs** | **Microsoft Visual Studio 11 Express** | **Visual Studio 11 Express Beta for Web**.
+1. In this task, you will create an empty ASP.NET MVC application project using the MVC Visual Studio template. Start **Microsoft Visual Studio 2012**.
 
 1. On the **File** menu, click **New Project**.
 
@@ -175,21 +135,15 @@ In this task, you will examine the solution structure to understand the elements
  
 	_ASP.NET MVC Folder structure in Solution Explorer_
 
-	1. **Content**. This folder is the recommended location to add content files such as cascading style sheet files, images, and so on. In general, the Content folder is used for static files.
-
 	1. **Controllers.** This folder will contain the controller classes. In an MVC based application, controllers are responsible for handling end user interaction, manipulating the model, and ultimately choosing a view to render the UI.
 
 		> **Note:** The MVC framework requires the names of all controllers to end with "Controller"-for example, HomeController, LoginController, or ProductController.
 
 	1. **Models**. This folder is provided for classes that represent the application model for the MVC Web application. This usually includes code that defines objects and the logic for interacting with the data store. Typically, the actual model objects will be in separate class libraries. However, when you create a new application, you might include classes and then move them into separate class libraries at a later point in the development cycle.
 
-	1. **Scripts**. This is the recommended folder to store JavaScript files in your application.
-
 	1. **Views**. This folder is the recommended location for views, the components responsible for displaying the application's user interface. Views use .aspx, .ascx, .cshtml and .master files, in addition to any other files that are related to rendering views. Views folder contains a folder for each controller; the folder is named with the controller-name prefix. For example, if you have a controller named **HomeController**, the Views folder will contain a folder named Home. By default, when the ASP.NET MVC framework loads a view, it looks for an .aspx file with the requested view name in the Views\controllerName folder (**Views\[ControllerName]\[Action].aspx**) or (**Views\[ControllerName]\[Action].cshtml**) for Razor Views. 
 
-	1. **Views\Shared.** By default, there is also a folder named Shared in the Views folder, which does not correspond to any controller. The Shared folder is used for views that are shared across multiple controllers. For example, you can put the Web application's layout master page in the Shared folder.
-
-		> **Note:** In addition to the folders listed previously, an MVC Web application uses the **Global.asax** file to set global URL routing defaults, and it uses the **Web.config** file to configure the application.
+	> **Note:** In addition to the folders listed previously, an MVC Web application uses the **Global.asax** file to set global URL routing defaults, and it uses the **Web.config** file to configure the application.
 
  
 <a name="Ex1Task3" />
@@ -259,23 +213,9 @@ For the scope of this exercise, you will have those actions to simply return a s
 
 In this task, you will add a new Controller.
 
-1. If not already open, start Microsoft Visual Studio 11 Express Beta for Web from **Start** | **All Programs** | **Microsoft Visual Studio 11 Express** | **Visual Studio 11 Express Beta for Web**.
+1. If not already open, start **Microsoft Visual Studio 2012**.
 
-1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to Source\Ex02-CreatingAController\Begin, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
-
-1.	Follow these steps to install the **NuGet** package dependencies.
-
-	a.	Open the **NuGet** **Package Manager Console**. To do this, select **Tools | Library Package Manager | Package Manager Console**.
-
-	b.	In the **Package Manager Console,** type **Install-Package NuGetPowerTools**.
-
-	c.	After installing the package, type **Enable-PackageRestore**.
-
-	d.	Build the solution. The **NuGet** dependencies will be downloaded and installed automatically.
-
-	>**Note:** One of the advantages of using NuGet is that you don't have to ship all the libraries in your project, reducing the project size. With NuGet Power Tools, by specifying the package versions in the Packages.config file, you will be able to download all the required libraries the first time you run the project. This is why you will have to run these steps after you open an existing solution from this lab.
-	
-	>For more information, see this article: <http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages>.
+1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex02-CreatingAController\Begin**, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
 
 1. Add the new controller. To do this, right-click the **Controllers** folder within the Solution Explorer, select **Add** and then the **Controller** command. Change the **Controller** **Name** to **StoreController**, and click **Add**.
 
@@ -354,23 +294,9 @@ Until now, you have been returning constant strings from the Controllers. In thi
 
 In this task, you will use the **querystring** to send parameters to the **Browse** action method in the **StoreController**.
 
-1. If not already open, start Microsoft Visual Studio 11 Express Beta for Web from **Start** | **All Programs** | **Microsoft Visual Studio 11 Express** | **Visual Studio 11 Express Beta for Web**.
+1. If not already open, start **Microsoft Visual Studio 2012**.
 
-1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to Source\Ex03-PassingParametersToAController\Begin, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
-
-1.	Follow these steps to install the **NuGet** package dependencies.
-
-	a.	Open the **NuGet** **Package Manager Console**. To do this, select **Tools | Library Package Manager | Package Manager Console**.
-
-	b.	In the **Package Manager Console,** type **Install-Package NuGetPowerTools**.
-
-	c.	After installing the package, type **Enable-PackageRestore**.
-
-	d.	Build the solution. The **NuGet** dependencies will be downloaded and installed automatically.
-
-	>**Note:** One of the advantages of using NuGet is that you don't have to ship all the libraries in your project, reducing the project size. With NuGet Power Tools, by specifying the package versions in the Packages.config file, you will be able to download all the required libraries the first time you run the project. This is why you will have to run these steps after you open an existing solution from this lab.
-	
-	>For more information, see this article: <http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages>.
+1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex03-PassingParametersToAController\Begin**, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
 
 1. Open **StoreController** class. To do this, in the **Solution Explorer**, expand the **Controllers** folder and double-click **StoreController.cs**.
 
@@ -457,27 +383,13 @@ In this exercise you will learn how to add a layout master page to setup a templ
 <a name="Ex4Task1" />
 #### Task 1 - Modifying the file _layout.cshtml####
 
-The file ~/Views/Shared/_layout.cshtml allows you to setup a template for common HTML to use across the entire website. In this task you will add a layout master page with a common header with links to the Home page and Store area.
+The file **~/Views/Shared/_layout.cshtml** allows you to setup a template for common HTML to use across the entire website. In this task you will add a layout master page with a common header with links to the Home page and Store area.
 
-1. If not already open, start Microsoft Visual Studio 11 Express Beta for Web from **Start** | **All Programs** | **Microsoft Visual Studio 11 Express** | **Visual Studio 11 Express Beta for Web**.
+1. If not already open, start **Microsoft Visual Studio 2012**.
 
-1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to Source\Ex04-CreatingAView\Begin, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
+1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex04-CreatingAView\Begin**, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
 
-1.	Follow these steps to install the **NuGet** package dependencies.
-
-	a.	Open the **NuGet** **Package Manager Console**. To do this, select **Tools | Library Package Manager | Package Manager Console**.
-
-	b.	In the **Package Manager Console,** type **Install-Package NuGetPowerTools**.
-
-	c.	After installing the package, type **Enable-PackageRestore**.
-
-	d.	Build the solution. The **NuGet** dependencies will be downloaded and installed automatically.
-
-	>**Note:** One of the advantages of using NuGet is that you don't have to ship all the libraries in your project, reducing the project size. With NuGet Power Tools, by specifying the package versions in the Packages.config file, you will be able to download all the required libraries the first time you run the project. This is why you will have to run these steps after you open an existing solution from this lab.
-	
-	>For more information, see this article: <http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages>.
-
-1. The file _layout.cshtml contains the HTML container layout for all pages on the site.  It includes the **\<html\>** element for the HTML response, as well as the **\<head\>** and **\<body\>** elements. **@RenderBody()** within the HTML body identify regions that view templates will be able to fill in with dynamic content.
+1. The file **_layout.cshtml** contains the HTML container layout for all pages on the site.  It includes the **\<html\>** element for the HTML response, as well as the **\<head\>** and **\<body\>** elements. **@RenderBody()** within the HTML body identify regions that view templates will be able to fill in with dynamic content.
 
 	````HTML(C#)
 	<!DOCTYPE html>
@@ -524,7 +436,7 @@ The file ~/Views/Shared/_layout.cshtml allows you to setup a template for common
 	</html>
 	````
 	
-	>**Note:** Did you know? Visual Studio 11 has snippets that make it easy to add commonly used code in HTML, code files and more! Try it out by typing **\<div\>** and pressing **TAB** twice to insert a complete **div** tag.
+	>**Note:** Did you know? Visual Studio 2012 has snippets that make it easy to add commonly used code in HTML, code files and more! Try it out by typing **\<div\>** and pressing **TAB** twice to insert a complete **div** tag.
 	
 <a name="Ex4Task2" />
 #### Task 2 - Adding CSS Stylesheet####
@@ -605,7 +517,8 @@ In this task, you will add a View template to generate the HTML response that wi
 
 1. Select **MvcMusicStore** project in the Solution Explorer and Press **F5** to run the Application.
 
-**Exercise 4: Verification**
+<a name="Ex4Task4" />
+####Task 4: Verification####
 
 In order to verify that you have correctly performed all the steps in the previous exercise, proceed as follows:
 
@@ -633,23 +546,9 @@ In this exercise, you will learn how to create a ViewModel class and add the req
 
 In this task, you will create a ViewModel class that will implement the Store genre listing scenario.
 
-1. If not already open, start Microsoft Visual Studio 11 Express Beta for Web from **Start** | **All Programs** | **Microsoft Visual Studio 11 Express** | **Visual Studio 11 Express Beta for Web**.
+1. If not already open, start **Microsoft Visual Studio 2012**.
 
-1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to Source\Ex05-CreatingAViewModel\Begin, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
-
-1.	Follow these steps to install the **NuGet** package dependencies.
-
-	a.	Open the **NuGet** **Package Manager Console**. To do this, select **Tools | Library Package Manager | Package Manager Console**.
-
-	b.	In the **Package Manager Console,** type **Install-Package NuGetPowerTools**.
-
-	c.	After installing the package, type **Enable-PackageRestore**.
-
-	d.	Build the solution. The **NuGet** dependencies will be downloaded and installed automatically.
-
-	>**Note:** One of the advantages of using NuGet is that you don't have to ship all the libraries in your project, reducing the project size. With NuGet Power Tools, by specifying the package versions in the Packages.config file, you will be able to download all the required libraries the first time you run the project. This is why you will have to run these steps after you open an existing solution from this lab.
-	
-	>For more information, see this article: <http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages>.
+1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex05-CreatingAViewModel\Begin**, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
 
 1. Create a **ViewModels** folder to hold the ViewModel. To do this, right-click the top-level **MvcMusicStore** project, select **Add** and then **New Folder**.
 
@@ -752,7 +651,7 @@ In this task, you will update the **StoreController** to use the **StoreIndexVie
 
 In this task, you will create a View template that will use a StoreIndexViewModel object passed from the Controller to display a list of genres.
 
-1. Before creating the new View template, let's build the project so that the **Add View Dialog** knows about the **StoreIndexViewModel** class. Build the project by selecting the **Debug** menu item and then **Build MvcMusicStore**.
+1. Before creating the new View template, let's build the project so that the **Add View Dialog** knows about the **StoreIndexViewModel** class. Build the project by selecting the **Build** menu item and then **Build MvcMusicStore**.
 
  	![Building the project](./images/Building-the-project.png?raw=true "Building the project")
  
@@ -770,7 +669,7 @@ In this task, you will create a View template that will use a StoreIndexViewMode
  
 	_Add View Dialog_
 
-	The \Views\Store\Index.cshtml View template file is created and opened. Based on the information provided to the **Add View** dialog in the last step, the View template will expect a **StoreIndexViewModel** instance as the data to use to generate an HTML response. You will notice that by seeing that the template inherits a **ViewPage<MusicStore.ViewModels.StoreIndexViewModel>** in C#.
+	The **\Views\Store\Index.cshtml** View template file is created and opened. Based on the information provided to the **Add View** dialog in the last step, the View template will expect a **StoreIndexViewModel** instance as the data to use to generate an HTML response. You will notice that by seeing that the template inherits a **ViewPage<MusicStore.ViewModels.StoreIndexViewModel>** in C#.
 
  
 <a name="Ex5Task5" />
@@ -780,7 +679,7 @@ In this task, you will update the View template created in the last task to retr
 
 > **Note:** You will use @ syntax (often referred to as "code nuggets") to execute code within the View template.
 
-1. In the Index.cshtml file, replace the code inside with the following:
+1. In the **Index.cshtml** file, replace the code inside with the following:
 	<!-- mark:1-9 -->
 	````HTML
 	@model MvcMusicStore.ViewModels.StoreIndexViewModel
@@ -844,23 +743,9 @@ In Exercise 3 you learned how to pass parameters to the Controller. In this exer
 
 Unlike ViewModels, which are created just to pass information from the Controller to the View, Model classes are built to contain and manage data and domain logic. In this task you will add two model classes to represent these concepts: **Genre** and **Album**.
 
-1. If not already open, start Microsoft Visual Studio 11 Express Beta for Web from **Start** | **All Programs** | **Microsoft Visual Studio 11 Express** | **Visual Studio 11 Express Beta for Web**.
+1. If not already open, start **Microsoft Visual Studio 2012**
 
-1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to Source\Ex06-UsingParametersInView\Begin, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
-
-1.	Follow these steps to install the **NuGet** package dependencies.
-
-	a.	Open the **NuGet** **Package Manager Console**. To do this, select **Tools | Library Package Manager | Package Manager Console**.
-
-	b.	In the **Package Manager Console,** type **Install-Package NuGetPowerTools**.
-
-	c.	After installing the package, type **Enable-PackageRestore**.
-
-	d.	Build the solution. The **NuGet** dependencies will be downloaded and installed automatically.
-
-	>**Note:** One of the advantages of using NuGet is that you don't have to ship all the libraries in your project, reducing the project size. With NuGet Power Tools, by specifying the package versions in the Packages.config file, you will be able to download all the required libraries the first time you run the project. This is why you will have to run these steps after you open an existing solution from this lab.
-	
-	>For more information, see this article: <http://docs.nuget.org/docs/workflows/using-nuget-without-committing-packages>.
+1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex06-UsingParametersInView\Begin**, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
 
 1. Add a **Genre** Model class. To do this, right-click the **Models** folder in the **Solution Explorer**, select **Add** and then the **New Item** option. Under **Code**, choose the **Class** item and name the file **Genre.cs**, then click **Add**.
 
@@ -1046,11 +931,11 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 
 In this task, you will add a **Browse** View to show the Albums found for a specific Genre.
 
-1. Before creating the new View template, you should build the project so that the **Add View Dialog** knows about the **ViewModel** class to use. Build the project by selecting the **Debug** menu item and then **Build MvcMusicStore**.
+1. Before creating the new View template, you should build the project so that the **Add View Dialog** knows about the **ViewModel** class to use. Build the project by selecting the **Build** menu item and then **Build MvcMusicStore**.
 
- 	![Building the project in Visual Studio 11](./images/Building-the-project-in-Visual-Studio-11.png?raw=true "Building the project in Visual Studio 11")
+ 	![Building the project in Visual Studio 2012](./images/Building-the-project-in-Visual-Studio-11.png?raw=true "Building the project in Visual Studio 2012")
  
-	_Building the project in Visual Studio 11_
+	_Building the project in Visual Studio 2012_
 
 1. Add a **Browse** View. To do this, right-click in the **Browse** action method of the **StoreController** and click **Add View**.
 
@@ -1276,7 +1161,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 <a name="Ex7Task1" />
 #### Task 1: Exploring the MVC4 Internet Application Template####
 
-1. If not already open, start Microsoft Visual Studio 11 Express Beta for Web from **Start** | **All Programs** | **Microsoft Visual Studio 11 Express** | **Visual Studio 11 Express Beta for Web**.
+1. If not already open, start **Microsoft Visual Studio 2012**
 
 1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C#|Web** template on the left pane tree, and choose the **ASP**.**NET MVC 4 Web Application.** Name the project **MusicStore**, select a location (or leave the default) and click **OK**. 
 
@@ -1301,24 +1186,6 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 		![MVC4 restyled templates](images/mvc4-restyled-templates.png?raw=true "MVC4 restyled templates")
 
 		_MVC4 restyled templates_
-
-	1. **Richer UI with JavaScript**
-
-		Another enhancement to default project templates is the use of JavaScript to provide an enhanced interaction. The Login and Register links used in the template exemplify how to use the jQuery UI Dialog to display a fancy login screen. Click the **Log in** link located on the upper-right corner of the home page. Then, click the register link located next to the login link.
-
-		![Log in and Register links](images/login-and-register-links.png?raw=true "Log in and Register links")
-		
-		_Log in and Register links_
-		
-			
-		![log-in-dialog](images/log-in-dialog.png?raw=true "Log in dialog")
-
-		_Log in dialog_
-
-		
-		![Register-dialog](images/register-dialog.png?raw=true "Register dialog")
-
-		_Register dialog_
 	
 	1. **Adaptive Rendering**
 		
@@ -1340,7 +1207,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 
 		Browse template views to find out the new theme markup.
 
-		![New template, using Razor and HTML5 markup (About.cshtml)](images/new-template-using-razor-and-html5-markup-abo.png?raw=true "New template, using Razor and HTML5 markup (About.cshtml)")
+		![New template, using Razor and HTML5 markup (About.cshtml)](images/new-template-using-razor-and-html5-markup-abo.png?raw=true "New template, using Razor and HTML5 markup (About.cshtml)
 
 		_New template, using Razor and HTML5 markup (About.cshtml)_
 
