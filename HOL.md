@@ -1207,9 +1207,9 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 
 		Browse template views to find out the new theme markup.
 
-		![New template, using Razor and HTML5 markup (About.cshtml)](images/new-template-using-razor-and-html5-markup-abo.png?raw=true "New template, using Razor and HTML5 markup (About.cshtml)
+		![New template, using Razor and HTML5 markup](images/new-template-using-razor-and-html5-markup-abo.png?raw=true "New template, using Razor and HTML5 markup")
 
-		_New template, using Razor and HTML5 markup (About.cshtml)_
+		_New template, using Razor and HTML5 markup_
 
 	1. **JavaScript libraries included**
 
