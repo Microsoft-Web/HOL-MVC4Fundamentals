@@ -16,7 +16,7 @@ If you wish to explore the ASP.NET MVC 3 version of the tutorial application, yo
 
 ### The Music Store application ###
 
-The Music Store web application that will be built throughout this Lab comprises three main parts: shopping, checkout, and administration. Visitors will be able to browse albums by genre, add albums to their cart, review their selection and finally proceed to checkout to login and complete the order. Additionally, store administrators will be able to manage the available albums. as well as their main properties.
+The Music Store web application that will be built throughout this Lab comprises three main parts: shopping, checkout, and administration. Visitors will be able to browse albums by genre, add albums to their cart, review their selection and finally proceed to checkout to login and complete the order. Additionally, store administrators will be able to manage the available albums as well as their main properties.
 
  ![Music Store screens](./images/Music-Store-screens.png?raw=true "Music Store screens")
  
@@ -61,7 +61,7 @@ In this Hands-On Lab, you will learn how to:
 
 You must have the following items to complete this lab:
 
-- Visual Studio 2012
+- Visual Studio 2012 Express for Web
 
 <a name="Setup" />
 ### Setup ###
@@ -105,20 +105,20 @@ Estimated time to complete this lab: **45 minutes**.
 <a name="Exercise1" />
 ### Exercise 1: Creating MusicStore ASP.NET MVC Web Application Project ###
 
-In this exercise, you will learn how to create an ASP.NET MVC application in Visual Studio 2012 Express as well as its main folder organization. Additionally, you will learn how to add a new Controller and have it display a simple string at the Application screen.
+In this exercise, you will learn how to create an ASP.NET MVC application in Visual Studio 2012 Express for Web as well as its main folder organization. Additionally, you will learn how to add a new Controller and make it display a simple string in the application's home page.
 
 <a name="Ex1Task1" />
 #### Task 1 - Creating the ASP.NET MVC Web Application Project####
 
-1. In this task, you will create an empty ASP.NET MVC application project using the MVC Visual Studio template. Start **Microsoft Visual Studio 2012**.
+1. In this task, you will create an empty ASP.NET MVC application project using the MVC Visual Studio template. Start **VS Express for Web**.
 
 1. On the **File** menu, click **New Project**.
 
 1. In the **New Project** dialog box select the **ASP.NET MVC 4 Web Application** project type, located under **Visual C#,** **Web** template list.
 
-1. Change the **Name** to **MvcMusicStore**.
+1. Change the **Name** to _MvcMusicStore_.
 
-1. Set the location of the solution inside a new **Begin** folder in this Exercise's installation folder, for example **C:\WebCampsTrainingKit\Labs\Beginner-ASP.NET-MVC-Fundamentals MVC4\Source\Ex01-CreatingMusicStoreProject\Begin**. Click **OK**.
+1. Set the location of the solution inside a new **Begin** folder in this Exercise's Source folder, for example **[YOUR-HOL-PATH]\Source\Ex01-CreatingMusicStoreProject\Begin**. Click **OK**.
 
  	![Create New Project Dialog Box](./images/Create-New-Project-Dialog-Box.png?raw=true "Create New Project Dialog Box")
  
@@ -143,7 +143,7 @@ In this task, you will examine the solution structure to understand the elements
  
 	_ASP.NET MVC Folder structure in Solution Explorer_
 
-	1. **Controllers.** This folder will contain the controller classes. In an MVC based application, controllers are responsible for handling end user interaction, manipulating the model, and ultimately choosing a view to render the UI.
+	1. **Controllers**. This folder will contain the controller classes. In an MVC based application, controllers are responsible for handling end user interaction, manipulating the model, and ultimately choosing a view to render the UI.
 
 		> **Note:** The MVC framework requires the names of all controllers to end with "Controller"-for example, HomeController, LoginController, or ProductController.
 
@@ -163,13 +163,13 @@ On the other hand, ASP.NET MVC framework maps URLs to classes that are referred 
 
 In this task, you will add a Controller class that will handle URLs to the Home page of the Music Store site.
 
-1. Right-click the **Controllers** folder within the Solution Explorer, select **Add** and then the **Controller** command:
+1. Right-click **Controllers** folder within the Solution Explorer, select **Add** and then **Controller** command:
 
  	![Add a Controller Command](./images/Add-a-Controller-Command.png?raw=true "Add a Controller Command")
  
-	_Add a Controller Command_
+	_Add Controller Command_
 
-1. The **Add Controller** dialog appears. Name the controller **HomeController** and press **Add**.
+1. The **Add Controller** dialog appears. Name the controller _HomeController_ and press **Add**.
 
  	![Add Controller Dialog](./images/Add-Controller-Dialog.png?raw=true "Add Controller Dialog")
  
@@ -198,14 +198,14 @@ In this task, you will try out the Application in a web browser.
  
 	_Application running in a web browser_
 
-	> **Note**: The local IIS Web Server will run the website on a random free port number. In the figure above, the site is running at http://localhost:3013/, so it's using port 3013. Your port number may vary.
+	> **Note**: The local IIS Web Server will run the website on a random free port number. In the figure above, the site is running at http://localhost:50103/, so it's using port 50103. Your port number may vary.
 
 1. Close the browser.
 
 <a name="Exercise2" />
 ### Exercise 2: Creating a Controller ###
 
-In this exercise, you will learn how to create a Controller to implement simple functionality of the Music Store. That controller will define action methods to handle each of the following specific requests:
+In this exercise, you will learn how to update the controller to implement simple functionality of the Music Store application. That controller will define action methods to handle each of the following specific requests:
 
 - A listing page of the music genres in the Music Store
 
@@ -213,19 +213,19 @@ In this exercise, you will learn how to create a Controller to implement simple 
 
 - A details page that shows information about a specific music album
 
-For the scope of this exercise, you will have those actions to simply return a string by now.
+For the scope of this exercise, those actions will simply return a string by now.
 
- 
+
 <a name="Ex2Task1" />
 #### Task 1 - Adding a New StoreController Class####
 
 In this task, you will add a new Controller.
 
-1. If not already open, start **Microsoft Visual Studio 2012**.
+1. If not already open, start **VS Express for Web 2012**.
 
 1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex02-CreatingAController\Begin**, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
 
-1. Add the new controller. To do this, right-click the **Controllers** folder within the Solution Explorer, select **Add** and then the **Controller** command. Change the **Controller** **Name** to **StoreController**, and click **Add**.
+1. Add the new controller. To do this, right-click the **Controllers** folder within the Solution Explorer, select **Add** and then the **Controller** command. Change the **Controller Name** to _StoreController_, and click **Add**.
 
 	![Add Controller Dialog](./images/Add-controller-dialog-2.png?raw=true "Add Controller Dialog")
  
@@ -240,7 +240,7 @@ In this task, you will modify the Controller methods that are called **actions**
 
 	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex2 StoreController Index_)
 
-	<!-- mark:1-5 -->
+	<!-- mark:1-4 -->
 	````C#
 	public string Index()
 	{
@@ -248,7 +248,7 @@ In this task, you will modify the Controller methods that are called **actions**
 	}
 	````
 
-1. Add the **Browse** and **Details** methods. To do this, add the following code to the **StoreController**:
+1. Add **Browse** and **Details** methods. To do this, add the following code to the **StoreController**:
 
 	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex2 StoreController BrowseAndDetails_)
 
@@ -278,7 +278,7 @@ In this task, you will try out the Application in a web browser.
 
 1. Press **F5** to run the Application.
 
-1. The project starts in the Home page. Change the URL to verify each action's implementation.
+1. The project starts in the **Home** page. Change the URL to verify each action's implementation.
 
 	1. **/Store**. You will see **"Hello from Store.Index()"**.
 
@@ -302,7 +302,7 @@ Until now, you have been returning constant strings from the Controllers. In thi
 
 In this task, you will use the **querystring** to send parameters to the **Browse** action method in the **StoreController**.
 
-1. If not already open, start **Microsoft Visual Studio 2012**.
+1. If not already open, start **VS Express for Web**.
 
 1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex03-PassingParametersToAController\Begin**, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
 
@@ -311,7 +311,6 @@ In this task, you will use the **querystring** to send parameters to the **Brows
 1. Change the **Browse** method, adding a string parameter to request for a specific genre. ASP.NET MVC will automatically pass any querystring or form post parameters named **genre** to this action method when invoked. To do this, replace the **Browse** method with the following code:
 
 	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex3 StoreController BrowseMethod_)
-
 	<!-- mark:1-10 -->
 	````C#
 	//
@@ -326,7 +325,7 @@ In this task, you will use the **querystring** to send parameters to the **Brows
 	````
 
 	> **Note:** You are using the **HttpUtility.HtmlEncode** utility method to prevents users from injecting Javascript into the View with a link like **/Store/Browse?Genre=&lt;script>window.location='http://hackersite.com'</script&gt;**.
-
+	>
 	> For further explanation, please visit [this msdn article](http://msdn.microsoft.com/en-us/library/a2a4yykt(v=VS.80).aspx).
 
  
@@ -337,7 +336,7 @@ In this task, you will try out the Application in a web browser and use the **ge
 
 1. Press **F5** to run the Application.
 
-1. The project starts in the Home page. Change the URL to **/Store/Browse?Genre=Disco** to verify that the action receives the genre parameter.
+1. The project starts in the **Home** page. Change the URL to _/Store/Browse?Genre=Disco_ to verify that the action receives the genre parameter.
 
  	![Browsing StoreBrowseGenre=Disco](./images/Browsing-StoreBrowseGenre=Disco.png?raw=true "Browsing StoreBrowseGenre=Disco")
  
@@ -375,7 +374,7 @@ In this task, you will try out the Application in a web browser and use the **Id
 
 1. Press **F5** to run the Application.
 
-1. The project starts in the Home page. Change the URL to **/Store/Details/5** to verify that the action receives the id parameter.
+1. The project starts in the Home page. Change the URL to _/Store/Details/5_ to verify that the action receives the id parameter.
 
  	![Browsing StoreDetails5](./images/Browsing-StoreDetails5.png?raw=true "Browsing StoreDetails5")
  
