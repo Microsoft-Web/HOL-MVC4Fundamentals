@@ -6,19 +6,20 @@
 
 <h2>Browse Genres</h2>
 
-<p> Select from @Model.NumberOfGenres genres</p>
+<p>Select from @Model.NumberOfGenres genres</p>
 
 <ul>
-    @foreach (string genreName in Model.Genres) {
+    @foreach (string genreName in Model.Genres)
+    {
         <li>
             @Html.ActionLink(genreName, "Browse", new { genre = genreName }, null)
 
-             @if (ViewBag.Starred.Contains(genreName)) { 
+            @if (ViewBag.Starred.Contains(genreName))
+            { 
                 <img src="../../Content/Images/starred.png" alt="Starred element" />
             }
-
         </li>
-        }
+    }
 </ul>
 <br />
 <h5><img src="../../Content/Images/starred.png" alt="Starred element" />Starred genres 20% Off!</h5>

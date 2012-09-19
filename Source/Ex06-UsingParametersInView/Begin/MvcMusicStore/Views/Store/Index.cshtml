@@ -6,12 +6,13 @@
 
 <h2>Browse Genres</h2>
 
-<p> Select from @Model.NumberOfGenres genres</p>
+<p>Select from @Model.NumberOfGenres genres</p>
 
 <ul>
-    @foreach (string genreName in Model.Genres) {
+    @foreach (string genreName in Model.Genres)
+    {
         <li>
             @genreName
         </li>
-        }
+    }
 </ul>

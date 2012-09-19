@@ -8,6 +8,9 @@ namespace MvcMusicStore.Controllers
 {
     public class StoreController : Controller
     {
+        //
+        // GET: /Store/
+
         public string Index()
         {
             return "Hello from Store.Index()";
@@ -32,6 +35,5 @@ namespace MvcMusicStore.Controllers
 
             return message;
         }
-
     }
 }

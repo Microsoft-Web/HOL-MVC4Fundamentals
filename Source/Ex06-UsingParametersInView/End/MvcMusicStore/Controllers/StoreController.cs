@@ -6,11 +6,13 @@ using System.Web.Mvc;
 using MvcMusicStore.ViewModels;
 using MvcMusicStore.Models;
 
-
 namespace MvcMusicStore.Controllers
 {
     public class StoreController : Controller
     {
+        //
+        // GET: /Store/
+
         public ActionResult Index()
         {
             // Create a list of genres
@@ -62,6 +64,5 @@ namespace MvcMusicStore.Controllers
 
             return View(album);
         }
-
     }
 }

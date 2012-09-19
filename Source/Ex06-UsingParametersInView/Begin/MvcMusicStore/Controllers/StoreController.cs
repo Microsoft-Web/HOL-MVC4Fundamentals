@@ -9,6 +9,9 @@ namespace MvcMusicStore.Controllers
 {
     public class StoreController : Controller
     {
+        //
+        // GET: /Store/
+
         public ActionResult Index()
         {
             // Create a list of genres
@@ -24,12 +27,18 @@ namespace MvcMusicStore.Controllers
             return View(viewModel);
         }
 
+        //
+        // GET: /Store/Browse?genre=Disco
+
         public string Browse(string genre)
         {
             string message = HttpUtility.HtmlEncode("Store.Browse, Genre = " + genre);
-            
+
             return message;
         }
+
+        //
+        // GET: /Store/Details/5
 
         public string Details(int id)
         {

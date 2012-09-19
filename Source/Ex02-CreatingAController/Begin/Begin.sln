@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Web
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMusicStore", "MvcMusicStore\MvcMusicStore.csproj", "{015773A2-22E6-4227-9AE7-288CC960195E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcMusicStore", "MvcMusicStore\MvcMusicStore.csproj", "{CDEE2DED-9329-4C95-AEF7-28C838D21D31}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{55BC04C1-9CAE-4BAF-8DAC-6E7EC5CBA15C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{42A31258-EB44-444C-90DC-807E2A7F5AF6}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
@@ -16,10 +16,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{015773A2-22E6-4227-9AE7-288CC960195E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{015773A2-22E6-4227-9AE7-288CC960195E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{015773A2-22E6-4227-9AE7-288CC960195E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{015773A2-22E6-4227-9AE7-288CC960195E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDEE2DED-9329-4C95-AEF7-28C838D21D31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDEE2DED-9329-4C95-AEF7-28C838D21D31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDEE2DED-9329-4C95-AEF7-28C838D21D31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDEE2DED-9329-4C95-AEF7-28C838D21D31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
