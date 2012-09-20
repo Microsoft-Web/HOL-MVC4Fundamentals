@@ -54,7 +54,7 @@ In this Hands-On Lab, you will learn how to:
 
 - Use View Model pattern to pass information from controller actions to the view templates
 
-- Explore the MVC 4 new template for internet applications
+- Explore the ASP.NET MVC 4 new template for internet applications
  
 <a name="Prerequisites" />
 ### Prerequisites ###
@@ -1087,7 +1087,7 @@ In this task, you will test that each Genre is displayed with a link to the appr
 <a name="Ex6Task10" />
 #### Task 10 - Using Dynamic ViewModel Collection to Pass Values####
 
-In this task, you will learn a simple and powerful method to pass values between the Controller and the View without making any changes in the Model. MVC 4 provides the collection "ViewModel", which can be assigned to any dynamic value and accessed inside controllers and views as well.
+In this task, you will learn a simple and powerful method to pass values between the Controller and the View without making any changes in the Model. ASP.NET MVC 4 provides the collection "ViewModel", which can be assigned to any dynamic value and accessed inside controllers and views as well.
 
 You will now use the ViewBag dynamic collection to pass a list of "**Starred genres**" from the controller to the view. The Store Index view will access to **ViewModel** and display the information.
 
@@ -1172,21 +1172,21 @@ In this task, you will test that the starred genres display a star icon.
 In this exercise, you will explore the enhancements in the ASP.NET MVC 4 project templates, taking a look at the most relevant features of the new template.
 
 <a name="Ex7Task1" />
-#### Task 1: Exploring the MVC 4 Internet Application Template####
+#### Task 1: Exploring the ASP.NET MVC 4 Internet Application Template####
 
 1. If not already open, start **VS Express for Web**
 
 1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C#|Web** template on the left pane tree, and choose the **ASP.NET MVC 4 Web Application**. Name the project _MusicStore_, select a location (or leave the default) and click **OK**. 
 
-	![Creating a new MVC 4 Project](images/creating-a-new-mvc4-project.png?raw=true "Creating a new MVC 4 Project")
+	![Creating a new ASP.NET MVC 4 Project](images/creating-a-new-mvc4-project.png?raw=true "Creating a new ASP.NET MVC 4 Project")
 
-	_Creating a new MVC 4 Project_
+	_Creating a new ASP.NET MVC 4 Project_
 
 1. In the **New ASP.NET MVC 4 Project** dialog, select the **Internet Application** project template and click **OK**. Notice you can select either Razor or ASP.NET as the view engine.
 
-	![Creating a new MVC 4 Internet Application](images/creating-a-new-mvc4-internet-application.png?raw=true "Creating a new MVC 4 Internet Application")
+	![Creating a new ASP.NET MVC 4 Internet Application](images/creating-a-new-mvc4-internet-application.png?raw=true "Creating a new ASP.NET MVC 4 Internet Application")
 
-	_Creating a new MVC 4 Internet Application_
+	_Creating a new ASP.NET MVC 4 Internet Application_
 
 	>**Note**: Razor syntax has been introduced in ASP.NET MVC 3. Its goal is to minimize the number of characters and keystrokes required in a file, enabling a fast and fluid coding workflow. Razor leverages existing C#/VB (or other) language skills and delivers a template markup syntax that enables an awesome HTML construction workflow.
 
@@ -1196,25 +1196,25 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC 4 project
 
 		The templates have been renewed, providing more modern-looking styles.
 
-		![MVC 4 restyled templates](images/mvc4-restyled-templates.png?raw=true "MVC 4 restyled templates")
+		![ASP.NET MVC 4 restyled templates](images/mvc4-restyled-templates.png?raw=true "ASP.NET MVC 4 restyled templates")
 
-		_MVC 4 restyled templates_
+		_ASP.NET MVC 4 restyled templates_
 	
 	1. **Adaptive Rendering**
 		
 		Check out resizing the browser window and notice how the page layout dynamically adapts to the new window size. These templates use the adaptive rendering technique to render properly in both desktop and mobile platforms without any customization. 
 
-		![MVC 4 project template in different browser sizes](images/mvc-4-project-template-in-different-browser-s.png?raw=true "MVC 4 project template in different browser sizes")
+		![ASP.NET MVC 4 project template in different browser sizes](images/mvc-4-project-template-in-different-browser-s.png?raw=true "ASP.NET MVC 4 project template in different browser sizes")
 		
-		_MVC 4 project template in different browser sizes_
+		_ASP.NET MVC 4 project template in different browser sizes_
 		
 1. Close the browser to stop the debugger and return to Visual Studio.
 
 1. Now you are able to explore the solution and check out some of the new features introduced by ASP.NET MVC 4 in the project template.
 
-	![MVC4-internet-application-project-template](images/MVC4-internet-application-project-template.png?raw=true "The MVC 4 Internet Application Project Template")
+	![ASP.NET MVC4-internet-application-project-template](images/MVC4-internet-application-project-template.png?raw=true "The ASP.NET MVC 4 Internet Application Project Template")
 
-	_The MVC 4 Internet Application Project Template_	
+	_The ASP.NET MVC 4 Internet Application Project Template_	
 
 	1. **HTML5 markup**
 
@@ -1232,7 +1232,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC 4 project
 			
 			>**Note:** You can learn about jQuery and jQuery UI in [http://docs.jquery.com/](http://docs.jquery.com/).
 			
-		1. **KnockoutJS**: The MVC 4 default template now includes **KnockoutJS**, a JavaScript MVVM framework that lets you create rich and highly responsive web applications using JavaScript and HTML. Like in MVC3, jQuery and jQuery UI libraries are also included in ASP.NET MVC 4.
+		1. **KnockoutJS**: The ASP.NET MVC 4 default template now includes **KnockoutJS**, a JavaScript MVVM framework that lets you create rich and highly responsive web applications using JavaScript and HTML. Like in ASP.NET MVC 3, jQuery and jQuery UI libraries are also included in ASP.NET MVC 4.
 
 			>**Note:** You can get more information about KnockOutJS library in this link: <http://learn.knockoutjs.com/>.
 		
@@ -1320,7 +1320,7 @@ You can install **Microsoft Visual Studio Express 2012 for Web** or another "Exp
 	_VS Express for Web tile_
 
 <a name="AppendixB" />
-## Appendix B: Publishing an MVC 4 Application using Web Deploy ##
+## Appendix B: Publishing an ASP.NET MVC 4 Application using Web Deploy ##
 
 This appendix will show you how to create a new web site from the Windows Azure Management Portal and publish the application you obtained by following the lab, taking advantage of the Web Deploy publishing feature provided by Windows Azure.
 
@@ -1405,7 +1405,7 @@ If your application makes use of SQL Server databases you will need to create a 
 <a name="Ex1Task3"></a>
 #### Task 3 – Publishing an ASP.NET MVC 4 Application using Web Deploy ####
 
-1. Go back to the MVC 4 solution. In the **Solution Explorer**,  right-click the web site project and select **Publish**.
+1. Go back to the ASP.NET MVC 4 solution. In the **Solution Explorer**,  right-click the web site project and select **Publish**.
 
 	![Publishing the Application](images/publishing-the-application.png?raw=true "Publishing the Application")
 
