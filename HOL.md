@@ -56,12 +56,12 @@ In this Hands-On Lab, you will learn how to:
 
 - Explore the MVC 4 new template for internet applications
  
-<a name="SystemRequirements" />
+<a name="Prerequisites" />
 ### Prerequisites ###
 
 You must have the following items to complete this lab:
 
-- [Visual Studio 2012 Express for Web](http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-for-web)
+- [Visual Studio 2012 Express for Web](http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-for-web) (read [Appendix A](#AppendixA) for instructions on how to install it)
 
 <a name="Setup" />
 ### Setup ###
@@ -374,7 +374,7 @@ In this task, you will try out the Application in a web browser and use the **Id
 
 1. Press **F5** to run the Application.
 
-1. The project starts in the Home page. Change the URL to _/Store/Details/5_ to verify that the action receives the id parameter.
+1. The project starts in the **Home** page. Change the URL to _/Store/Details/5_ to verify that the action receives the id parameter.
 
  	![Browsing StoreDetails5](./images/Browsing-StoreDetails5.png?raw=true "Browsing StoreDetails5")
  
@@ -383,7 +383,7 @@ In this task, you will try out the Application in a web browser and use the **Id
 <a name="Exercise4" />
 ### Exercise 4: Creating a View ###
 
-So far you have been returning strings from controller actions. Although that is a useful way of understanding how controllers work, it is not how you real Web applications are built. Views are components that provide a better approach for generating HTML back to the browser with the use of template files.
+So far you have been returning strings from controller actions. Although that is a useful way of understanding how controllers work, it is not how your real Web applications are built. Views are components that provide a better approach for generating HTML back to the browser with the use of template files.
 
 In this exercise you will learn how to add a layout master page to setup a template for common HTML content, a StyleSheet to enhance the look and feel of the site and finally a View template to enable HomeController to return HTML.
 
@@ -455,13 +455,13 @@ The empty project template includes a very streamlined CSS file which just inclu
 
 In this task, you will add a CSS stylesheet to define the styles of the site.
 
-1. The CSS file and images are included in the **Source\Assets\Content** folder of this Lab. In order to add them to the application, drag their content from a **Windows Explorer** window into the **Solution Explorer** in Visual Web Developer Express, as shown below:
+1. The CSS file and images are included in the **Source\Assets\Content** folder of this Lab. In order to add them to the application, drag their content from a **Windows Explorer** window into the **Solution Explorer** in Visual Studio Express for Web, as shown below:
 
  	![Dragging style contents](./images/Dragging-style-contents.png?raw=true "Dragging style contents")
  
 	_Dragging style contents_
 
-1. A warning dialog will appear, asking for confirmation to replace Site.css file. Click **Yes**.
+1. A warning dialog will appear, asking for confirmation to replace **Site.css** file. Click **Yes**.
 
 	![Warning Dialog](./images/Warning-Dialog.png?raw=true "Warning Dialog")
 
@@ -469,14 +469,13 @@ In this task, you will add a CSS stylesheet to define the styles of the site.
 
  
 <a name="Ex4Task3" />
-#### Task 3 - Adding a View Template####
+#### Task 3 - Adding a View Template ####
 
 In this task, you will add a View template to generate the HTML response that will use the layout master page and CSS added in this exercise.
 
-1. To use a View template when browsing the site's home page, you will first need to indicate that instead of returning a string, the **HomeController Index** method should return a **View**. Open **HomeController** class and change its **Index** method to return an **ActionResult,** and have it return **View()**.
+1. To use a View template when browsing the site's home page, you will first need to indicate that instead of returning a string, the **HomeController Index** method will return a **View**. Open **HomeController** class and change its **Index** method to return an **ActionResult**, and have it return **View()**.
 
 	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex4 HomeController Index_)
-	
 	<!-- mark:3-10 -->
 	````C#
 	public class HomeController : Controller
@@ -491,19 +490,19 @@ In this task, you will add a View template to generate the HTML response that wi
 	}
 	````
 
-1. Now, you need to add an appropriate View template. To do this, **right-click** inside the **Index** action method and select **Add View**. This will bring up the Add View dialog.
+1. Now, you need to add an appropriate View template. To do this, **right-click** inside the **Index** action method and select **Add View**. This will bring up the **Add View** dialog.
 
  	![Adding a View from within the Index method](./images/Adding-a-View-from-within-the-Index-method.png?raw=true "Adding a View from within the Index method")
  
 	_Adding a View from within the Index method_
 
-1. The **Add View** Dialog will appear to generate a View template file. By default, this dialog pre-populates the name of the View template so that it matches the action method that will use it.  Because you used the **Add View** context menu within the **Index** action method of the HomeController, the **Add View** dialog has Index as the default view name. Click **Add**.
+1. The **Add View** Dialog will appear to generate a View template file. By default, this dialog pre-populates the name of the View template so that it matches the action method that will use it.  Because you used the **Add View** context menu within the **Index** action method within the HomeController, the **Add View** dialog has Index as the default view name. Click **Add**.
 
  	![Add View Dialog](./images/Add-View-Dialog.png?raw=true "Add View Dialog")
  
 	_Add View Dialog_
 
-1. Visual Studio generates an **Index.cshtml** view template inside the Views\Home folder and then opens it.
+1. Visual Studio generates an **Index.cshtml** view template inside the **Views\Home** folder and then opens it.
 
  	![Add View Dialog](./images/Add-View-Dialog-solution.png?raw=true "Add View Dialog")
  
@@ -593,7 +592,7 @@ In this task, you will add those 2 properties to the **StoreIndexViewModel** cla
 
 	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex5 StoreIndexViewModel properties_)
 
-	<!-- mark:3-5 -->
+	<!-- mark:3-4 -->
 	````C#
 	public class StoreIndexViewModel
 	{
@@ -605,7 +604,7 @@ In this task, you will add those 2 properties to the **StoreIndexViewModel** cla
 
  
 <a name="Ex5Task3" />
-#### Task 3 - Updating StoreController to use the StoreIndexViewModel####
+#### Task 3 - Updating StoreController to use the StoreIndexViewModel ####
 
 The **StoreIndexViewModel** class encapsulates the information needed to pass from **StoreController**'s **Index** method to a View template in order to generate a response.
 
@@ -617,7 +616,7 @@ In this task, you will update the **StoreController** to use the **StoreIndexVie
  
 	_Opening StoreController class_
 
-1. In order to use the **StoreIndexViewModel** class from the **StoreController**, add the following namespace to the top of the **StoreController** code:
+1. In order to use the **StoreIndexViewModel** class from the **StoreController**, add the following namespace at the top of the **StoreController** code:
 
 	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex5 StoreIndexViewModel using ViewModels_)
 
@@ -667,19 +666,19 @@ In this task, you will create a View template that will use a StoreIndexViewMode
  
 	_Building the project_
 
-1. Create a new View template. To do that, right-click inside the **Index** method and select **Add View.**
+1. Create a new View template. To do that, right-click inside the **Index** method and select **Add View**.
 
  	![Adding a View](./images/Adding-a-View.png?raw=true "Adding a View")
  
 	_Adding a View_
 
-1. Because the **Add View Dialog** was invoked from the **StoreController**, it will add the View template by default in a \Views\Store\Index.cshtml file. Check the **Create a strongly-typed-view** checkbox and then select **StoreIndexViewModel** as the **Model class**. Also, make sure that the View engine selected is **Razor**. Click **Add**.
+1. Because the **Add View Dialog** was invoked from the **StoreController**, it will add the View template by default in a **\Views\Store\Index.cshtml** file. Check the **Create a strongly-typed-view** checkbox and then select **StoreIndexViewModel** as the **Model class**. Also, make sure that the View engine selected is **Razor**. Click **Add**.
 
  	![Add View Dialog](./images/Add-View-Dialog-2.png?raw=true "Add View Dialog")
  
 	_Add View Dialog_
 
-	The **\Views\Store\Index.cshtml** View template file is created and opened. Based on the information provided to the **Add View** dialog in the last step, the View template will expect a **StoreIndexViewModel** instance as the data to use to generate an HTML response. You will notice that by seeing that the template inherits a **ViewPage<MusicStore.ViewModels.StoreIndexViewModel>** in C#.
+	The **\Views\Store\Index.cshtml** View template file is created and opened. Based on the information provided to the **Add View** dialog in the last step, the View template will expect a **StoreIndexViewModel** instance as the data to use to generate an HTML response. You will notice that the template inherits a **ViewPage<MusicStore.ViewModels.StoreIndexViewModel>** in C#.
 
  
 <a name="Ex5Task5" />
@@ -689,7 +688,7 @@ In this task, you will update the View template created in the last task to retr
 
 > **Note:** You will use @ syntax (often referred to as "code nuggets") to execute code within the View template.
 
-1. In the **Index.cshtml** file, within the **Store** folder, replace the code inside with the following:
+1. In the **Index.cshtml** file, within the **Store** folder, replace its code with the following:
 
 	<!-- mark:1-9 -->
 	````HTML
@@ -752,15 +751,15 @@ In this task, you will update the View template created in the last task to retr
 In Exercise 3 you learned how to pass parameters to the Controller. In this exercise, you will learn how to use those parameters in the View template. For that purpose, you will be introduced first to Model classes that will help you to manage your data and domain logic. Additionally, you will learn how to create links to pages inside the ASP.NET MVC application without worrying of things like URL paths encoding.
 
 <a name="Ex6Task1" />
-#### Task 1 - Adding Model Classes####
+#### Task 1 - Adding Model Classes ####
 
 Unlike ViewModels, which are created just to pass information from the Controller to the View, Model classes are built to contain and manage data and domain logic. In this task you will add two model classes to represent these concepts: **Genre** and **Album**.
 
-1. If not already open, start **Microsoft Visual Studio 2012**
+1. If not already open, start **VS Express for Web**
 
 1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex06-UsingParametersInView\Begin**, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
 
-1. Add a **Genre** Model class. To do this, right-click the **Models** folder in the **Solution Explorer**, select **Add** and then the **New Item** option. Under **Code**, choose the **Class** item and name the file **Genre.cs**, then click **Add**.
+1. Add a **Genre** Model class. To do this, right-click the **Models** folder in the **Solution Explorer**, select **Add** and then the **New Item** option. Under **Code**, choose the **Class** item and name the file _Genre.cs_, then click **Add**.
 
 	![Adding a class](./images/Adding-a-class.png?raw=true "Adding a class")
 
@@ -790,9 +789,9 @@ Unlike ViewModels, which are created just to pass information from the Controlle
 	}
 	````
 
-1. Following the same procedure as before, add an **Album** class. To do this, right-click the **Models** folder in the **Solution Explorer**, select **Add** and then the **New Item** option. Under **Code**, choose the **Class** item and name the file **Album.cs**, then click **Add**.
+1. Following the same procedure as before, add an **Album** class. To do this, right-click the **Models** folder in the **Solution Explorer**, select **Add** and then the **New Item** option. Under **Code**, choose the **Class** item and name the file _Album.cs_, then click **Add**.
 
-1. Add two properties to the Album class**: Genre** and **Title**. To do this, add the following code:
+1. Add two properties to the Album class: **Genre** and **Title**. To do this, add the following code:
 
 	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex6 Album_)
 
@@ -818,7 +817,7 @@ Unlike ViewModels, which are created just to pass information from the Controlle
 
 A **StoreBrowseViewModel** will be used in this task to show the Albums that match a selected Genre.  In this task, you will create this class and then add two properties to handle the **Genre** and its **Album**'s List.
 
-1. Add a **StoreBrowseViewModel** class. To do this, right-click the **ViewModels** folder in the **Solution Explorer**, select **Add** and then the **New Item** option. Under **Code**, choose the **Class** item and name the file **StoreBrowseViewModel.cs**, then click **Add**.
+1. Add a **StoreBrowseViewModel** class. To do this, right-click the **ViewModels** folder in the **Solution Explorer**, select **Add** and then the **New Item** option. Under **Code**, choose the **Class** item and name the file _StoreBrowseViewModel.cs_, then click **Add**.
 
 1. Add a reference to the Models in **StoreBrowseViewModel** class. To do this, add the following using namespace:
 
@@ -840,7 +839,7 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 	}
 	````
 
-1. Add two properties to **StoreBrowseViewModel** class:  **Genre** and **Albums.** To do this, add the following code:
+1. Add two properties to **StoreBrowseViewModel** class:  **Genre** and **Albums**. To do this, add the following code:
 
 	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex6 ModelProperties_)
 
@@ -862,11 +861,11 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 	}
 	````
 
-	> **Note:** What is **List\<Album\>** ?: This definition is using the **List<T>** type, where **T** constrains the type to which elements of this **List** belong to, in this case **Album** (or any of its descendants).
+	> **Note:** What is **List\<Album\>** ?: This definition is using the **List\<T\>** type, where **T** constrains the type to which elements of this **List** belong to, in this case **Album** (or any of its descendants).
 
 	> This ability to design classes and methods that defer the specification of one or more types until the class or method is declared and instantiated by client code is a feature of the C# language called **Generics**.
 
-	> **List<T>** is the generic equivalent of the **ArrayList** type and is available in the **System.Collections.Generic** namespace**.** One of the benefits of using **generics** is that since the type is specified, you do not need to take care of type checking operations such as casting the elements into **Album** as you would do with an **ArrayList**.
+	> **List\<T\>** is the generic equivalent of the **ArrayList** type and is available in the **System.Collections.Generic** namespace. One of the benefits of using **generics** is that since the type is specified, you do not need to take care of type checking operations such as casting the elements into **Album** as you would do with an **ArrayList**.
 
  
 <a name="Ex6Task3" />
@@ -889,7 +888,7 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 	using MvcMusicStore.Models;
 	````
 
-1. Replace the **Browse** action method to use the **StoreViewBrowseController** class**.** You will create a Genre and two new Albums objects with dummy data (in the next Hands-on Lab you will consume real data from a database). To do this, replace the **Browse** method with the following code:
+1. Replace the **Browse** action method to use the **StoreViewBrowseController** class. You will create a Genre and two new Albums objects with dummy data (in the next Hands-on Lab you will consume real data from a database). To do this, replace the **Browse** method with the following code:
 
 	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex6 BrowseMethod_)
 
@@ -921,7 +920,7 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 	}
 	````
 
-1. Replace the **Details** action method to use the **StoreViewBrowseController** class**.** You will create a new **Album** object to be returned to the **View**. To do this, replace the **Details** method with the following code:
+1. Replace the **Details** action method to use the **StoreViewBrowseController** class. You will create a new **Album** object to be returned to the **View**. To do this, replace the **Details** method with the following code:
 
 	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex6 DetailsMethod_)
 
@@ -943,7 +942,7 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 
 In this task, you will add a **Browse** View to show the Albums found for a specific Genre.
 
-1. Before creating the new View template, you should build the project so that the **Add View Dialog** knows about the **ViewModel** class to use. Build the project by selecting the **Build** menu item and then **Build MvcMusicStore**.
+1. Before creating the new View template, you should build the project so that the **Add View** Dialog knows about the **ViewModel** class to use. Build the project by selecting the **Build** menu item and then **Build MvcMusicStore**.
 
 1. Add a **Browse** View. To do this, right-click in the **Browse** action method of the **StoreController** and click **Add View**.
 
@@ -994,7 +993,7 @@ In this task, you will implement the **Store/Details** view to display informati
 
 1. Close the browser if needed, to return to the Visual Studio window. Add a new **Details** view for the **StoreController**'s **Details** action method. To do this, right-click the **Details** method in the **StoreController** class and click **Add View**.
 
-1. In the **Add View** dialog view, verify that the **View Name** is **Details**. Check the **Create a strongly-typed view** checkbox and select **Album** from the **Model class** drop-down. Leave the other fields with their default value. Then click **Add**. This will create and open a **\Views\Store\Details.cshtml** file.
+1. In the **Add View** dialog, verify that the **View Name** is **Details**. Check the **Create a strongly-typed view** checkbox and select **Album** from the **Model class** drop-down. Leave the other fields with their default value. Then click **Add**. This will create and open a **\Views\Store\Details.cshtml** file.
 
  	![Adding a Details View](./images/Adding-a-Details-View.png?raw=true "Adding a Details View")
  
@@ -1020,7 +1019,7 @@ In this task, you will test that the **Details** View retrieves Album's informat
 
 1. Press **F5** to run the Application.
 
-1. The project starts in the Home page. Change the URL to **/Store/Details/5** to verify the album's information.
+1. The project starts in the **Home** page. Change the URL to **/Store/Details/5** to verify the album's information.
 
  	![Browsing Albums Detail](./images/Browsing-Albums-Detail.png?raw=true "Browsing Albums Detail")
  
@@ -1059,9 +1058,9 @@ In this task, you will add a link in the Store View to have a link in every Genr
 
 	> **Note**: another approach would be linking directly to the page, with a code like the following:
 
-	> &lt;a href="/Store/Browse?genre=@genreName">@genreName</a&gt;
+	> \<a href="/Store/Browse?genre=@genreName"\>@genreName\</a\>
 
-	> Although this approach works, it depends on a hardcoded string. If you later rename the Controller, you will have to change this instruction manually. A better alternative is to use an **HTML Helper** method. ASP.NET MVC includes an HTML Helper method which is available for such tasks. The **Html.ActionLink()** helper method makes it easy to build HTML **<a>** links, making sure URL paths are properly URL encoded.
+	> Although this approach works, it depends on a hardcoded string. If you later rename the Controller, you will have to change this instruction manually. A better alternative is to use an **HTML Helper** method. ASP.NET MVC includes an HTML Helper method which is available for such tasks. The **Html.ActionLink()** helper method makes it easy to build HTML **\<a\>** links, making sure URL paths are properly URL encoded.
 
 	> Htlm.ActionLink has several overloads. In this exercise you will use one that takes three parameters:
 
@@ -1093,6 +1092,7 @@ In this task, you will learn a simple and powerful method to pass values between
 You will now use the ViewBag dynamic collection to pass a list of "**Starred genres**" from the controller to the view. The Store Index view will access to **ViewModel** and display the information.
 
 1. Close the browser if needed, to return to the Visual Studio window. Open **StoreController.cs** and modify **Index** method to create a list of starred genres into ViewModel collection :
+
 	<!-- mark:13 -->
 	````C#
 	public ActionResult Index()
@@ -1159,7 +1159,7 @@ In this task, you will test that the starred genres display a star icon.
 
 1. Press **F5** to run the Application.
 
-1. The project starts in the Home page. Change the URL to **/Store** to verify that each featured genre has the respecting label:
+1. The project starts in the **Home** page. Change the URL to **/Store** to verify that each featured genre has the respecting label:
 
  	![Browsing Genres with starred elements](./images/Browsing-Genres-with-starred-elements.png?raw=true "Browsing Genres with starred elements")
  
@@ -1174,9 +1174,9 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 <a name="Ex7Task1" />
 #### Task 1: Exploring the MVC4 Internet Application Template####
 
-1. If not already open, start **Microsoft Visual Studio 2012**
+1. If not already open, start **VS Express for Web**
 
-1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C#|Web** template on the left pane tree, and choose the **ASP**.**NET MVC 4 Web Application.** Name the project **MusicStore**, select a location (or leave the default) and click **OK**. 
+1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C#|Web** template on the left pane tree, and choose the **ASP.NET MVC 4 Web Application**. Name the project _MusicStore_, select a location (or leave the default) and click **OK**. 
 
 	![Creating a new MVC4 Project](images/creating-a-new-mvc4-project.png?raw=true "Creating a new MVC4 Project")
 
@@ -1190,7 +1190,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 
 	>**Note**: Razor syntax has been introduced in ASP.NET MVC 3. Its goal is to minimize the number of characters and keystrokes required in a file, enabling a fast and fluid coding workflow. Razor leverages existing C#/VB (or other) language skills and delivers a template markup syntax that enables an awesome HTML construction workflow.
 
-1.	Press **F5** to run the solution and see the renewed templates. You can check out the following features:
+1.	Press **F5** to run the solution and see the renewed template. You can check out the following features:
 
 	1. **Modern-style templates**
 
@@ -1230,7 +1230,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 		
 		1. **jQuery UI**: This library provides abstractions for low-level interaction and animation, advanced effects and themeable widgets, built on top of the jQuery JavaScript Library.
 			
-			>**Note:** You can learn about jQuery and jQuery UI in <http://docs.jquery.com/>.
+			>**Note:** You can learn about jQuery and jQuery UI in [http://docs.jquery.com/](http://docs.jquery.com/).
 			
 		1. **KnockoutJS**: The MVC4 default template now includes **KnockoutJS**, a JavaScript MVVM framework that lets you create rich and highly responsive web applications using JavaScript and HTML. Like in MVC3, jQuery and jQuery UI libraries are also included in ASP.NET MVC 4.
 
@@ -1255,8 +1255,6 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC4 project 
 
 ---
 
-
-
 <a name="Summary" />
 ## Summary ##
 
@@ -1279,3 +1277,44 @@ By completing this Hands-On Lab you have learned the fundamentals of ASP.NET MVC
 - How to add and use dynamic properties in a View
 
 - The enhancements in the ASP.NET MVC 4 project templates
+
+<a name="AppendixA" />
+## Appendix A: Installing Visual Studio Express 2012 for Web ##
+
+You can install **Microsoft Visual Studio Express 2012 for Web** or another "Express" version using the **[Microsoft Web Platform Installer](http://www.microsoft.com/web/downloads/platform.aspx)**. The following instructions guide you through the steps required to install _Visual studio Express 2012 for Web_ using _Microsoft Web Platform Installer_.
+
+1. Go to [http://go.microsoft.com/?linkid=9810169](http://go.microsoft.com/?linkid=9810169). Alternatively, if you already have installed Web Platform Installer, you can open it and search for the product "_Visual Studio Express 2012 for Web with Windows Azure SDK_".
+
+1. Click on **Install Now**. If you do not have **Web Platform Installer** you will be redirected to download and install it first.
+
+1. Once **Web Platform Installer** is open, click **Install** to start the setup.
+
+	![Install Visual Studio Express](images/install-visual-studio-express.png?raw=true "Install Visual Studio Express")
+
+ 	_Install Visual Studio Express_
+
+1. Read all the products' licenses and terms and click **I Accept** to continue.
+
+	![Accepting the license terms](images/accepting-the-license-terms.png?raw=true)
+
+	_Accepting the license terms_
+
+1. Wait until the downloading and installation process completes.
+
+	![Installation progress](images/installation-progress.png?raw=true)
+
+	_Installation progress_
+
+1. When the installation completes, click **Finish**.
+
+	![Installation completed](images/installation-completed.png?raw=true)
+
+	_Installation completed_
+
+1. Click **Exit** to close Web Platform Installer.
+
+1. To open Visual Studio Express for Web, go to the **Start** screen and start writing "**VS Express**", then click on the **VS Express for Web** tile.
+
+	![VS Express for Web tile](images/vs-express-for-web-tile.png?raw=true)
+
+	_VS Express for Web tile_
