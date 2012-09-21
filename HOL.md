@@ -1324,7 +1324,7 @@ You can install **Microsoft Visual Studio Express 2012 for Web** or another "Exp
 
 This appendix will show you how to create a new web site from the Windows Azure Management Portal and publish the application you obtained by following the lab, taking advantage of the Web Deploy publishing feature provided by Windows Azure.
 
-<a name="Ex1Task1"></a>
+<a name="ApxBTask1"></a>
 #### Task 1 – Creating a New Web Site from the Windows Azure Portal ####
 
 1. Go to the [Windows Azure Management Portal](https://manage.windowsazure.com/) and sign in using the Microsoft credentials associated with your subscription.
@@ -1379,7 +1379,7 @@ This appendix will show you how to create a new web site from the Windows Azure 
 	
 	_Saving the publish profile file_
 
-<a name="Ex1Task2"></a>
+<a name="ApxBTask2"></a>
 #### Task 2 – Configuring the Database Server ####
 
 If your application makes use of SQL Server databases you will need to create a SQL Database server. If you want to deploy a simple application that does not use SQL Server you might skip this task.
@@ -1402,7 +1402,7 @@ If your application makes use of SQL Server databases you will need to create a 
 
 	_Confirm Changes_
 
-<a name="Ex1Task3"></a>
+<a name="ApxBTask3"></a>
 #### Task 3 – Publishing an ASP.NET MVC 4 Application using Web Deploy ####
 
 1. Go back to the ASP.NET MVC 4 solution. In the **Solution Explorer**,  right-click the web site project and select **Publish**.
