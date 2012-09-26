@@ -212,7 +212,11 @@ In this task, you will add a new Controller.
 
 1. If not already open, start **VS Express for Web 2012**.
 
-1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex02-CreatingAController\Begin**, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
+1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex02-CreatingAController\Begin**, select **Begin.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
+	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click **Project** and select **Manage NuGet Packages**.
+	1. In the **Manage NuGet Packages** page, click **Restore** in order to download missing packages.
+	1. Finally, build the solution by clicking **Build** | **Build Solution**.
+
 
 1. Add the new controller. To do this, right-click the **Controllers** folder within the Solution Explorer, select **Add** and then the **Controller** command. Change the **Controller Name** to _StoreController_, and click **Add**.
 
@@ -293,7 +297,10 @@ In this task, you will use the **querystring** to send parameters to the **Brows
 
 1. If not already open, start **VS Express for Web**.
 
-1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex03-PassingParametersToAController\Begin**, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
+1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex03-PassingParametersToAController\Begin**, select **Begin.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
+	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click **Project** and select **Manage NuGet Packages**.
+	1. In the **Manage NuGet Packages** page, click **Restore** in order to download missing packages.
+	1. Finally, build the solution by clicking **Build** | **Build Solution**.
 
 1. Open **StoreController** class. To do this, in the **Solution Explorer**, expand the **Controllers** folder and double-click **StoreController.cs**.
 
@@ -383,7 +390,10 @@ The file **~/Views/Shared/_layout.cshtml** allows you to setup a template for co
 
 1. If not already open, start **VS Express for Web**.
 
-1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex04-CreatingAView\Begin**, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
+1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex04-CreatingAView\Begin**, select **Begin.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
+	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click **Project** and select **Manage NuGet Packages**.
+	1. In the **Manage NuGet Packages** page, click **Restore** in order to download missing packages.
+	1. Finally, build the solution by clicking **Build** | **Build Solution**.
 
 1. The file **_layout.cshtml** contains the HTML container layout for all pages on the site.  It includes the **\<html\>** element for the HTML response, as well as the **\<head\>** and **\<body\>** elements. **@RenderBody()** within the HTML body identify regions that view templates will be able to fill in with dynamic content.
 
@@ -493,9 +503,9 @@ In this task, you will add a View template to generate the HTML response that wi
 
 1. Visual Studio generates an **Index.cshtml** view template inside the **Views\Home** folder and then opens it.
 
- 	![Add View Dialog](./images/Add-View-Dialog-solution.png?raw=true "Add View Dialog")
+ 	![Home Index view created](./images/Add-View-Dialog-solution.png?raw=true "Home Index view created")
  
-	_Add View Dialog_
+	_Home Index view created_
 
 	> **Note:** name and location of the **Index.cshtml** file is relevant and follows the default ASP.NET MVC naming conventions.
 
@@ -546,7 +556,10 @@ In this task, you will create a ViewModel class that will implement the Store ge
 
 1. If not already open, start **VS Express for Web**.
 
-1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex05-CreatingAViewModel\Begin**, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
+1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex05-CreatingAViewModel\Begin**, select **Begin.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
+	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click **Project** and select **Manage NuGet Packages**.
+	1. In the **Manage NuGet Packages** page, click **Restore** in order to download missing packages.
+	1. Finally, build the solution by clicking **Build** | **Build Solution**.
 
 1. Create a **ViewModels** folder to hold the ViewModel. To do this, right-click the top-level **MvcMusicStore** project, select **Add** and then **New Folder**.
 
@@ -746,7 +759,10 @@ Unlike ViewModels, which are created just to pass information from the Controlle
 
 1. If not already open, start **VS Express for Web**
 
-1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex06-UsingParametersInView\Begin**, select **MvcMusicStore.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
+1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex06-UsingParametersInView\Begin**, select **Begin.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
+	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click **Project** and select **Manage NuGet Packages**.
+	1. In the **Manage NuGet Packages** page, click **Restore** in order to download missing packages.
+	1. Finally, build the solution by clicking **Build** | **Build Solution**.
 
 1. Add a **Genre** Model class. To do this, right-click the **Models** folder in the **Solution Explorer**, select **Add** and then the **New Item** option. Under **Code**, choose the **Class** item and name the file _Genre.cs_, then click **Add**.
 
@@ -1171,7 +1187,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC 4 project
 
 	_Creating a new ASP.NET MVC 4 Project_
 
-1. In the **New ASP.NET MVC 4 Project** dialog, select the **Internet Application** project template and click **OK**. Notice you can select either Razor or ASP.NET as the view engine.
+1. In the **New ASP.NET MVC 4 Project** dialog, select the **Internet Application** project template and click **OK**. Notice you can select either Razor or ASPX as the view engine.
 
 	![Creating a new ASP.NET MVC 4 Internet Application](images/creating-a-new-mvc4-internet-application.png?raw=true "Creating a new ASP.NET MVC 4 Internet Application")
 
