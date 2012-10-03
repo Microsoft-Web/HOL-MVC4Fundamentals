@@ -1,6 +1,6 @@
-﻿<a name="HOLTitle" />
-# ASP.NET MVC 4 Fundamentals #
+﻿<a name="HOLTop" />
 
+# ASP.NET MVC 4 Fundamentals #
 ---
 
 <a name="Overview" />
@@ -63,10 +63,14 @@ You must have the following items to complete this lab:
 
 - [Visual Studio 2012 Express for Web](http://www.microsoft.com/visualstudio/eng/products/visual-studio-express-for-web) (read [Appendix A](#AppendixA) for instructions on how to install it)
 
-### Installing Code Snippets ###
+<a name="Setup" /> 
+### Setup ###
 
-For convenience, much of the code you will be managing along this lab is available as Visual Studio code snippets. To install the code snippets run **.\Source\Setup\CodeSnippets.vsi** file.
+**Installing Code Snippets**
 
+For convenience, much of the code you will be managing along this lab is available as Visual Studio code snippets. To install the code snippets run **.\Source\Assets\CodeSnippets.vsi** file.
+
+If you are not familiar with the Visual Studio Code Snippets, and want to learn how to use them, you can refer to the appendix from this document "[Appendix C: Using Code Snippets](#AppendixC)".
 
 <a name="Exercises" />
 ## Exercises ##
@@ -214,9 +218,10 @@ In this task, you will add a new Controller.
 
 1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex02-CreatingAController\Begin**, select **Begin.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
 	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click **Project** and select **Manage NuGet Packages**.
-	1. In the **Manage NuGet Packages** page, click **Restore** in order to download missing packages.
+	1. In the **Manage NuGet Packages** dialog, click **Restore** in order to download missing packages.
 	1. Finally, build the solution by clicking **Build** | **Build Solution**.
 
+	> **Note:** One of the advantages of using NuGet is that you don't have to ship all the libraries in your project, reducing the project size. With NuGet Power Tools, by specifying the package versions in the Packages.config file, you will be able to download all the required libraries the first time you run the project. This is why you will have to run these steps after you open an existing solution from this lab.
 
 1. Add the new controller. To do this, right-click the **Controllers** folder within the Solution Explorer, select **Add** and then the **Controller** command. Change the **Controller Name** to _StoreController_, and click **Add**.
 
@@ -299,7 +304,7 @@ In this task, you will use the **querystring** to send parameters to the **Brows
 
 1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex03-PassingParametersToAController\Begin**, select **Begin.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
 	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click **Project** and select **Manage NuGet Packages**.
-	1. In the **Manage NuGet Packages** page, click **Restore** in order to download missing packages.
+	1. In the **Manage NuGet Packages** dialog, click **Restore** in order to download missing packages.
 	1. Finally, build the solution by clicking **Build** | **Build Solution**.
 
 1. Open **StoreController** class. To do this, in the **Solution Explorer**, expand the **Controllers** folder and double-click **StoreController.cs**.
@@ -392,7 +397,7 @@ The file **~/Views/Shared/_layout.cshtml** allows you to setup a template for co
 
 1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex04-CreatingAView\Begin**, select **Begin.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
 	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click **Project** and select **Manage NuGet Packages**.
-	1. In the **Manage NuGet Packages** page, click **Restore** in order to download missing packages.
+	1. In the **Manage NuGet Packages** dialog, click **Restore** in order to download missing packages.
 	1. Finally, build the solution by clicking **Build** | **Build Solution**.
 
 1. The file **_layout.cshtml** contains the HTML container layout for all pages on the site.  It includes the **\<html\>** element for the HTML response, as well as the **\<head\>** and **\<body\>** elements. **@RenderBody()** within the HTML body identify regions that view templates will be able to fill in with dynamic content.
@@ -558,7 +563,7 @@ In this task, you will create a ViewModel class that will implement the Store ge
 
 1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex05-CreatingAViewModel\Begin**, select **Begin.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
 	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click **Project** and select **Manage NuGet Packages**.
-	1. In the **Manage NuGet Packages** page, click **Restore** in order to download missing packages.
+	1. In the **Manage NuGet Packages** dialog, click **Restore** in order to download missing packages.
 	1. Finally, build the solution by clicking **Build** | **Build Solution**.
 
 1. Create a **ViewModels** folder to hold the ViewModel. To do this, right-click the top-level **MvcMusicStore** project, select **Add** and then **New Folder**.
@@ -761,7 +766,7 @@ Unlike ViewModels, which are created just to pass information from the Controlle
 
 1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex06-UsingParametersInView\Begin**, select **Begin.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
 	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click **Project** and select **Manage NuGet Packages**.
-	1. In the **Manage NuGet Packages** page, click **Restore** in order to download missing packages.
+	1. In the **Manage NuGet Packages** dialog, click **Restore** in order to download missing packages.
 	1. Finally, build the solution by clicking **Build** | **Build Solution**.
 
 1. Add a **Genre** Model class. To do this, right-click the **Models** folder in the **Solution Explorer**, select **Add** and then the **New Item** option. Under **Code**, choose the **Class** item and name the file _Genre.cs_, then click **Add**.
@@ -1258,6 +1263,9 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC 4 project
 
 		>**Note:** Find more information about  [OAuthWebSecurity](http://msdn.microsoft.com/en-us/library/jj158393\(v=vs.111\).aspx) in MSDN.
 
+		
+>**Note:** Additionally, you can deploy this application to Windows Azure Web Sites following [Appendix B: Publishing an ASP.NET MVC 4 Application using Web Deploy](#AppendixB).
+
 ---
 
 <a name="Summary" />
@@ -1470,3 +1478,53 @@ If your application makes use of SQL Server databases you will need to create a 
 
 	_Application published to Windows Azure_
 
+
+<a name="AppendixC"></a>
+## Appendix C: Using Code Snippets ##
+
+With code snippets, you have all the code you need at your fingertips. The lab document will tell you exactly when you can use them, as shown in the following figure.
+
+ ![Using Visual Studio code snippets to insert code into your project](./images/Using-Visual-Studio-code-snippets-to-insert-code-into-your-project.png?raw=true "Using Visual Studio code snippets to insert code into your project")
+ 
+_Using Visual Studio code snippets to insert code into your project_
+
+_**To add a code snippet using the keyboard (C# only)**_
+
+1. Place the cursor where you would like to insert the code.
+
+1. Start typing the snippet name (without spaces or hyphens).
+
+1. Watch as IntelliSense displays matching snippets' names.
+
+1. Select the correct snippet (or keep typing until the entire snippet's name is selected).
+
+1. Press the Tab key twice to insert the snippet at the cursor location.
+
+ 
+   ![Start typing the snippet name](./images/Start-typing-the-snippet-name.png?raw=true "Start typing the snippet name")
+ 
+_Start typing the snippet name_
+
+   ![Press Tab to select the highlighted snippet](./images/Press-Tab-to-select-the-highlighted-snippet.png?raw=true "Press Tab to select the highlighted snippet")
+ 
+_Press Tab to select the highlighted snippet_
+
+   ![Press Tab again and the snippet will expand](./images/Press-Tab-again-and-the-snippet-will-expand.png?raw=true "Press Tab again and the snippet will expand")
+ 
+_Press Tab again and the snippet will expand_
+
+_**To add a code snippet using the mouse (C#, Visual Basic and XML)**_
+1. Right-click where you want to insert the code snippet.
+
+1. Select **Insert Snippet** followed by **My Code Snippets**.
+
+1. Pick the relevant snippet from the list, by clicking on it.
+
+ 
+  ![Right-click where you want to insert the code snippet and select Insert Snippet](./images/Right-click-where-you-want-to-insert-the-code-snippet-and-select-Insert-Snippet.png?raw=true "Right-click where you want to insert the code snippet and select Insert Snippet")
+ 
+_Right-click where you want to insert the code snippet and select Insert Snippet_
+
+ ![Pick the relevant snippet from the list, by clicking on it](./images/Pick-the-relevant-snippet-from-the-list,-by-clicking-on-it.png?raw=true "Pick the relevant snippet from the list, by clicking on it")
+ 
+_Pick the relevant snippet from the list, by clicking on it_
