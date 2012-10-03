@@ -421,9 +421,9 @@ The file **~/Views/Shared/_layout.cshtml** allows you to setup a template for co
 	</html>
 	````
 	
-1. Add a common header with links to the Home page and Store area on all pages in the site. In order to do that, add the following code inside the **\<div\>** statement.
+1. Add a common header with links to the Home page and Store area on all pages in the site. In order to do that, add the following code below \<body\> statement.
 
-	<!-- mark:11-17 -->
+	<!-- mark:11-25 -->
 	````HTML(C#)
 	<!DOCTYPE html>
 	<html>
@@ -435,13 +435,21 @@ The file **~/Views/Shared/_layout.cshtml** allows you to setup a template for co
 		 @Scripts.Render("~/bundles/modernizr")
 	</head>
 	<body>
-		 <div id="header">
-			  <h1>ASP.NET MVC MUSIC STORE</h1>
-			  <ul id="navlist">
-					<li class="first"><a href="/" id="current">Home</a></li>
-					<li><a href="/Store/">Store</a></li>
-			  </ul>
-		 </div>
+		 <header>
+			  <div class="content-wrapper">
+					<div class="float-left">
+						 <p class="site-title">@Html.ActionLink("ASP.NET MVC Music Store", "Index", "Home")</p>
+					</div>
+					<div class="float-right">
+						 <nav>
+							  <ul id="menu">
+									<li>@Html.ActionLink("Home", "Index", "Home")</li>
+									<li>@Html.ActionLink("Store", "Index", "Store")</li>
+							  </ul>
+						 </nav>
+					</div>
+			  </div>
+		 </header>
 		 @RenderBody()
 
 		 @Scripts.Render("~/bundles/jquery")
@@ -449,7 +457,64 @@ The file **~/Views/Shared/_layout.cshtml** allows you to setup a template for co
 	</body>
 	</html>
 	````
-	
+
+1. Include a div to render the body section of each page. Replace **@RenderBody()** with the following higlighted code:
+
+	<!-- mark:18-23 -->
+	````HTML(C#)
+	...
+	<body>
+		 <header>
+			  <div class="content-wrapper">
+					<div class="float-left">
+						 <p class="site-title">@Html.ActionLink("ASP.NET MVC Music Store", "Index", "Home")</p>
+					</div>
+					<div class="float-right">
+						 <nav>
+							  <ul id="menu">
+									<li>@Html.ActionLink("Home", "Index", "Home")</li>
+									<li>@Html.ActionLink("Store", "Index", "Store")</li>
+							  </ul>
+						 </nav>
+					</div>
+			  </div>
+		 </header>
+		 <div id="body">
+			  @RenderSection("featured", required: false)
+			  <section class="content-wrapper main-content clear-fix">
+					@RenderBody()
+			  </section>
+		 </div>
+		 ...
+	</body>
+	</html>
+	````
+
+1. Finally, add a common footer that will be shown in all lab sections.
+
+	<!-- mark:10-16 -->
+	````HTML(C#)
+	...
+	<body>
+		 ...
+		 <div id="body">
+			  @RenderSection("featured", required: false)
+			  <section class="content-wrapper main-content clear-fix">
+					@RenderBody()
+			  </section>
+		 </div>
+		 <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p><a href="http://mvcmusicstore.codeplex.com">mvcmusicstore.codeplex.com</a></p>
+                </div>
+            </div>
+        </footer>
+		...
+	</body>
+	</html
+	````
+
 	>**Note:** Did you know? Visual Studio 2012 has snippets that make it easy to add commonly used code in HTML, code files and more! Try it out by typing **\<div\>** and pressing **TAB** twice to insert a complete **div** tag.
 	
 <a name="Ex4Task2" />
@@ -465,11 +530,7 @@ In this task, you will add a CSS stylesheet to define the styles of the site.
  
 	_Dragging style contents_
 
-1. A warning dialog will appear, asking for confirmation to replace **Site.css** file. Click **Yes**.
-
-	![Warning Dialog](./images/Warning-Dialog.png?raw=true "Warning Dialog")
-
-	_Warning Dialog_
+1. A warning dialog will appear, asking for confirmation to replace **Site.css** file and some existing images. Check **Apply to all items** and click **Yes**.
 
  
 <a name="Ex4Task3" />
@@ -805,7 +866,7 @@ Unlike ViewModels, which are created just to pass information from the Controlle
 
 	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex6 Album_)
 
-	<!-- mark:10-11 -->
+	<!-- mark:10-12 -->
 	````C#
 	using System;
 	using System.Collections.Generic;
@@ -817,6 +878,7 @@ Unlike ViewModels, which are created just to pass information from the Controlle
 	    public class Album
 	    {
 	        public string Title { get; set; }
+
 	        public Genre Genre { get; set; }
 	    }
 	}
@@ -853,7 +915,7 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 
 	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex6 ModelProperties_)
 
-	<!-- mark:11-12 -->
+	<!-- mark:11-13 -->
 	````C#
 	using System;
 	using System.Collections.Generic;
@@ -866,6 +928,7 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 	    public class StoreBrowseViewModel
 	    {
 	        public Genre Genre { get; set; }
+
 	        public List<Album> Albums { get; set; }
 	    }
 	}
