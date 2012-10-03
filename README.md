@@ -4,7 +4,7 @@
 
 ### Introduction ###
 
-Hands-On Labs are sets of step-by-step guides that are designed to help you learn ASP.NET MVC 4.  Each Lab provides instructions to guide you through the process of developing a complete application.
+These Hands-On Labs are sets of step-by-step guides that are designed to help you learn Visual Studio 2012, ASP.NET 4.5 WebForms and ASP.NET MVC 4. Each Lab provides instructions to guide you through the process of developing a Web application.
 
 This Hands-On Lab is based on MVC (Model View Controller) Music Store, a tutorial application that introduces and explains step-by-step how to use ASP.NET MVC and Visual Studio. Throughout the lab you will learn the simplicity, yet power of using these technologies together. You will start with a simple application and will build it until you have a fully functional MVC Web Application.
 
