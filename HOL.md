@@ -91,9 +91,9 @@ This Hands-On Lab is comprised by the following exercises:
 
 1. [Exercise 7: A lap around ASP.NET MVC 4 New Template](#Exercise7)
  
-Estimated time to complete this lab: **45 minutes**.
-
 > **Note:** Each exercise is accompanied by an **End** folder containing the resulting solution you should obtain after completing the exercises. You can use this solution as a guide if you need additional help working through the exercises.
+
+Estimated time to complete this lab: **60 minutes**.
 
 <a name="Exercise1" />
 ### Exercise 1: Creating MusicStore ASP.NET MVC Web Application Project ###
@@ -217,7 +217,7 @@ In this task, you will add a new Controller.
 1. If not already open, start **VS Express for Web 2012**.
 
 1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex02-CreatingAController\Begin**, select **Begin.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
-	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click **Project** and select **Manage NuGet Packages**.
+	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click the **Project** menu and select **Manage NuGet Packages**.
 	1. In the **Manage NuGet Packages** dialog, click **Restore** in order to download missing packages.
 	1. Finally, build the solution by clicking **Build** | **Build Solution**.
 
@@ -303,10 +303,12 @@ In this task, you will use the **querystring** to send parameters to the **Brows
 1. If not already open, start **VS Express for Web**.
 
 1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex03-PassingParametersToAController\Begin**, select **Begin.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
-	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click **Project** and select **Manage NuGet Packages**.
+	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click the **Project** menu and select **Manage NuGet Packages**.
 	1. In the **Manage NuGet Packages** dialog, click **Restore** in order to download missing packages.
 	1. Finally, build the solution by clicking **Build** | **Build Solution**.
 
+	>**Note:** One of the advantages of using NuGet is that you don't have to ship all the libraries in your project, reducing the project size. With NuGet Power Tools, by specifying the package versions in the Packages.config file, you will be able to download all the required libraries the first time you run the project. This is why you will have to run these steps after you open an existing solution from this lab.
+	
 1. Open **StoreController** class. To do this, in the **Solution Explorer**, expand the **Controllers** folder and double-click **StoreController.cs**.
 
 1. Change the **Browse** method, adding a string parameter to request for a specific genre. ASP.NET MVC will automatically pass any querystring or form post parameters named **genre** to this action method when invoked. To do this, replace the **Browse** method with the following code:
@@ -396,10 +398,12 @@ The file **~/Views/Shared/_layout.cshtml** allows you to setup a template for co
 1. If not already open, start **VS Express for Web**.
 
 1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex04-CreatingAView\Begin**, select **Begin.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
-	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click **Project** and select **Manage NuGet Packages**.
+	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click the **Project** menu and select **Manage NuGet Packages**.
 	1. In the **Manage NuGet Packages** dialog, click **Restore** in order to download missing packages.
 	1. Finally, build the solution by clicking **Build** | **Build Solution**.
 
+	>**Note:** One of the advantages of using NuGet is that you don't have to ship all the libraries in your project, reducing the project size. With NuGet Power Tools, by specifying the package versions in the Packages.config file, you will be able to download all the required libraries the first time you run the project. This is why you will have to run these steps after you open an existing solution from this lab.
+	
 1. The file **_layout.cshtml** contains the HTML container layout for all pages on the site.  It includes the **\<html\>** element for the HTML response, as well as the **\<head\>** and **\<body\>** elements. **@RenderBody()** within the HTML body identify regions that view templates will be able to fill in with dynamic content.
 
 	````HTML(C#)
@@ -623,10 +627,12 @@ In this task, you will create a ViewModel class that will implement the Store ge
 1. If not already open, start **VS Express for Web**.
 
 1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex05-CreatingAViewModel\Begin**, select **Begin.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
-	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click **Project** and select **Manage NuGet Packages**.
+	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click the **Project** menu and select **Manage NuGet Packages**.
 	1. In the **Manage NuGet Packages** dialog, click **Restore** in order to download missing packages.
 	1. Finally, build the solution by clicking **Build** | **Build Solution**.
 
+	>**Note:** One of the advantages of using NuGet is that you don't have to ship all the libraries in your project, reducing the project size. With NuGet Power Tools, by specifying the package versions in the Packages.config file, you will be able to download all the required libraries the first time you run the project. This is why you will have to run these steps after you open an existing solution from this lab.
+	
 1. Create a **ViewModels** folder to hold the ViewModel. To do this, right-click the top-level **MvcMusicStore** project, select **Add** and then **New Folder**.
 
  	![Adding a new folder](./images/Adding-a-new-folder.png?raw=true "Adding a new folder")
@@ -826,10 +832,12 @@ Unlike ViewModels, which are created just to pass information from the Controlle
 1. If not already open, start **VS Express for Web**
 
 1. In the **File** menu, choose **Open Project**. In the Open Project dialog, browse to **Source\Ex06-UsingParametersInView\Begin**, select **Begin.sln** and click **Open**. Alternatively, you may continue with the solution that you obtained after completing the previous exercise.
-	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click **Project** and select **Manage NuGet Packages**.
+	1. If you opened the provided **Begin** solution, you will need to download some missing NuGet packages before continue. To do this, click the **Project** menu and select **Manage NuGet Packages**.
 	1. In the **Manage NuGet Packages** dialog, click **Restore** in order to download missing packages.
 	1. Finally, build the solution by clicking **Build** | **Build Solution**.
 
+	>**Note:** One of the advantages of using NuGet is that you don't have to ship all the libraries in your project, reducing the project size. With NuGet Power Tools, by specifying the package versions in the Packages.config file, you will be able to download all the required libraries the first time you run the project. This is why you will have to run these steps after you open an existing solution from this lab.
+	
 1. Add a **Genre** Model class. To do this, right-click the **Models** folder in the **Solution Explorer**, select **Add** and then the **New Item** option. Under **Code**, choose the **Class** item and name the file _Genre.cs_, then click **Add**.
 
 	![Adding a class](./images/Adding-a-class.png?raw=true "Adding a class")
