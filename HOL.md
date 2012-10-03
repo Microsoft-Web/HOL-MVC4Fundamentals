@@ -494,31 +494,6 @@ The file **~/Views/Shared/_layout.cshtml** allows you to setup a template for co
 	</html>
 	````
 
-1. Finally, add a common footer that will be shown in all lab sections.
-
-	<!-- mark:10-16 -->
-	````HTML(C#)
-	...
-	<body>
-		 ...
-		 <div id="body">
-			  @RenderSection("featured", required: false)
-			  <section class="content-wrapper main-content clear-fix">
-					@RenderBody()
-			  </section>
-		 </div>
-		 <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p><a href="http://mvcmusicstore.codeplex.com">mvcmusicstore.codeplex.com</a></p>
-                </div>
-            </div>
-        </footer>
-		...
-	</body>
-	</html
-	````
-
 	>**Note:** Did you know? Visual Studio 2012 has snippets that make it easy to add commonly used code in HTML, code files and more! Try it out by typing **\<div\>** and pressing **TAB** twice to insert a complete **div** tag.
 	
 <a name="Ex4Task2" />
