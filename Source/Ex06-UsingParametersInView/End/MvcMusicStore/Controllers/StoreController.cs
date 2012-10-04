@@ -27,12 +27,10 @@ namespace MvcMusicStore.Controllers
 
             ViewBag.Starred = new List<string> { "Rock", "Jazz" };
 
-            return View(viewModel);
+            return this.View(viewModel);
         }
 
-        //
         // GET: /Store/Browse?genre=Disco
-
         public ActionResult Browse(string genre)
         {
             var genreModel = new Genre()
@@ -52,17 +50,15 @@ namespace MvcMusicStore.Controllers
                 Albums = albums
             };
 
-            return View(viewModel);
+            return this.View(viewModel);
         }
 
-        //
         // GET: /Store/Details/5
-
         public ActionResult Details(int id)
         {
             var album = new Album { Title = "Sample Album" };
 
-            return View(album);
+            return this.View(album);
         }
     }
 }

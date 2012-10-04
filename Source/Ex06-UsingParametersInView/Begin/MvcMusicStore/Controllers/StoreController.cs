@@ -24,12 +24,10 @@ namespace MvcMusicStore.Controllers
                 Genres = genres
             };
 
-            return View(viewModel);
+            return this.View(viewModel);
         }
 
-        //
         // GET: /Store/Browse?genre=Disco
-
         public string Browse(string genre)
         {
             string message = HttpUtility.HtmlEncode("Store.Browse, Genre = " + genre);
@@ -37,9 +35,7 @@ namespace MvcMusicStore.Controllers
             return message;
         }
 
-        //
         // GET: /Store/Details/5
-
         public string Details(int id)
         {
             string message = "Store.Details, ID = " + id;

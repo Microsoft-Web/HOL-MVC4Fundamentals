@@ -252,17 +252,13 @@ In this task, you will modify the Controller methods that are called **actions**
 
 	<!-- mark:1-15 -->
 	````C#
-	//
 	// GET: /Store/Browse
-	
 	public string Browse()
 	{
 	  return "Hello from Store.Browse()";
 	}
 	
-	//
-	// GET: /Store/Details
-	
+	// GET: /Store/Details	
 	public string Details()
 	{
 	  return "Hello from Store.Details()";
@@ -314,11 +310,9 @@ In this task, you will use the **querystring** to send parameters to the **Brows
 1. Change the **Browse** method, adding a string parameter to request for a specific genre. ASP.NET MVC will automatically pass any querystring or form post parameters named **genre** to this action method when invoked. To do this, replace the **Browse** method with the following code:
 
 	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex3 StoreController BrowseMethod_)
-	<!-- mark:1-10 -->
+	<!-- mark:1-7 -->
 	````C#
-	//
-	// GET: /Store/Browse?genre=Disco
-	
+	// GET: /Store/Browse?genre=Disco	
 	public string Browse(string genre)
 	{
 	  string message = HttpUtility.HtmlEncode("Store.Browse, Genre = " + genre);
@@ -357,11 +351,9 @@ In this task, you will use the **URL** to pass an **Id** parameter to the **Deta
 
 	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex3 StoreController DetailsMethod_)
 
-	<!-- mark:1-9 -->
+	<!-- mark:1-7 -->
 	````C#
-	//
-	// GET: /Store/Details/5
-	
+	// GET: /Store/Details/5	
 	public string Details(int id)
 	{
 	  string message = "Store.Details, ID = " + id;
@@ -520,7 +512,7 @@ In this task, you will add a View template to generate the HTML response that wi
 1. To use a View template when browsing the site's home page, you will first need to indicate that instead of returning a string, the **HomeController Index** method will return a **View**. Open **HomeController** class and change its **Index** method to return an **ActionResult**, and have it return **View()**.
 
 	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex4 HomeController Index_)
-	<!-- mark:3-10 -->
+	<!-- mark:5-9 -->
 	````C#
 	public class HomeController : Controller
 	{
@@ -529,7 +521,7 @@ In this task, you will add a View template to generate the HTML response that wi
 	
 	    public ActionResult Index()
 	    {
-	        return View();
+	        return this.View();
 	    }
 	}
 	````
@@ -641,11 +633,12 @@ In this task, you will add those 2 properties to the **StoreIndexViewModel** cla
 
 	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex5 StoreIndexViewModel properties_)
 
-	<!-- mark:3-4 -->
+	<!-- mark:3-5 -->
 	````C#
 	public class StoreIndexViewModel
 	{
 	  public int NumberOfGenres { get; set; }
+
 	  public List<string> Genres { get; set; }
 	}
 	````
@@ -697,7 +690,7 @@ In this task, you will update the **StoreController** to use the **StoreIndexVie
 	        Genres = genres
 	    };
 	
-	    return View(viewModel);
+	    return this.View(viewModel);
 	}
 	````
 
@@ -972,7 +965,7 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 	        Albums = albums
 	    };
 	
-	    return View(viewModel);
+	    return this.View(viewModel);
 	}
 	````
 
@@ -989,7 +982,7 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 	{
 	  var album = new Album { Title = "Sample Album" };
 	
-	  return View(album);
+	  return this.View(album);
 	}
 	````
 
@@ -1165,7 +1158,7 @@ You will now use the ViewBag dynamic collection to pass a list of "**Starred gen
 	
 	    ViewBag.Starred = new List<string> { "Rock", "Jazz" };
 	            
-	    return View(viewModel);
+	    return this.View(viewModel);
 	}
 	````
 
@@ -1232,7 +1225,7 @@ In this exercise, you will explore the enhancements in the ASP.NET MVC 4 project
 
 1. If not already open, start **VS Express for Web**
 
-1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C#|Web** template on the left pane tree, and choose the **ASP.NET MVC 4 Web Application**. Name the project _MusicStore_, select a location (or leave the default) and click **OK**. 
+1. Select the **File | New | Project** menu command. In the **New Project** dialog, select the **Visual C#|Web** template on the left pane tree, and choose the **ASP.NET MVC 4 Web Application**. **Name** the project _MusicStore_ and update the **solution name** to _Begin_, then select a location (or leave the default) and click **OK**. 
 
 	![Creating a new ASP.NET MVC 4 Project](images/creating-a-new-mvc4-project.png?raw=true "Creating a new ASP.NET MVC 4 Project")
 

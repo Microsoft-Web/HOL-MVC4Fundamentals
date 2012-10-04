@@ -13,7 +13,7 @@ namespace MvcMusicStore.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            return this.View();
         }
     }
 }
