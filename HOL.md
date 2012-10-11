@@ -361,7 +361,8 @@ In this task, you will use the **URL** to pass an **Id** parameter to the **Deta
 	  return message;
 	}
 	````
- 
+
+
 <a name="Ex3Task4" />
 #### Task 4 - Running the Application####
 
@@ -642,6 +643,7 @@ In this task, you will add those 2 properties to the **StoreIndexViewModel** cla
 	  public List<string> Genres { get; set; }
 	}
 	````
+
 	> **Note**: The **{ get; set; }** notation makes use of C#'s auto-implemented properties feature. It provides the benefits of a property without requiring us to declare a backing field.
 
  
@@ -654,15 +656,15 @@ In this task, you will update the **StoreController** to use the **StoreIndexVie
 
 1. Open **StoreController** class. 
 
- 	![Opening StoreController class](./images/Opening-StoreController-class.png?raw=true "Opening StoreController class")
- 
+	![Opening StoreController class](./images/Opening-StoreController-class.png?raw=true "Opening StoreController class")
+
 	_Opening StoreController class_
 
 1. In order to use the **StoreIndexViewModel** class from the **StoreController**, add the following namespace at the top of the **StoreController** code:
 
 	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex5 StoreIndexViewModel using ViewModels_)
 
-	<!-- mark:1-2 -->
+	<!-- mark:1 -->
 	````C#
 	using MvcMusicStore.ViewModels;
 	````
@@ -973,7 +975,7 @@ A **StoreBrowseViewModel** will be used in this task to show the Albums that mat
 
 	(Code Snippet - _ASP.NET MVC 4 Fundamentals - Ex6 DetailsMethod_)
 
-	<!-- mark:1-10 -->
+	<!-- mark:1-9 -->
 	````C#
 	//
 	// GET: /Store/Details/5
